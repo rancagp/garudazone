@@ -35,10 +35,10 @@ const navigation = [
 ]
 
 const slides = [
-  "/images/timnas1.jpg",
+  "/images/timnas6.jpg",
   "/images/timnas5.jpg",
-  "/images/timnas3.webp",
-  "/images/timnas4.webp"
+  "/images/timnas5.jpg",
+  "/images/timnas5.jpg"
 ]
 
 function classNames(...classes) {
@@ -58,7 +58,7 @@ export default function Example() {
     <>
       <Head title='Home' />
       <div className='w-full'>
-        <Disclosure as="nav" className="bg-gray-800 fixed z-10 top-0 w-full">
+        <Disclosure as="nav" className="bg-red-700 fixed z-10 top-0 w-full">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex h-16 items-center justify-between">
               <div className="flex items-center">
@@ -77,7 +77,7 @@ export default function Example() {
                         href={item.href}
                         aria-current={item.current ? 'page' : undefined}
                         className={classNames(
-                          item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                          item.current ? 'bg-red-900 text-white' : 'text-gray-300 hover:bg-red-900 hover:text-white',
                           'rounded-md px-3 py-2 text-sm font-medium',
                         )}
                       >
@@ -101,8 +101,8 @@ export default function Example() {
                           </MenuButton>
                         ) : (
                           <>
-                            <a href="/register" className='rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white uppercase'>Register</a>
-                            <a href="/login" className='rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white uppercase'>Login</a>
+                            <a href="/register" className='rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-red-900 hover:text-white uppercase'>Register</a>
+                            <a href="/login" className='rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-red-900 hover:text-white uppercase'>Login</a>
                           </>
                         )
                       }
@@ -201,14 +201,14 @@ export default function Example() {
 
         {/* Main content */}
         <main className='w-full h-screen bg-gray-300'>
-          <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 bg-red">
 
 
             {/* konten 1 */}
             <div className="h-56 sm:h-[73dvh] ">
               <Carousel>
                 {slides.map((s, index) => (
-                  <img key={index} src={s} alt={`Slide ${index + 1}`} className='h-full w-full object-fill' />
+                  <img key={index} src={s} alt={`Slide ${index + 1}`} className='h-full w-full' />
                 ))}
               </Carousel>
             </div>
@@ -217,6 +217,9 @@ export default function Example() {
           {/* konten2 */}
           <div className="bg-gray-300 py-1 sm:pt-0 sm:pb-5">
             <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+              <p className="mx-auto mt-2 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl">
+                BERITA TERBARU
+              </p>
               <div className="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
                 <div className="relative lg:row-span-2">
                   <div className="absolute inset-px rounded-lg  lg:rounded-l-[2rem]"></div>
@@ -365,3 +368,11 @@ export default function Example() {
     </>
   )
 }
+
+
+
+
+
+
+
+
