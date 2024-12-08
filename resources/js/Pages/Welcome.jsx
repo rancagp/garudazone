@@ -58,7 +58,7 @@ export default function Example() {
     <>
       <Head title='Home' />
       <div className='w-full'>
-        <Disclosure as="nav" className="bg-red-700 fixed z-10 top-0 w-full">
+        <Disclosure as="nav" className="bg-red-700 sticky z-10 top-0 w-full">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex h-16 items-center justify-between">
               <div className="flex items-center">
@@ -350,6 +350,7 @@ export default function Example() {
             </div>
           </div>
 
+          {/*Footer*/}
           <footer className="bg-gray-800 text-white py-4">
             <div className="container mx-auto text-center">
               <p>&copy; 2024 GarudaZone. All rights reserved.</p>

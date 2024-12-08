@@ -13,9 +13,17 @@ export default function GuestLayout({ children }) {
                 </Link>
             </div>
 
-            <div className="mt-6 w-full overflow-hidden bg-white px-6 py-4 shadow-md sm:max-w-md sm:rounded-lg">
+            <div className="mt-6 w-full overflow-hidden bg-white px-6 py-4 sm:max-w-md sm:rounded-lg"
+                style={{
+                    boxShadow: '0 20px 50px rgba(0.5, 0.5, 0.5, 0.5)',
+                    transition: 'box-shadow 0.3s ease-in-out' // Optional: Adding transition for smooth effect on hover
+                }}>
                 {children}
             </div>
         </div>
     );
 }
+
+
+
+
