@@ -32,7 +32,7 @@ const navigation = [
   { name: 'HOME', href: '#', current: true },
   { name: 'KABAR BOLA', href: '#', current: false },
   { name: 'SEJARAH', href: '#', current: false },
-  { name: 'PERTANDINGAN', href: '#', current: false },
+  { name: 'PERTANDINGAN', href: '/pertandingan', current: false },
 
 ]
 
@@ -40,7 +40,7 @@ const slides = [
   "/images/timnas6.jpg",
   "/images/timnas5.jpg",
   "/images/timnas0.png",
-  "/images/timnas14.jpeg"
+  "/images/timnas14.jpeg",
   "/images/timnaswp1.jpg",
   "/images/timnaswp5.jpg",
   "/images/timnaswp4.jpg",
@@ -68,14 +68,14 @@ export default function Example() {
       <Head title='Home' />
       <div className='w-full'>
         <Disclosure as="nav" className="bg-red-700 sticky z-10 top-0 w-full">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl pr-4 sm:pr-6 lg:pr-8">
             <div className="flex h-16 items-center justify-between">
               <div className="flex items-center">
-                <div className="shrink-0">
+                <div className="skew-x-12 origin-bottom-left bg-white w-20">
                   <img
                     alt="GarudaZone"
                     src="/images/garudazone.png"
-                    className="size-20"
+                    className="size-16 mx-auto"
                   />
                 </div>
                 <div className="hidden md:block">
