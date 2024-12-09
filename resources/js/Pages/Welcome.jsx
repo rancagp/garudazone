@@ -41,6 +41,9 @@ const slides = [
   "/images/timnas5.jpg",
   "/images/timnas0.png",
   "/images/timnas14.jpeg"
+  "/images/timnaswp1.jpg",
+  "/images/timnaswp5.jpg",
+  "/images/timnaswp4.jpg"
 ]
 
 function classNames(...classes) {
@@ -60,7 +63,7 @@ export default function Example() {
     <>
       <Head title='Home' />
       <div className='w-full'>
-        <Disclosure as="nav" className="bg-red-700 fixed z-10 top-0 w-full">
+        <Disclosure as="nav" className="bg-red-700 sticky z-10 top-0 w-full">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex h-16 items-center justify-between">
               <div className="flex items-center">
@@ -293,19 +296,20 @@ export default function Example() {
                   <div className="bg-white relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
                     <div className="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
                       <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
-                        Mobile friendly
+                        Berita 1
                       </p>
                       <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
                         Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.
                       </p>
                     </div>
                     <div className="relative min-h-[30rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm">
-                      <div className="absolute inset-x-10 bottom-0 top-10 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
+                      <div className="absolute inset-x-10 bottom-0 top-10 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-red-950 bg-gray-900 shadow-2xl">
                         <img
                           className="size-full object-cover object-top"
-                          src="https://tailwindui.com/plus/img/component-images/bento-03-mobile-friendly.png"
-                          alt=""
+                          src="/images/timnas8.jpg"
+                          alt="Description of the image"
                         />
+
                       </div>
                     </div>
                   </div>
@@ -315,7 +319,7 @@ export default function Example() {
                   <div className="absolute inset-px rounded-lg bg-white max-lg:rounded-t-[2rem]"></div>
                   <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
                     <div className="px-8 pt-8 sm:px-10 sm:pt-10">
-                      <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Performance</p>
+                      <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Bertia 2</p>
                       <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit maiores impedit.
                       </p>
@@ -323,7 +327,7 @@ export default function Example() {
                     <div className="flex flex-1 items-center justify-center px-8 max-lg:pb-12 max-lg:pt-10 sm:px-10 lg:pb-2">
                       <img
                         className="w-full max-lg:max-w-xs"
-                        src="https://tailwindui.com/plus/img/component-images/bento-03-performance.png"
+                        src=""
                         alt=""
                       />
                     </div>
@@ -334,7 +338,7 @@ export default function Example() {
                   <div className="absolute inset-px rounded-lg bg-white"></div>
                   <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]">
                     <div className="px-8 pt-8 sm:px-10 sm:pt-10">
-                      <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Security</p>
+                      <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Berita 3</p>
                       <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
                         Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi.
                       </p>
@@ -342,7 +346,7 @@ export default function Example() {
                     <div className="flex flex-1 items-center [container-type:inline-size] max-lg:py-6 lg:pb-2">
                       <img
                         className="h-[min(152px,40cqw)] object-cover"
-                        src="https://tailwindui.com/plus/img/component-images/bento-03-security.png"
+                        src=""
                         alt=""
                       />
                     </div>
@@ -354,7 +358,7 @@ export default function Example() {
                   <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]">
                     <div className="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
                       <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
-                        Powerful APIs
+                        Berita 4
                       </p>
                       <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
                         Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget sem sodales gravida.
@@ -408,7 +412,7 @@ export default function Example() {
                 </div>
                 <img
                   alt="Product screenshot"
-                  src="https://tailwindui.com/plus/img/component-images/dark-project-app-screenshot.png"
+                  src="/images/timnaswp4.jpg"
                   width={2432}
                   height={1442}
                   className="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
@@ -416,7 +420,8 @@ export default function Example() {
               </div>
             </div>
           </div>
-               {/* Footer */}
+          
+          {/*Footer*/}
           <footer className="bg-gray-800 text-white py-4">
             <div className="container mx-auto text-center">
               <p>&copy; 2024 GarudaZone. All rights reserved.</p>
