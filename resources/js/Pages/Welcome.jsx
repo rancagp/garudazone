@@ -216,6 +216,8 @@ export default function Example() {
             </div>
           </div>
 
+
+
           {/* konten2 */}
           <div className="bg-gray-300 py-1 sm:pt-0 sm:pb-5">
             <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
@@ -313,6 +315,19 @@ export default function Example() {
                   <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"></div>
                 </div>
               </div>
+            </div>
+          </div>
+
+          <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 bg-red">
+
+
+            {/* konten 3 */}
+            <div className="h-56 sm:h-[82dvh] ">
+              <Carousel>
+                {slides.map((s, index) => (
+                  <img key={index} src={s} alt={`Slide ${index + 1}`} className='h-full w-full' />
+                ))}
+              </Carousel>
             </div>
           </div>
 
