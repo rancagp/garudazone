@@ -38,11 +38,9 @@ const navigation = [
 
 const slides = [
   "/images/timnas6.jpg",
-
   "/images/timnaswp1.jpg",
   "/images/timnaswp5.jpg",
   "/images/timnaswp4.jpg",
-
   "/images/timnas5.jpg",
   "/images/timnas0.png",
   "/images/timnas14.jpeg"
@@ -222,8 +220,8 @@ export default function Example() {
                 BERITA TERBARU
               </p>
 
+              {/*konten3*/}
               <div class="flex flex-wrap gap-4">
-
                 <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                   <a href="#">
                     <img class="rounded-t-lg" src="/images/News1.png" alt="" />
@@ -426,7 +424,6 @@ export default function Example() {
 
 
           {/* Footer */}
-
           <footer className="bg-gray-800 text-white py-4">
             <div className="container mx-auto text-center">
               <p>&copy; 2024 GarudaZone. All rights reserved.</p>
