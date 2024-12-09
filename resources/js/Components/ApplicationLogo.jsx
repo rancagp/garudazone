@@ -4,7 +4,7 @@ export default function ApplicationLogo(props) {
             {...props}
             src="/images/garudazone.png"
             alt="Logo"
-            className="h-24"
+            className="h-40 w-40"
         />
     );
 }
