@@ -40,7 +40,7 @@ const slides = [
   "/images/timnas6.jpg",
   "/images/timnas5.jpg",
   "/images/timnas0.png",
-  "/images/timnas14.jpeg"
+  "/images/timnas14.jpeg",
   "/images/timnaswp1.jpg",
   "/images/timnaswp5.jpg",
   "/images/timnaswp4.jpg",
