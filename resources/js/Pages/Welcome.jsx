@@ -43,7 +43,11 @@ const slides = [
   "/images/timnas14.jpeg",
   "/images/timnaswp1.jpg",
   "/images/timnaswp5.jpg",
-  "/images/timnaswp4.jpg"
+  "/images/timnaswp4.jpg",
+  "/images/timnas5.jpg",
+  "/images/timnas0.png",
+  "/images/timnas14.jpeg"
+
 ]
 
 function classNames(...classes) {
@@ -203,7 +207,7 @@ export default function Example() {
 
 
             {/* konten 1 */}
-            <div className="h-56 sm:h-[73dvh] ">
+            <div className="h-56 sm:h-[82dvh] ">
               <Carousel>
                 {slides.map((s, index) => (
                   <img key={index} src={s} alt={`Slide ${index + 1}`} className='h-full w-full' />
