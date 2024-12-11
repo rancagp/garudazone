@@ -318,18 +318,7 @@ export default function Example() {
             </div>
           </div>
 
-          <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 bg-red">
-
-
-            {/* konten 3 */}
-            <div className="h-56 sm:h-[82dvh] ">
-              <Carousel>
-                {slides.map((s, index) => (
-                  <img key={index} src={s} alt={`Slide ${index + 1}`} className='h-full w-full' />
-                ))}
-              </Carousel>
-            </div>
-          </div>
+          {/* konten 3 */}
 
           <div className="overflow-hidden bg-white py-24 sm:py-32">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
