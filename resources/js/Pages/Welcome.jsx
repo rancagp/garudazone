@@ -216,84 +216,14 @@ export default function Example() {
             </div>
           </div>
 
+
+
           {/* konten2 */}
           <div className="bg-gray-300 py-1 sm:pt-0 sm:pb-5">
             <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
               <p className="mx-auto mt-2 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl">
                 BERITA TERBARU
               </p>
-
-              <div class="flex flex-wrap gap-4">
-
-                <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                  <a href="#">
-                    <img class="rounded-t-lg" src="/images/News1.png" alt="" />
-                  </a>
-                  <div class="p-5">
-                    <a href="#">
-                      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                        Noteworthy technology acquisitions 2021
-                      </h5>
-                    </a>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                      Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
-                    </p>
-                    <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                      Read more
-                      <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-
-
-                <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                  <a href="#">
-                    <img class="rounded-t-lg" src="/images/News1.png" alt="" />
-                  </a>
-                  <div class="p-5">
-                    <a href="#">
-                      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                        Noteworthy technology acquisitions 2021
-                      </h5>
-                    </a>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                      Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
-                    </p>
-                    <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                      Read more
-                      <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-
-                <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                  <a href="#">
-                    <img class="rounded-t-lg" src="/images/News1.png" alt="" />
-                  </a>
-                  <div class="p-5">
-                    <a href="#">
-                      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                        Noteworthy technology acquisitions 2021
-                      </h5>
-                    </a>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                      Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
-                    </p>
-                    <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                      Read more
-                      <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-
               <div className="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
                 <div className="relative lg:row-span-2">
                   <div className="absolute inset-px rounded-lg  lg:rounded-l-[2rem]"></div>
@@ -388,6 +318,19 @@ export default function Example() {
             </div>
           </div>
 
+          <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 bg-red">
+
+
+            {/* konten 3 */}
+            <div className="h-56 sm:h-[82dvh] ">
+              <Carousel>
+                {slides.map((s, index) => (
+                  <img key={index} src={s} alt={`Slide ${index + 1}`} className='h-full w-full' />
+                ))}
+              </Carousel>
+            </div>
+          </div>
+
           <div className="overflow-hidden bg-white py-24 sm:py-32">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
               <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
@@ -425,7 +368,7 @@ export default function Example() {
             </div>
           </div>
 
-          {/*Footer*/}
+          {/* footer */}
           <footer className="bg-gray-800 text-white py-4">
             <div className="container mx-auto text-center">
               <p>&copy; 2024 GarudaZone. All rights reserved.</p>
