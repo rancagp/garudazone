@@ -9,7 +9,7 @@ import { usePage } from "@inertiajs/react";
 import { Menu } from "react-feather";
 
 const navigation = [
-    { name: 'HOME', href: '#', current: false },
+    { name: 'HOME', href: '/', current: false },
     { name: 'KABAR BOLA', href: '#', current: false },
     { name: 'SEJARAH', href: '#', current: false },
     { name: 'PERTANDINGAN', href: '/pertandingan', current: true },

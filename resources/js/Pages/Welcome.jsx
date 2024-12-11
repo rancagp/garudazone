@@ -203,10 +203,9 @@ export default function Example() {
 
         {/* MainContent */}
         <main className='w-full h-screen bg-gray-300'>
+
+          {/* konten 1 */}
           <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 bg-red">
-
-
-            {/* konten 1 */}
             <div className="h-56 sm:h-[82dvh] ">
               <Carousel>
                 {slides.map((s, index) => (
@@ -215,8 +214,6 @@ export default function Example() {
               </Carousel>
             </div>
           </div>
-
-
 
           {/* konten2 */}
           <div className="bg-gray-300 py-1 sm:pt-0 sm:pb-5">
