@@ -24,8 +24,21 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/pertandingan', function(){
+Route::get('/pertandingan', function () {
     return Inertia::render('Match/index');
 });
 
-require __DIR__.'/auth.php';
+Route::get('/sejarah', function () {
+    return Inertia::render('Sejarah/index');
+});
+
+Route::get('/kabar-bola', function () {
+    return Inertia::render('KabarBola/index');
+});
+
+Route::get('/kabar-bola/slug', function () {
+    return Inertia::render('KabarBola/page');
+});
+
+
+require __DIR__ . '/auth.php';
