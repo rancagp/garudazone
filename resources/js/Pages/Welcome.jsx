@@ -36,17 +36,13 @@ const navigation = [
 
 ]
 
+
 const slides = [
   "/images/timnas6.jpg",
-  "/images/timnas5.jpg",
-  "/images/timnas0.png",
-  "/images/timnas14.jpeg",
-  "/images/timnaswp1.jpg",
-  "/images/timnaswp5.jpg",
   "/images/timnaswp4.jpg",
-  "/images/timnas5.jpg",
-  "/images/timnas0.png",
-  "/images/timnas14.jpeg"
+  "/images/timnas14.jpeg",
+  "/images/timnas8.jpg",
+  "/images/timnas14.jpeg",
 
 ]
 
@@ -202,7 +198,7 @@ export default function Example() {
         </Disclosure>
 
         {/* MainContent */}
-        <main className='w-full h-screen bg-gray-300'>
+        <main className='w-full h-screen bg-white'>
 
           {/* konten 1 */}
           <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 bg-red">
@@ -221,6 +217,62 @@ export default function Example() {
               <p className="mx-auto mt-2 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl">
                 BERITA TERBARU
               </p>
+              <div class="flex flex-wrap justify-center gap-4">
+    <div class="max-w-xs bg-white border border-gray-200 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 dark:bg-gray-800 dark:border-gray-700">
+        <a href="#" class="overflow-hidden rounded-t-lg block">
+            <img class="h-40 w-full object-cover transform transition duration-300 ease-in-out hover:scale-105" src="/images/News1.png" alt="Technology image" />
+        </a>
+        <div class="p-4">
+            <a href="#">
+                <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Indonesia berhasil masuk top 10 Asian National Teams by market value</h5>
+            </a>
+            <p class="mb-2 text-sm font-normal text-gray-700 dark:text-gray-400">Timnas Indonesia dengan adanya pemain Naturalisasi yang berkualitas, berada di posisi 9 dalam Asia National Teams by Value.</p>
+            <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-2 focus:outline-none focus:ring-blue-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">
+                Read more
+                <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <div class="max-w-xs bg-white border border-gray-200 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 dark:bg-gray-800 dark:border-gray-700">
+        <a href="#" class="overflow-hidden rounded-t-lg block">
+            <img class="h-40 w-full object-cover transform transition duration-300 ease-in-out hover:scale-105" src="/images/News1.png" alt="Technology image" />
+        </a>
+        <div class="p-4">
+            <a href="#">
+                <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Indonesia berhasil masuk top 10 Asian National Teams by market value</h5>
+            </a>
+            <p class="mb-2 text-sm font-normal text-gray-700 dark:text-gray-400">Timnas Indonesia dengan adanya pemain Naturalisasi yang berkualitas, berada di posisi 9 dalam Asia National Teams by Value.</p>
+            <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-2 focus:outline-none focus:ring-blue-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">
+                Read more
+                <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+    <div class="max-w-xs bg-white border border-gray-200 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 dark:bg-gray-800 dark:border-gray-700">
+        <a href="#" class="overflow-hidden rounded-t-lg block">
+            <img class="h-40 w-full object-cover transform transition duration-300 ease-in-out hover:scale-105" src="/images/News1.png" alt="Technology image" />
+        </a>
+        <div class="p-4">
+            <a href="#">
+                <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Indonesia berhasil masuk top 10 Asian National Teams by market value</h5>
+            </a>
+            <p class="mb-2 text-sm font-normal text-gray-700 dark:text-gray-400">Timnas Indonesia dengan adanya pemain Naturalisasi yang berkualitas, berada di posisi 9 dalam Asia National Teams by Value.</p>
+            <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-2 focus:outline-none focus:ring-blue-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">
+                Read more
+                <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+  </div>
+
+
               <div className="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
                 <div className="relative lg:row-span-2">
                   <div className="absolute inset-px rounded-lg  lg:rounded-l-[2rem]"></div>
@@ -315,7 +367,7 @@ export default function Example() {
             </div>
           </div>
 
-          <div className="overflow-hidden bg-white py-24 sm:py-32">
+          <div className="overflow-hidden bg-gray-400 py-24 sm:py-32">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
               <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
                 <div className="lg:pr-8 lg:pt-4">
@@ -342,7 +394,7 @@ export default function Example() {
                   </div>
                 </div>
                 <img
-                  alt="Product screenshot"
+                  alt="Product img"
                   src="/images/timnaswp4.jpg"
                   width={2432}
                   height={1442}
@@ -353,19 +405,33 @@ export default function Example() {
           </div>
 
           {/* footer */}
-          <footer className="bg-gray-800 text-white py-4">
-            <div className="container mx-auto text-center">
-              <p>&copy; 2024 GarudaZone. All rights reserved.</p>
-              <div className="mt-2">
-                <a href="https://www.example.com" className="text-gray-400 hover:text-white mx-2">
-                  Privacy Policy
-                </a>
-                <a href="https://www.example.com" className="text-gray-400 hover:text-white mx-2">
-                  Terms of Service
-                </a>
-              </div>
-            </div>
-          </footer>
+          
+          <footer class="bg-gray-400 shadow dark:bg-gray-900">
+    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+        <div class="sm:flex sm:items-center sm:justify-between">
+            <a href="" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                <img src="/images/garudazone.png" class="h-8" alt="GarudaZone Logo" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-gray-900">GarudaZone</span>
+            </a>
+            <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-900 sm:mb-0 dark:text-gray-400">
+                <li>
+                    <a href="#" class="hover:underline me-4 md:me-6">About</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:underline">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <hr class="my-6 border-gray-900 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <span class="block text-sm text-gray-900 sm:text-center dark:text-gray-400">© 2024  <a href="#" class="hover:underline">GarudaZone™</a>. All Rights Reserved.</span>
+    </div>
+</footer>
         </main>
       </div>
     </>
