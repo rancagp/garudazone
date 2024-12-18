@@ -1,5 +1,4 @@
 import {
-    Button,
     Disclosure,
     DisclosureButton,
     DisclosurePanel,
@@ -7,7 +6,7 @@ import {
     MenuItem,
     MenuItems,
 } from "@headlessui/react";
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { usePage } from "@inertiajs/react";
 import { Menu } from "react-feather";
