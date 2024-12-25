@@ -93,6 +93,9 @@ export default function Login({ status, canResetPassword }) {
                     <PrimaryButton className="ms-4" disabled={processing}>
                         Log in
                     </PrimaryButton>
+                    <a href='/auth/redirect' className="ms-4" disabled={processing}>
+                        Google
+                    </a>
                 </div>
             </form>
         </GuestLayout>
