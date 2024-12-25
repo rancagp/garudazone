@@ -37,11 +37,7 @@ const features = [
     },
 ];
 
-const user = {
-    name: "RancaGp",
-    email: "tom@example.com",
-    imageUrl: "/images/ranca.jpg", // Ganti dengan path relatif ke file gambar lokal
-};
+
 const navigation = [
     { name: "HOME", href: "/", current: true },
     { name: "KABAR BOLA", href: "/kabar-bola", current: false },
@@ -74,6 +70,12 @@ export default function Example() {
         { name: "Your Profile", href: "#" },
         { name: "Settings", href: "#" },
     ];
+
+    const user = {
+        name: "RancaGp",
+        email: "tom@example.com",
+        imageUrl: auth?.user?.avatar || 'https://placehold.co/50?text=no image',
+    };
 
     return (
         <>
