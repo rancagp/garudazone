@@ -1,43 +1,7 @@
-import {
-    Button,
-    Disclosure,
-    DisclosureButton,
-    DisclosurePanel,
-    MenuButton,
-    MenuItem,
-    MenuItems,
-} from "@headlessui/react";
-import { useState } from "react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
-import { usePage } from "@inertiajs/react";
-import { Menu } from "react-feather";
+import Button from "@/Components/Button";
 import Navbar from "@/Components/navbar";
 
-const navigation = [
-    { name: "HOME", href: "/", current: false },
-    { name: "KABAR BOLA", href: "/kabar-bola", current: false },
-    { name: "SEJARAH", href: "/sejarah", current: false },
-    { name: "PERTANDINGAN", href: "/pertandingan", current: true },
-];
-
-function classNames(...classes) {
-    return classes.filter(Boolean).join(" ");
-}
-
-const user = {
-    name: "RancaGp",
-    email: "tom@example.com",
-    imageUrl: "/images/ranca.jpg", // Ganti dengan path relatif ke file gambar lokal
-};
-
-const userNavigation = [
-    { name: "Your Profile", href: "#" },
-    { name: "Settings", href: "#" },
-];
-
 export default function Match() {
-    const { auth } = usePage().props;
-    const [showDetails, setShowDetails] = useState(false);
 
     return (
         <>
@@ -57,9 +21,7 @@ export default function Match() {
                         <div className="flex flex-col items-center justify-between gap-5">
                             <span className="text-xl font-bold">VS</span>
                             <Button
-                                className={
-                                    "border border-red-500 w-max mx-auto px-4 py-2"
-                                }
+                                variant={'danger'}
                             >
                                 Beli Tiket
                             </Button>

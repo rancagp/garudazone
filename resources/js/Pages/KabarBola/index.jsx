@@ -1,42 +1,6 @@
-import {
-    Disclosure,
-    DisclosureButton,
-    DisclosurePanel,
-    MenuButton,
-    MenuItem,
-    MenuItems,
-} from "@headlessui/react";
-import { useState } from "react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { Menu } from "react-feather";
-import { usePage } from "@inertiajs/react";
 import Navbar from "@/Components/navbar";
 
-const navigation = [
-    { name: "HOME", href: "/", current: false },
-    { name: "KABAR BOLA", href: "/kabar-bola", current: true },
-    { name: "SEJARAH", href: "/sejarah", current: false },
-    { name: "PERTANDINGAN", href: "/pertandingan", current: false },
-];
-
-function classNames(...classes) {
-    return classes.filter(Boolean).join(" ");
-}
-
-const userNavigation = [
-    { name: "Your Profile", href: "#" },
-    { name: "Settings", href: "#" },
-];
-
-const user = {
-    name: "RancaGp",
-    email: "tom@example.com",
-    imageUrl: "/images/ranca.jpg",
-};
-
 export default function Match() {
-    const { auth } = usePage().props || {};
-    const [showDetails, setShowDetails] = useState(false);
 
     return (
         <>

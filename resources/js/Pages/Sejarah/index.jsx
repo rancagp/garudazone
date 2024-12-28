@@ -1,15 +1,4 @@
-import {
-    Disclosure,
-    DisclosureButton,
-    DisclosurePanel,
-    MenuButton,
-    MenuItem,
-    MenuItems,
-} from "@headlessui/react";
-import React, { useState } from "react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
-import { usePage } from "@inertiajs/react";
-import { Menu } from "react-feather";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -17,31 +6,7 @@ import "../../../css/style.css";
 import { Pagination } from "swiper/modules";
 import Navbar from "@/Components/navbar";
 
-const navigation = [
-    { name: "HOME", href: "/", current: false },
-    { name: "KABAR BOLA", href: "/kabar-bola", current: false },
-    { name: "SEJARAH", href: "/sejarah", current: true },
-    { name: "PERTANDINGAN", href: "/pertandingan", current: false },
-];
-
-function classNames(...classes) {
-    return classes.filter(Boolean).join(" ");
-}
-
-const user = {
-    name: "RancaGp",
-    email: "tom@example.com",
-    imageUrl: "/images/ranca.jpg",
-};
-
-const userNavigation = [
-    { name: "Your Profile", href: "#" },
-    { name: "Settings", href: "#" },
-];
-
 export default function Match() {
-    const { auth } = usePage().props;
-    const [showDetails, setShowDetails] = useState(false);
 
     return (
         <>
