@@ -1,7 +1,7 @@
+import Button from '@/Components/Button';
 import Checkbox from '@/Components/Checkbox';
 import InputError from '@/Components/InputError';
 import InputLabel from '@/Components/InputLabel';
-import PrimaryButton from '@/Components/PrimaryButton';
 import TextInput from '@/Components/TextInput';
 import GuestLayout from '@/Layouts/GuestLayout';
 import { Head, Link, useForm } from '@inertiajs/react';
@@ -90,9 +90,12 @@ export default function Login({ status, canResetPassword }) {
                         </Link>
                     )}
 
-                    <PrimaryButton className="ms-4" disabled={processing}>
+                    <Button variant={'primary'} className='ms-4' >
                         Log in
-                    </PrimaryButton>
+                    </Button>
+                    <a href='/auth/redirect' className="ms-4" disabled={processing}>
+                        Google
+                    </a>
                 </div>
             </form>
         </GuestLayout>
