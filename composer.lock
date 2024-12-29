@@ -8154,6 +8154,11 @@
                     "providers": [
                         "Pest\\Laravel\\PestServiceProvider"
                     ]
+                },
+                "laravel": {
+                    "providers": [
+                        "Pest\\Laravel\\PestServiceProvider"
+                    ]
                 }
             },
             "autoload": {

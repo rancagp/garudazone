@@ -40,7 +40,7 @@ const features = [
 const user = {
     name: "RancaGp",
     email: "tom@example.com",
-    imageUrl: "/images/ranca.jpg", // Ganti dengan path relatif ke file gambar lokal
+    imageUrl: "/images/ranca.jpg", 
 };
 const navigation = [
     { name: "HOME", href: "/", current: true },
@@ -60,7 +60,7 @@ const slides = [
     "/images/timnaswp4.jpg",
     "/images/timnas5.jpg",
     "/images/timnas0.png",
-    "/images/timnas14.jpeg",
+    "/images/timnas14.jpeg"
 ];
 
 function classNames(...classes) {
