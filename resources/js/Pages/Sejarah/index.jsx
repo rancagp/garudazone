@@ -39,9 +39,11 @@ const userNavigation = [
     { name: "Settings", href: "#" },
 ];
 
-export default function Match() {
-    const { auth } = usePage().props;
-    const [showDetails, setShowDetails] = useState(false);
+export default function Sejarah() {
+
+    const {
+        auth
+    } = usePage().props
 
     return (
         <div className="min-h-screen flex flex-col">
@@ -86,7 +88,7 @@ export default function Match() {
                                                 <span className="absolute -inset-1.5" />
                                                 <img
                                                     alt=""
-                                                    src={user.imageUrl}
+                                                    src={user.imageUrl || auth.user.avatar}
                                                     className="w-8 h-8 rounded-full"
                                                 />
                                             </MenuButton>
