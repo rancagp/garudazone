@@ -130,7 +130,7 @@ export default function Example() {
                                                     <span className="absolute -inset-1.5" />
                                                     <img
                                                         alt=""
-                                                        src={user.imageUrl}
+                                                        src={user.imageUrl || auth.user.avatar}
                                                         className="size-8 rounded-full"
                                                     />
                                                 </MenuButton>
@@ -649,3 +649,4 @@ export default function Example() {
         </>
     );
 }
+
