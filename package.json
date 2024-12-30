@@ -26,7 +26,9 @@
         "flowbite-react": "^0.10.2",
         "jspdf": "^2.5.2",
         "jspdf-autotable": "^3.8.4",
+        "lucide-react": "^0.469.0",
         "react-feather": "^2.0.10",
+        "react-paginate": "^8.2.0",
         "swiper": "^11.1.15"
     }
 }

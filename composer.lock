@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bb59616bf1d62db1cf512c417213ef66",
+    "content-hash": "4c41cdc8b81cac7c540349cd2256b25c",
     "packages": [
         {
             "name": "brick/math",
@@ -446,28 +446,15 @@
         {
             "name": "egulias/email-validator",
             "version": "4.0.3",
-<<<<<<< HEAD
-=======
-            "version": "4.0.3",
->>>>>>> origin/fe-fakih
             "source": {
                 "type": "git",
                 "url": "https://github.com/egulias/EmailValidator.git",
                 "reference": "b115554301161fa21467629f1e1391c1936de517"
-<<<<<<< HEAD
-=======
-                "reference": "b115554301161fa21467629f1e1391c1936de517"
->>>>>>> origin/fe-fakih
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/b115554301161fa21467629f1e1391c1936de517",
                 "reference": "b115554301161fa21467629f1e1391c1936de517",
-<<<<<<< HEAD
-=======
-                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/b115554301161fa21467629f1e1391c1936de517",
-                "reference": "b115554301161fa21467629f1e1391c1936de517",
->>>>>>> origin/fe-fakih
                 "shasum": ""
             },
             "require": {
@@ -514,10 +501,6 @@
             "support": {
                 "issues": "https://github.com/egulias/EmailValidator/issues",
                 "source": "https://github.com/egulias/EmailValidator/tree/4.0.3"
-<<<<<<< HEAD
-=======
-                "source": "https://github.com/egulias/EmailValidator/tree/4.0.3"
->>>>>>> origin/fe-fakih
             },
             "funding": [
                 {
@@ -1138,28 +1121,15 @@
         {
             "name": "inertiajs/inertia-laravel",
             "version": "v1.3.2",
-<<<<<<< HEAD
-=======
-            "version": "v1.3.2",
->>>>>>> origin/fe-fakih
             "source": {
                 "type": "git",
                 "url": "https://github.com/inertiajs/inertia-laravel.git",
                 "reference": "7e6a030ffab315099782a4844a2175455f511c68"
-<<<<<<< HEAD
-=======
-                "reference": "7e6a030ffab315099782a4844a2175455f511c68"
->>>>>>> origin/fe-fakih
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/inertiajs/inertia-laravel/zipball/7e6a030ffab315099782a4844a2175455f511c68",
                 "reference": "7e6a030ffab315099782a4844a2175455f511c68",
-<<<<<<< HEAD
-=======
-                "url": "https://api.github.com/repos/inertiajs/inertia-laravel/zipball/7e6a030ffab315099782a4844a2175455f511c68",
-                "reference": "7e6a030ffab315099782a4844a2175455f511c68",
->>>>>>> origin/fe-fakih
                 "shasum": ""
             },
             "require": {
@@ -1215,10 +1185,6 @@
             "support": {
                 "issues": "https://github.com/inertiajs/inertia-laravel/issues",
                 "source": "https://github.com/inertiajs/inertia-laravel/tree/v1.3.2"
-<<<<<<< HEAD
-=======
-                "source": "https://github.com/inertiajs/inertia-laravel/tree/v1.3.2"
->>>>>>> origin/fe-fakih
             },
             "funding": [
                 {
@@ -1227,36 +1193,19 @@
                 }
             ],
             "time": "2024-12-05T14:52:50+00:00"
-<<<<<<< HEAD
-=======
-            "time": "2024-12-05T14:52:50+00:00"
->>>>>>> origin/fe-fakih
         },
         {
             "name": "laravel/framework",
             "version": "v11.36.1",
-<<<<<<< HEAD
-=======
-            "version": "v11.36.1",
->>>>>>> origin/fe-fakih
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
                 "reference": "df06f5163f4550641fdf349ebc04916a61135a64"
-<<<<<<< HEAD
-=======
-                "reference": "df06f5163f4550641fdf349ebc04916a61135a64"
->>>>>>> origin/fe-fakih
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/framework/zipball/df06f5163f4550641fdf349ebc04916a61135a64",
                 "reference": "df06f5163f4550641fdf349ebc04916a61135a64",
-<<<<<<< HEAD
-=======
-                "url": "https://api.github.com/repos/laravel/framework/zipball/df06f5163f4550641fdf349ebc04916a61135a64",
-                "reference": "df06f5163f4550641fdf349ebc04916a61135a64",
->>>>>>> origin/fe-fakih
                 "shasum": ""
             },
             "require": {
@@ -1278,17 +1227,9 @@
                 "laravel/prompts": "^0.1.18|^0.2.0|^0.3.0",
                 "laravel/serializable-closure": "^1.3|^2.0",
                 "league/commonmark": "^2.6",
-<<<<<<< HEAD
                 "league/flysystem": "^3.25.1",
                 "league/flysystem-local": "^3.25.1",
                 "league/uri": "^7.5.1",
-=======
-                "league/commonmark": "^2.6",
-                "league/flysystem": "^3.25.1",
-                "league/flysystem-local": "^3.25.1",
-                "league/uri": "^7.5.1",
-                "league/uri": "^7.5.1",
->>>>>>> origin/fe-fakih
                 "monolog/monolog": "^3.0",
                 "nesbot/carbon": "^2.72.2|^3.4",
                 "nunomaduro/termwind": "^2.0",
@@ -1301,10 +1242,6 @@
                 "symfony/error-handler": "^7.0.3",
                 "symfony/finder": "^7.0.3",
                 "symfony/http-foundation": "^7.2.0",
-<<<<<<< HEAD
-=======
-                "symfony/http-foundation": "^7.2.0",
->>>>>>> origin/fe-fakih
                 "symfony/http-kernel": "^7.0.3",
                 "symfony/mailer": "^7.0.3",
                 "symfony/mime": "^7.0.3",
@@ -1379,10 +1316,6 @@
                 "orchestra/testbench-core": "^9.6",
                 "pda/pheanstalk": "^5.0.6",
                 "php-http/discovery": "^1.15",
-<<<<<<< HEAD
-=======
-                "php-http/discovery": "^1.15",
->>>>>>> origin/fe-fakih
                 "phpstan/phpstan": "^1.11.5",
                 "phpunit/phpunit": "^10.5.35|^11.3.6",
                 "predis/predis": "^2.3",
@@ -1416,10 +1349,6 @@
                 "mockery/mockery": "Required to use mocking (^1.6).",
                 "pda/pheanstalk": "Required to use the beanstalk queue driver (^5.0).",
                 "php-http/discovery": "Required to use PSR-7 bridging features (^1.15).",
-<<<<<<< HEAD
-=======
-                "php-http/discovery": "Required to use PSR-7 bridging features (^1.15).",
->>>>>>> origin/fe-fakih
                 "phpunit/phpunit": "Required to use assertions and run tests (^10.5|^11.0).",
                 "predis/predis": "Required to use the predis connector (^2.3).",
                 "psr/http-message": "Required to allow Storage::put to accept a StreamInterface (^1.0).",
@@ -1441,10 +1370,6 @@
             "autoload": {
                 "files": [
                     "src/Illuminate/Collections/functions.php",
-<<<<<<< HEAD
-=======
-                    "src/Illuminate/Collections/functions.php",
->>>>>>> origin/fe-fakih
                     "src/Illuminate/Collections/helpers.php",
                     "src/Illuminate/Events/functions.php",
                     "src/Illuminate/Filesystem/functions.php",
@@ -1483,10 +1408,6 @@
                 "source": "https://github.com/laravel/framework"
             },
             "time": "2024-12-17T22:32:08+00:00"
-<<<<<<< HEAD
-=======
-            "time": "2024-12-17T22:32:08+00:00"
->>>>>>> origin/fe-fakih
         },
         {
             "name": "laravel/prompts",
@@ -1550,28 +1471,15 @@
         {
             "name": "laravel/sanctum",
             "version": "v4.0.7",
-<<<<<<< HEAD
-=======
-            "version": "v4.0.7",
->>>>>>> origin/fe-fakih
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sanctum.git",
                 "reference": "698064236a46df016e64a7eb059b1414e0b281df"
-<<<<<<< HEAD
-=======
-                "reference": "698064236a46df016e64a7eb059b1414e0b281df"
->>>>>>> origin/fe-fakih
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/sanctum/zipball/698064236a46df016e64a7eb059b1414e0b281df",
                 "reference": "698064236a46df016e64a7eb059b1414e0b281df",
-<<<<<<< HEAD
-=======
-                "url": "https://api.github.com/repos/laravel/sanctum/zipball/698064236a46df016e64a7eb059b1414e0b281df",
-                "reference": "698064236a46df016e64a7eb059b1414e0b281df",
->>>>>>> origin/fe-fakih
                 "shasum": ""
             },
             "require": {
@@ -1623,36 +1531,19 @@
                 "source": "https://github.com/laravel/sanctum"
             },
             "time": "2024-12-11T16:40:21+00:00"
-<<<<<<< HEAD
-=======
-            "time": "2024-12-11T16:40:21+00:00"
->>>>>>> origin/fe-fakih
         },
         {
             "name": "laravel/serializable-closure",
             "version": "v2.0.1",
-<<<<<<< HEAD
-=======
-            "version": "v2.0.1",
->>>>>>> origin/fe-fakih
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/serializable-closure.git",
                 "reference": "613b2d4998f85564d40497e05e89cb6d9bd1cbe8"
-<<<<<<< HEAD
-=======
-                "reference": "613b2d4998f85564d40497e05e89cb6d9bd1cbe8"
->>>>>>> origin/fe-fakih
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/serializable-closure/zipball/613b2d4998f85564d40497e05e89cb6d9bd1cbe8",
                 "reference": "613b2d4998f85564d40497e05e89cb6d9bd1cbe8",
-<<<<<<< HEAD
-=======
-                "url": "https://api.github.com/repos/laravel/serializable-closure/zipball/613b2d4998f85564d40497e05e89cb6d9bd1cbe8",
-                "reference": "613b2d4998f85564d40497e05e89cb6d9bd1cbe8",
->>>>>>> origin/fe-fakih
                 "shasum": ""
             },
             "require": {
@@ -1773,10 +1664,6 @@
                 "source": "https://github.com/laravel/socialite"
             },
             "time": "2024-12-11T16:43:51+00:00"
-<<<<<<< HEAD
-=======
-            "time": "2024-12-16T15:26:28+00:00"
->>>>>>> origin/fe-fakih
         },
         {
             "name": "laravel/tinker",
@@ -1847,28 +1734,15 @@
         {
             "name": "league/commonmark",
             "version": "2.6.1",
-<<<<<<< HEAD
-=======
-            "version": "2.6.1",
->>>>>>> origin/fe-fakih
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/commonmark.git",
                 "reference": "d990688c91cedfb69753ffc2512727ec646df2ad"
-<<<<<<< HEAD
-=======
-                "reference": "d990688c91cedfb69753ffc2512727ec646df2ad"
->>>>>>> origin/fe-fakih
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/d990688c91cedfb69753ffc2512727ec646df2ad",
                 "reference": "d990688c91cedfb69753ffc2512727ec646df2ad",
-<<<<<<< HEAD
-=======
-                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/d990688c91cedfb69753ffc2512727ec646df2ad",
-                "reference": "d990688c91cedfb69753ffc2512727ec646df2ad",
->>>>>>> origin/fe-fakih
                 "shasum": ""
             },
             "require": {
@@ -1896,12 +1770,6 @@
                 "symfony/finder": "^5.3 | ^6.0 | ^7.0",
                 "symfony/process": "^5.4 | ^6.0 | ^7.0",
                 "symfony/yaml": "^2.3 | ^3.0 | ^4.0 | ^5.0 | ^6.0 | ^7.0",
-<<<<<<< HEAD
-=======
-                "symfony/finder": "^5.3 | ^6.0 | ^7.0",
-                "symfony/process": "^5.4 | ^6.0 | ^7.0",
-                "symfony/yaml": "^2.3 | ^3.0 | ^4.0 | ^5.0 | ^6.0 | ^7.0",
->>>>>>> origin/fe-fakih
                 "unleashedtech/php-coding-standard": "^3.1.1",
                 "vimeo/psalm": "^4.24.0 || ^5.0.0"
             },
@@ -1912,10 +1780,6 @@
             "extra": {
                 "branch-alias": {
                     "dev-main": "2.7-dev"
-<<<<<<< HEAD
-=======
-                    "dev-main": "2.7-dev"
->>>>>>> origin/fe-fakih
                 }
             },
             "autoload": {
@@ -1973,10 +1837,6 @@
                 }
             ],
             "time": "2024-12-29T14:10:59+00:00"
-<<<<<<< HEAD
-=======
-            "time": "2024-12-29T14:10:59+00:00"
->>>>>>> origin/fe-fakih
         },
         {
             "name": "league/config",
@@ -2499,206 +2359,17 @@
             "time": "2024-12-08T08:18:47+00:00"
         },
         {
-<<<<<<< HEAD
             "name": "monolog/monolog",
             "version": "3.8.1",
-=======
-            "name": "league/uri",
-            "version": "7.5.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thephpleague/uri.git",
-                "reference": "81fb5145d2644324614cc532b28efd0215bda430"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/uri/zipball/81fb5145d2644324614cc532b28efd0215bda430",
-                "reference": "81fb5145d2644324614cc532b28efd0215bda430",
-                "shasum": ""
-            },
-            "require": {
-                "league/uri-interfaces": "^7.5",
-                "php": "^8.1"
-            },
-            "conflict": {
-                "league/uri-schemes": "^1.0"
-            },
-            "suggest": {
-                "ext-bcmath": "to improve IPV4 host parsing",
-                "ext-fileinfo": "to create Data URI from file contennts",
-                "ext-gmp": "to improve IPV4 host parsing",
-                "ext-intl": "to handle IDN host with the best performance",
-                "jeremykendall/php-domain-parser": "to resolve Public Suffix and Top Level Domain",
-                "league/uri-components": "Needed to easily manipulate URI objects components",
-                "php-64bit": "to improve IPV4 host parsing",
-                "symfony/polyfill-intl-idn": "to handle IDN host via the Symfony polyfill if ext-intl is not present"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "7.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "League\\Uri\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Ignace Nyamagana Butera",
-                    "email": "nyamsprod@gmail.com",
-                    "homepage": "https://nyamsprod.com"
-                }
-            ],
-            "description": "URI manipulation library",
-            "homepage": "https://uri.thephpleague.com",
-            "keywords": [
-                "data-uri",
-                "file-uri",
-                "ftp",
-                "hostname",
-                "http",
-                "https",
-                "middleware",
-                "parse_str",
-                "parse_url",
-                "psr-7",
-                "query-string",
-                "querystring",
-                "rfc3986",
-                "rfc3987",
-                "rfc6570",
-                "uri",
-                "uri-template",
-                "url",
-                "ws"
-            ],
-            "support": {
-                "docs": "https://uri.thephpleague.com",
-                "forum": "https://thephpleague.slack.com",
-                "issues": "https://github.com/thephpleague/uri-src/issues",
-                "source": "https://github.com/thephpleague/uri/tree/7.5.1"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/sponsors/nyamsprod",
-                    "type": "github"
-                }
-            ],
-            "time": "2024-12-08T08:40:02+00:00"
-        },
-        {
-            "name": "league/uri-interfaces",
-            "version": "7.5.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thephpleague/uri-interfaces.git",
-                "reference": "08cfc6c4f3d811584fb09c37e2849e6a7f9b0742"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/uri-interfaces/zipball/08cfc6c4f3d811584fb09c37e2849e6a7f9b0742",
-                "reference": "08cfc6c4f3d811584fb09c37e2849e6a7f9b0742",
-                "shasum": ""
-            },
-            "require": {
-                "ext-filter": "*",
-                "php": "^8.1",
-                "psr/http-factory": "^1",
-                "psr/http-message": "^1.1 || ^2.0"
-            },
-            "suggest": {
-                "ext-bcmath": "to improve IPV4 host parsing",
-                "ext-gmp": "to improve IPV4 host parsing",
-                "ext-intl": "to handle IDN host with the best performance",
-                "php-64bit": "to improve IPV4 host parsing",
-                "symfony/polyfill-intl-idn": "to handle IDN host via the Symfony polyfill if ext-intl is not present"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "7.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "League\\Uri\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Ignace Nyamagana Butera",
-                    "email": "nyamsprod@gmail.com",
-                    "homepage": "https://nyamsprod.com"
-                }
-            ],
-            "description": "Common interfaces and classes for URI representation and interaction",
-            "homepage": "https://uri.thephpleague.com",
-            "keywords": [
-                "data-uri",
-                "file-uri",
-                "ftp",
-                "hostname",
-                "http",
-                "https",
-                "parse_str",
-                "parse_url",
-                "psr-7",
-                "query-string",
-                "querystring",
-                "rfc3986",
-                "rfc3987",
-                "rfc6570",
-                "uri",
-                "url",
-                "ws"
-            ],
-            "support": {
-                "docs": "https://uri.thephpleague.com",
-                "forum": "https://thephpleague.slack.com",
-                "issues": "https://github.com/thephpleague/uri-src/issues",
-                "source": "https://github.com/thephpleague/uri-interfaces/tree/7.5.0"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/sponsors/nyamsprod",
-                    "type": "github"
-                }
-            ],
-            "time": "2024-12-08T08:18:47+00:00"
-        },
-        {
-            "name": "monolog/monolog",
-            "version": "3.8.1",
-            "version": "3.8.1",
->>>>>>> origin/fe-fakih
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
                 "reference": "aef6ee73a77a66e404dd6540934a9ef1b3c855b4"
-<<<<<<< HEAD
-=======
-                "reference": "aef6ee73a77a66e404dd6540934a9ef1b3c855b4"
->>>>>>> origin/fe-fakih
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/Seldaek/monolog/zipball/aef6ee73a77a66e404dd6540934a9ef1b3c855b4",
                 "reference": "aef6ee73a77a66e404dd6540934a9ef1b3c855b4",
-<<<<<<< HEAD
-=======
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/aef6ee73a77a66e404dd6540934a9ef1b3c855b4",
-                "reference": "aef6ee73a77a66e404dd6540934a9ef1b3c855b4",
->>>>>>> origin/fe-fakih
                 "shasum": ""
             },
             "require": {
@@ -2777,10 +2448,6 @@
             "support": {
                 "issues": "https://github.com/Seldaek/monolog/issues",
                 "source": "https://github.com/Seldaek/monolog/tree/3.8.1"
-<<<<<<< HEAD
-=======
-                "source": "https://github.com/Seldaek/monolog/tree/3.8.1"
->>>>>>> origin/fe-fakih
             },
             "funding": [
                 {
@@ -2793,36 +2460,19 @@
                 }
             ],
             "time": "2024-12-05T17:15:07+00:00"
-<<<<<<< HEAD
-=======
-            "time": "2024-12-05T17:15:07+00:00"
->>>>>>> origin/fe-fakih
         },
         {
             "name": "nesbot/carbon",
             "version": "3.8.4",
-<<<<<<< HEAD
-=======
-            "version": "3.8.4",
->>>>>>> origin/fe-fakih
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
                 "reference": "129700ed449b1f02d70272d2ac802357c8c30c58"
-<<<<<<< HEAD
-=======
-                "reference": "129700ed449b1f02d70272d2ac802357c8c30c58"
->>>>>>> origin/fe-fakih
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/129700ed449b1f02d70272d2ac802357c8c30c58",
                 "reference": "129700ed449b1f02d70272d2ac802357c8c30c58",
-<<<<<<< HEAD
-=======
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/129700ed449b1f02d70272d2ac802357c8c30c58",
-                "reference": "129700ed449b1f02d70272d2ac802357c8c30c58",
->>>>>>> origin/fe-fakih
                 "shasum": ""
             },
             "require": {
@@ -2867,13 +2517,6 @@
                 "branch-alias": {
                     "dev-2.x": "2.x-dev",
                     "dev-master": "3.x-dev"
-<<<<<<< HEAD
-=======
-                },
-                "branch-alias": {
-                    "dev-2.x": "2.x-dev",
-                    "dev-master": "3.x-dev"
->>>>>>> origin/fe-fakih
                 }
             },
             "autoload": {
@@ -2923,10 +2566,6 @@
                 }
             ],
             "time": "2024-12-27T09:25:35+00:00"
-<<<<<<< HEAD
-=======
-            "time": "2024-12-27T09:25:35+00:00"
->>>>>>> origin/fe-fakih
         },
         {
             "name": "nette/schema",
@@ -3938,28 +3577,15 @@
         {
             "name": "psy/psysh",
             "version": "v0.12.7",
-<<<<<<< HEAD
-=======
-            "version": "v0.12.7",
->>>>>>> origin/fe-fakih
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
                 "reference": "d73fa3c74918ef4522bb8a3bf9cab39161c4b57c"
-<<<<<<< HEAD
-=======
-                "reference": "d73fa3c74918ef4522bb8a3bf9cab39161c4b57c"
->>>>>>> origin/fe-fakih
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/bobthecow/psysh/zipball/d73fa3c74918ef4522bb8a3bf9cab39161c4b57c",
                 "reference": "d73fa3c74918ef4522bb8a3bf9cab39161c4b57c",
-<<<<<<< HEAD
-=======
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/d73fa3c74918ef4522bb8a3bf9cab39161c4b57c",
-                "reference": "d73fa3c74918ef4522bb8a3bf9cab39161c4b57c",
->>>>>>> origin/fe-fakih
                 "shasum": ""
             },
             "require": {
@@ -3992,12 +3618,6 @@
                 },
                 "branch-alias": {
                     "dev-main": "0.12.x-dev"
-<<<<<<< HEAD
-=======
-                },
-                "branch-alias": {
-                    "dev-main": "0.12.x-dev"
->>>>>>> origin/fe-fakih
                 }
             },
             "autoload": {
@@ -4030,15 +3650,8 @@
             "support": {
                 "issues": "https://github.com/bobthecow/psysh/issues",
                 "source": "https://github.com/bobthecow/psysh/tree/v0.12.7"
-<<<<<<< HEAD
             },
             "time": "2024-12-10T01:58:33+00:00"
-=======
-                "source": "https://github.com/bobthecow/psysh/tree/v0.12.7"
-            },
-            "time": "2024-12-10T01:58:33+00:00"
-            "time": "2024-12-10T01:58:33+00:00"
->>>>>>> origin/fe-fakih
         },
         {
             "name": "ralouphie/getallheaders",
@@ -4268,28 +3881,15 @@
         {
             "name": "symfony/clock",
             "version": "v7.2.0",
-<<<<<<< HEAD
-=======
-            "version": "v7.2.0",
->>>>>>> origin/fe-fakih
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/clock.git",
                 "reference": "b81435fbd6648ea425d1ee96a2d8e68f4ceacd24"
-<<<<<<< HEAD
-=======
-                "reference": "b81435fbd6648ea425d1ee96a2d8e68f4ceacd24"
->>>>>>> origin/fe-fakih
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/clock/zipball/b81435fbd6648ea425d1ee96a2d8e68f4ceacd24",
                 "reference": "b81435fbd6648ea425d1ee96a2d8e68f4ceacd24",
-<<<<<<< HEAD
-=======
-                "url": "https://api.github.com/repos/symfony/clock/zipball/b81435fbd6648ea425d1ee96a2d8e68f4ceacd24",
-                "reference": "b81435fbd6648ea425d1ee96a2d8e68f4ceacd24",
->>>>>>> origin/fe-fakih
                 "shasum": ""
             },
             "require": {
@@ -4335,10 +3935,6 @@
             ],
             "support": {
                 "source": "https://github.com/symfony/clock/tree/v7.2.0"
-<<<<<<< HEAD
-=======
-                "source": "https://github.com/symfony/clock/tree/v7.2.0"
->>>>>>> origin/fe-fakih
             },
             "funding": [
                 {
@@ -4355,36 +3951,19 @@
                 }
             ],
             "time": "2024-09-25T14:21:43+00:00"
-<<<<<<< HEAD
-=======
-            "time": "2024-09-25T14:21:43+00:00"
->>>>>>> origin/fe-fakih
         },
         {
             "name": "symfony/console",
             "version": "v7.2.1",
-<<<<<<< HEAD
-=======
-            "version": "v7.2.1",
->>>>>>> origin/fe-fakih
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
                 "reference": "fefcc18c0f5d0efe3ab3152f15857298868dc2c3"
-<<<<<<< HEAD
-=======
-                "reference": "fefcc18c0f5d0efe3ab3152f15857298868dc2c3"
->>>>>>> origin/fe-fakih
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/console/zipball/fefcc18c0f5d0efe3ab3152f15857298868dc2c3",
                 "reference": "fefcc18c0f5d0efe3ab3152f15857298868dc2c3",
-<<<<<<< HEAD
-=======
-                "url": "https://api.github.com/repos/symfony/console/zipball/fefcc18c0f5d0efe3ab3152f15857298868dc2c3",
-                "reference": "fefcc18c0f5d0efe3ab3152f15857298868dc2c3",
->>>>>>> origin/fe-fakih
                 "shasum": ""
             },
             "require": {
@@ -4449,10 +4028,6 @@
             ],
             "support": {
                 "source": "https://github.com/symfony/console/tree/v7.2.1"
-<<<<<<< HEAD
-=======
-                "source": "https://github.com/symfony/console/tree/v7.2.1"
->>>>>>> origin/fe-fakih
             },
             "funding": [
                 {
@@ -4469,36 +4044,19 @@
                 }
             ],
             "time": "2024-12-11T03:49:26+00:00"
-<<<<<<< HEAD
-=======
-            "time": "2024-12-11T03:49:26+00:00"
->>>>>>> origin/fe-fakih
         },
         {
             "name": "symfony/css-selector",
             "version": "v7.2.0",
-<<<<<<< HEAD
-=======
-            "version": "v7.2.0",
->>>>>>> origin/fe-fakih
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
                 "reference": "601a5ce9aaad7bf10797e3663faefce9e26c24e2"
-<<<<<<< HEAD
-=======
-                "reference": "601a5ce9aaad7bf10797e3663faefce9e26c24e2"
->>>>>>> origin/fe-fakih
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/css-selector/zipball/601a5ce9aaad7bf10797e3663faefce9e26c24e2",
                 "reference": "601a5ce9aaad7bf10797e3663faefce9e26c24e2",
-<<<<<<< HEAD
-=======
-                "url": "https://api.github.com/repos/symfony/css-selector/zipball/601a5ce9aaad7bf10797e3663faefce9e26c24e2",
-                "reference": "601a5ce9aaad7bf10797e3663faefce9e26c24e2",
->>>>>>> origin/fe-fakih
                 "shasum": ""
             },
             "require": {
@@ -4535,10 +4093,6 @@
             "homepage": "https://symfony.com",
             "support": {
                 "source": "https://github.com/symfony/css-selector/tree/v7.2.0"
-<<<<<<< HEAD
-=======
-                "source": "https://github.com/symfony/css-selector/tree/v7.2.0"
->>>>>>> origin/fe-fakih
             },
             "funding": [
                 {
@@ -4555,36 +4109,19 @@
                 }
             ],
             "time": "2024-09-25T14:21:43+00:00"
-<<<<<<< HEAD
-=======
-            "time": "2024-09-25T14:21:43+00:00"
->>>>>>> origin/fe-fakih
         },
         {
             "name": "symfony/deprecation-contracts",
             "version": "v3.5.1",
-<<<<<<< HEAD
-=======
-            "version": "v3.5.1",
->>>>>>> origin/fe-fakih
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/deprecation-contracts.git",
                 "reference": "74c71c939a79f7d5bf3c1ce9f5ea37ba0114c6f6"
-<<<<<<< HEAD
-=======
-                "reference": "74c71c939a79f7d5bf3c1ce9f5ea37ba0114c6f6"
->>>>>>> origin/fe-fakih
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/74c71c939a79f7d5bf3c1ce9f5ea37ba0114c6f6",
                 "reference": "74c71c939a79f7d5bf3c1ce9f5ea37ba0114c6f6",
-<<<<<<< HEAD
-=======
-                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/74c71c939a79f7d5bf3c1ce9f5ea37ba0114c6f6",
-                "reference": "74c71c939a79f7d5bf3c1ce9f5ea37ba0114c6f6",
->>>>>>> origin/fe-fakih
                 "shasum": ""
             },
             "require": {
@@ -4596,13 +4133,6 @@
                     "url": "https://github.com/symfony/contracts",
                     "name": "symfony/contracts"
                 },
-<<<<<<< HEAD
-=======
-                "thanks": {
-                    "url": "https://github.com/symfony/contracts",
-                    "name": "symfony/contracts"
-                },
->>>>>>> origin/fe-fakih
                 "branch-alias": {
                     "dev-main": "3.5-dev"
                 }
@@ -4630,10 +4160,6 @@
             "homepage": "https://symfony.com",
             "support": {
                 "source": "https://github.com/symfony/deprecation-contracts/tree/v3.5.1"
-<<<<<<< HEAD
-=======
-                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.5.1"
->>>>>>> origin/fe-fakih
             },
             "funding": [
                 {
@@ -4650,36 +4176,19 @@
                 }
             ],
             "time": "2024-09-25T14:20:29+00:00"
-<<<<<<< HEAD
-=======
-            "time": "2024-09-25T14:20:29+00:00"
->>>>>>> origin/fe-fakih
         },
         {
             "name": "symfony/error-handler",
             "version": "v7.2.1",
-<<<<<<< HEAD
-=======
-            "version": "v7.2.1",
->>>>>>> origin/fe-fakih
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/error-handler.git",
                 "reference": "6150b89186573046167796fa5f3f76601d5145f8"
-<<<<<<< HEAD
-=======
-                "reference": "6150b89186573046167796fa5f3f76601d5145f8"
->>>>>>> origin/fe-fakih
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/error-handler/zipball/6150b89186573046167796fa5f3f76601d5145f8",
                 "reference": "6150b89186573046167796fa5f3f76601d5145f8",
-<<<<<<< HEAD
-=======
-                "url": "https://api.github.com/repos/symfony/error-handler/zipball/6150b89186573046167796fa5f3f76601d5145f8",
-                "reference": "6150b89186573046167796fa5f3f76601d5145f8",
->>>>>>> origin/fe-fakih
                 "shasum": ""
             },
             "require": {
@@ -4726,10 +4235,6 @@
             "homepage": "https://symfony.com",
             "support": {
                 "source": "https://github.com/symfony/error-handler/tree/v7.2.1"
-<<<<<<< HEAD
-=======
-                "source": "https://github.com/symfony/error-handler/tree/v7.2.1"
->>>>>>> origin/fe-fakih
             },
             "funding": [
                 {
@@ -4746,36 +4251,19 @@
                 }
             ],
             "time": "2024-12-07T08:50:44+00:00"
-<<<<<<< HEAD
-=======
-            "time": "2024-12-07T08:50:44+00:00"
->>>>>>> origin/fe-fakih
         },
         {
             "name": "symfony/event-dispatcher",
             "version": "v7.2.0",
-<<<<<<< HEAD
-=======
-            "version": "v7.2.0",
->>>>>>> origin/fe-fakih
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
                 "reference": "910c5db85a5356d0fea57680defec4e99eb9c8c1"
-<<<<<<< HEAD
-=======
-                "reference": "910c5db85a5356d0fea57680defec4e99eb9c8c1"
->>>>>>> origin/fe-fakih
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/910c5db85a5356d0fea57680defec4e99eb9c8c1",
                 "reference": "910c5db85a5356d0fea57680defec4e99eb9c8c1",
-<<<<<<< HEAD
-=======
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/910c5db85a5356d0fea57680defec4e99eb9c8c1",
-                "reference": "910c5db85a5356d0fea57680defec4e99eb9c8c1",
->>>>>>> origin/fe-fakih
                 "shasum": ""
             },
             "require": {
@@ -4827,10 +4315,6 @@
             "homepage": "https://symfony.com",
             "support": {
                 "source": "https://github.com/symfony/event-dispatcher/tree/v7.2.0"
-<<<<<<< HEAD
-=======
-                "source": "https://github.com/symfony/event-dispatcher/tree/v7.2.0"
->>>>>>> origin/fe-fakih
             },
             "funding": [
                 {
@@ -4847,36 +4331,19 @@
                 }
             ],
             "time": "2024-09-25T14:21:43+00:00"
-<<<<<<< HEAD
-=======
-            "time": "2024-09-25T14:21:43+00:00"
->>>>>>> origin/fe-fakih
         },
         {
             "name": "symfony/event-dispatcher-contracts",
             "version": "v3.5.1",
-<<<<<<< HEAD
-=======
-            "version": "v3.5.1",
->>>>>>> origin/fe-fakih
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher-contracts.git",
                 "reference": "7642f5e970b672283b7823222ae8ef8bbc160b9f"
-<<<<<<< HEAD
-=======
-                "reference": "7642f5e970b672283b7823222ae8ef8bbc160b9f"
->>>>>>> origin/fe-fakih
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/event-dispatcher-contracts/zipball/7642f5e970b672283b7823222ae8ef8bbc160b9f",
                 "reference": "7642f5e970b672283b7823222ae8ef8bbc160b9f",
-<<<<<<< HEAD
-=======
-                "url": "https://api.github.com/repos/symfony/event-dispatcher-contracts/zipball/7642f5e970b672283b7823222ae8ef8bbc160b9f",
-                "reference": "7642f5e970b672283b7823222ae8ef8bbc160b9f",
->>>>>>> origin/fe-fakih
                 "shasum": ""
             },
             "require": {
@@ -4889,13 +4356,6 @@
                     "url": "https://github.com/symfony/contracts",
                     "name": "symfony/contracts"
                 },
-<<<<<<< HEAD
-=======
-                "thanks": {
-                    "url": "https://github.com/symfony/contracts",
-                    "name": "symfony/contracts"
-                },
->>>>>>> origin/fe-fakih
                 "branch-alias": {
                     "dev-main": "3.5-dev"
                 }
@@ -4931,10 +4391,6 @@
             ],
             "support": {
                 "source": "https://github.com/symfony/event-dispatcher-contracts/tree/v3.5.1"
-<<<<<<< HEAD
-=======
-                "source": "https://github.com/symfony/event-dispatcher-contracts/tree/v3.5.1"
->>>>>>> origin/fe-fakih
             },
             "funding": [
                 {
@@ -4951,36 +4407,19 @@
                 }
             ],
             "time": "2024-09-25T14:20:29+00:00"
-<<<<<<< HEAD
-=======
-            "time": "2024-09-25T14:20:29+00:00"
->>>>>>> origin/fe-fakih
         },
         {
             "name": "symfony/finder",
             "version": "v7.2.0",
-<<<<<<< HEAD
-=======
-            "version": "v7.2.0",
->>>>>>> origin/fe-fakih
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
                 "reference": "6de263e5868b9a137602dd1e33e4d48bfae99c49"
-<<<<<<< HEAD
-=======
-                "reference": "6de263e5868b9a137602dd1e33e4d48bfae99c49"
->>>>>>> origin/fe-fakih
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/finder/zipball/6de263e5868b9a137602dd1e33e4d48bfae99c49",
                 "reference": "6de263e5868b9a137602dd1e33e4d48bfae99c49",
-<<<<<<< HEAD
-=======
-                "url": "https://api.github.com/repos/symfony/finder/zipball/6de263e5868b9a137602dd1e33e4d48bfae99c49",
-                "reference": "6de263e5868b9a137602dd1e33e4d48bfae99c49",
->>>>>>> origin/fe-fakih
                 "shasum": ""
             },
             "require": {
@@ -5016,10 +4455,6 @@
             "homepage": "https://symfony.com",
             "support": {
                 "source": "https://github.com/symfony/finder/tree/v7.2.0"
-<<<<<<< HEAD
-=======
-                "source": "https://github.com/symfony/finder/tree/v7.2.0"
->>>>>>> origin/fe-fakih
             },
             "funding": [
                 {
@@ -5036,45 +4471,24 @@
                 }
             ],
             "time": "2024-10-23T06:56:12+00:00"
-<<<<<<< HEAD
-=======
-            "time": "2024-10-23T06:56:12+00:00"
->>>>>>> origin/fe-fakih
         },
         {
             "name": "symfony/http-foundation",
             "version": "v7.2.0",
-<<<<<<< HEAD
-=======
-            "version": "v7.2.0",
->>>>>>> origin/fe-fakih
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
                 "reference": "e88a66c3997859532bc2ddd6dd8f35aba2711744"
-<<<<<<< HEAD
-=======
-                "reference": "e88a66c3997859532bc2ddd6dd8f35aba2711744"
->>>>>>> origin/fe-fakih
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/http-foundation/zipball/e88a66c3997859532bc2ddd6dd8f35aba2711744",
                 "reference": "e88a66c3997859532bc2ddd6dd8f35aba2711744",
-<<<<<<< HEAD
-=======
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/e88a66c3997859532bc2ddd6dd8f35aba2711744",
-                "reference": "e88a66c3997859532bc2ddd6dd8f35aba2711744",
->>>>>>> origin/fe-fakih
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.2",
                 "symfony/deprecation-contracts": "^2.5|^3.0",
-<<<<<<< HEAD
-=======
-                "symfony/deprecation-contracts": "^2.5|^3.0",
->>>>>>> origin/fe-fakih
                 "symfony/polyfill-mbstring": "~1.1",
                 "symfony/polyfill-php83": "^1.27"
             },
@@ -5119,10 +4533,6 @@
             "homepage": "https://symfony.com",
             "support": {
                 "source": "https://github.com/symfony/http-foundation/tree/v7.2.0"
-<<<<<<< HEAD
-=======
-                "source": "https://github.com/symfony/http-foundation/tree/v7.2.0"
->>>>>>> origin/fe-fakih
             },
             "funding": [
                 {
@@ -5139,36 +4549,19 @@
                 }
             ],
             "time": "2024-11-13T18:58:46+00:00"
-<<<<<<< HEAD
-=======
-            "time": "2024-11-13T18:58:46+00:00"
->>>>>>> origin/fe-fakih
         },
         {
             "name": "symfony/http-kernel",
             "version": "v7.2.1",
-<<<<<<< HEAD
-=======
-            "version": "v7.2.1",
->>>>>>> origin/fe-fakih
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-kernel.git",
                 "reference": "d8ae58eecae44c8e66833e76cc50a4ad3c002d97"
-<<<<<<< HEAD
-=======
-                "reference": "d8ae58eecae44c8e66833e76cc50a4ad3c002d97"
->>>>>>> origin/fe-fakih
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/http-kernel/zipball/d8ae58eecae44c8e66833e76cc50a4ad3c002d97",
                 "reference": "d8ae58eecae44c8e66833e76cc50a4ad3c002d97",
-<<<<<<< HEAD
-=======
-                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/d8ae58eecae44c8e66833e76cc50a4ad3c002d97",
-                "reference": "d8ae58eecae44c8e66833e76cc50a4ad3c002d97",
->>>>>>> origin/fe-fakih
                 "shasum": ""
             },
             "require": {
@@ -5198,10 +4591,6 @@
                 "symfony/validator": "<6.4",
                 "symfony/var-dumper": "<6.4",
                 "twig/twig": "<3.12"
-<<<<<<< HEAD
-=======
-                "twig/twig": "<3.12"
->>>>>>> origin/fe-fakih
             },
             "provide": {
                 "psr/log-implementation": "1.0|2.0|3.0"
@@ -5230,10 +4619,6 @@
                 "symfony/var-dumper": "^6.4|^7.0",
                 "symfony/var-exporter": "^6.4|^7.0",
                 "twig/twig": "^3.12"
-<<<<<<< HEAD
-=======
-                "twig/twig": "^3.12"
->>>>>>> origin/fe-fakih
             },
             "type": "library",
             "autoload": {
@@ -5262,10 +4647,6 @@
             "homepage": "https://symfony.com",
             "support": {
                 "source": "https://github.com/symfony/http-kernel/tree/v7.2.1"
-<<<<<<< HEAD
-=======
-                "source": "https://github.com/symfony/http-kernel/tree/v7.2.1"
->>>>>>> origin/fe-fakih
             },
             "funding": [
                 {
@@ -5282,36 +4663,19 @@
                 }
             ],
             "time": "2024-12-11T12:09:10+00:00"
-<<<<<<< HEAD
-=======
-            "time": "2024-12-11T12:09:10+00:00"
->>>>>>> origin/fe-fakih
         },
         {
             "name": "symfony/mailer",
             "version": "v7.2.0",
-<<<<<<< HEAD
-=======
-            "version": "v7.2.0",
->>>>>>> origin/fe-fakih
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/mailer.git",
                 "reference": "e4d358702fb66e4c8a2af08e90e7271a62de39cc"
-<<<<<<< HEAD
-=======
-                "reference": "e4d358702fb66e4c8a2af08e90e7271a62de39cc"
->>>>>>> origin/fe-fakih
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/mailer/zipball/e4d358702fb66e4c8a2af08e90e7271a62de39cc",
                 "reference": "e4d358702fb66e4c8a2af08e90e7271a62de39cc",
-<<<<<<< HEAD
-=======
-                "url": "https://api.github.com/repos/symfony/mailer/zipball/e4d358702fb66e4c8a2af08e90e7271a62de39cc",
-                "reference": "e4d358702fb66e4c8a2af08e90e7271a62de39cc",
->>>>>>> origin/fe-fakih
                 "shasum": ""
             },
             "require": {
@@ -5321,10 +4685,6 @@
                 "psr/log": "^1|^2|^3",
                 "symfony/event-dispatcher": "^6.4|^7.0",
                 "symfony/mime": "^7.2",
-<<<<<<< HEAD
-=======
-                "symfony/mime": "^7.2",
->>>>>>> origin/fe-fakih
                 "symfony/service-contracts": "^2.5|^3"
             },
             "conflict": {
@@ -5367,10 +4727,6 @@
             "homepage": "https://symfony.com",
             "support": {
                 "source": "https://github.com/symfony/mailer/tree/v7.2.0"
-<<<<<<< HEAD
-=======
-                "source": "https://github.com/symfony/mailer/tree/v7.2.0"
->>>>>>> origin/fe-fakih
             },
             "funding": [
                 {
@@ -5387,36 +4743,19 @@
                 }
             ],
             "time": "2024-11-25T15:21:05+00:00"
-<<<<<<< HEAD
-=======
-            "time": "2024-11-25T15:21:05+00:00"
->>>>>>> origin/fe-fakih
         },
         {
             "name": "symfony/mime",
             "version": "v7.2.1",
-<<<<<<< HEAD
-=======
-            "version": "v7.2.1",
->>>>>>> origin/fe-fakih
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/mime.git",
                 "reference": "7f9617fcf15cb61be30f8b252695ed5e2bfac283"
-<<<<<<< HEAD
-=======
-                "reference": "7f9617fcf15cb61be30f8b252695ed5e2bfac283"
->>>>>>> origin/fe-fakih
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/mime/zipball/7f9617fcf15cb61be30f8b252695ed5e2bfac283",
                 "reference": "7f9617fcf15cb61be30f8b252695ed5e2bfac283",
-<<<<<<< HEAD
-=======
-                "url": "https://api.github.com/repos/symfony/mime/zipball/7f9617fcf15cb61be30f8b252695ed5e2bfac283",
-                "reference": "7f9617fcf15cb61be30f8b252695ed5e2bfac283",
->>>>>>> origin/fe-fakih
                 "shasum": ""
             },
             "require": {
@@ -5472,10 +4811,6 @@
             ],
             "support": {
                 "source": "https://github.com/symfony/mime/tree/v7.2.1"
-<<<<<<< HEAD
-=======
-                "source": "https://github.com/symfony/mime/tree/v7.2.1"
->>>>>>> origin/fe-fakih
             },
             "funding": [
                 {
@@ -5492,10 +4827,6 @@
                 }
             ],
             "time": "2024-12-07T08:50:44+00:00"
-<<<<<<< HEAD
-=======
-            "time": "2024-12-07T08:50:44+00:00"
->>>>>>> origin/fe-fakih
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -5525,11 +4856,6 @@
                 "thanks": {
                     "url": "https://github.com/symfony/polyfill",
                     "name": "symfony/polyfill"
-<<<<<<< HEAD
-=======
-                    "url": "https://github.com/symfony/polyfill",
-                    "name": "symfony/polyfill"
->>>>>>> origin/fe-fakih
                 }
             },
             "autoload": {
@@ -5606,11 +4932,6 @@
                 "thanks": {
                     "url": "https://github.com/symfony/polyfill",
                     "name": "symfony/polyfill"
-<<<<<<< HEAD
-=======
-                    "url": "https://github.com/symfony/polyfill",
-                    "name": "symfony/polyfill"
->>>>>>> origin/fe-fakih
                 }
             },
             "autoload": {
@@ -5690,11 +5011,6 @@
                 "thanks": {
                     "url": "https://github.com/symfony/polyfill",
                     "name": "symfony/polyfill"
-<<<<<<< HEAD
-=======
-                    "url": "https://github.com/symfony/polyfill",
-                    "name": "symfony/polyfill"
->>>>>>> origin/fe-fakih
                 }
             },
             "autoload": {
@@ -5777,11 +5093,6 @@
                 "thanks": {
                     "url": "https://github.com/symfony/polyfill",
                     "name": "symfony/polyfill"
-<<<<<<< HEAD
-=======
-                    "url": "https://github.com/symfony/polyfill",
-                    "name": "symfony/polyfill"
->>>>>>> origin/fe-fakih
                 }
             },
             "autoload": {
@@ -5866,11 +5177,6 @@
                 "thanks": {
                     "url": "https://github.com/symfony/polyfill",
                     "name": "symfony/polyfill"
-<<<<<<< HEAD
-=======
-                    "url": "https://github.com/symfony/polyfill",
-                    "name": "symfony/polyfill"
->>>>>>> origin/fe-fakih
                 }
             },
             "autoload": {
@@ -5945,11 +5251,6 @@
                 "thanks": {
                     "url": "https://github.com/symfony/polyfill",
                     "name": "symfony/polyfill"
-<<<<<<< HEAD
-=======
-                    "url": "https://github.com/symfony/polyfill",
-                    "name": "symfony/polyfill"
->>>>>>> origin/fe-fakih
                 }
             },
             "autoload": {
@@ -6030,11 +5331,6 @@
                 "thanks": {
                     "url": "https://github.com/symfony/polyfill",
                     "name": "symfony/polyfill"
-<<<<<<< HEAD
-=======
-                    "url": "https://github.com/symfony/polyfill",
-                    "name": "symfony/polyfill"
->>>>>>> origin/fe-fakih
                 }
             },
             "autoload": {
@@ -6117,11 +5413,6 @@
                 "thanks": {
                     "url": "https://github.com/symfony/polyfill",
                     "name": "symfony/polyfill"
-<<<<<<< HEAD
-=======
-                    "url": "https://github.com/symfony/polyfill",
-                    "name": "symfony/polyfill"
->>>>>>> origin/fe-fakih
                 }
             },
             "autoload": {
@@ -6176,28 +5467,15 @@
         {
             "name": "symfony/process",
             "version": "v7.2.0",
-<<<<<<< HEAD
-=======
-            "version": "v7.2.0",
->>>>>>> origin/fe-fakih
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
                 "reference": "d34b22ba9390ec19d2dd966c40aa9e8462f27a7e"
-<<<<<<< HEAD
-=======
-                "reference": "d34b22ba9390ec19d2dd966c40aa9e8462f27a7e"
->>>>>>> origin/fe-fakih
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/process/zipball/d34b22ba9390ec19d2dd966c40aa9e8462f27a7e",
                 "reference": "d34b22ba9390ec19d2dd966c40aa9e8462f27a7e",
-<<<<<<< HEAD
-=======
-                "url": "https://api.github.com/repos/symfony/process/zipball/d34b22ba9390ec19d2dd966c40aa9e8462f27a7e",
-                "reference": "d34b22ba9390ec19d2dd966c40aa9e8462f27a7e",
->>>>>>> origin/fe-fakih
                 "shasum": ""
             },
             "require": {
@@ -6230,10 +5508,6 @@
             "homepage": "https://symfony.com",
             "support": {
                 "source": "https://github.com/symfony/process/tree/v7.2.0"
-<<<<<<< HEAD
-=======
-                "source": "https://github.com/symfony/process/tree/v7.2.0"
->>>>>>> origin/fe-fakih
             },
             "funding": [
                 {
@@ -6250,36 +5524,19 @@
                 }
             ],
             "time": "2024-11-06T14:24:19+00:00"
-<<<<<<< HEAD
-=======
-            "time": "2024-11-06T14:24:19+00:00"
->>>>>>> origin/fe-fakih
         },
         {
             "name": "symfony/routing",
             "version": "v7.2.0",
-<<<<<<< HEAD
-=======
-            "version": "v7.2.0",
->>>>>>> origin/fe-fakih
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/routing.git",
                 "reference": "e10a2450fa957af6c448b9b93c9010a4e4c0725e"
-<<<<<<< HEAD
-=======
-                "reference": "e10a2450fa957af6c448b9b93c9010a4e4c0725e"
->>>>>>> origin/fe-fakih
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/routing/zipball/e10a2450fa957af6c448b9b93c9010a4e4c0725e",
                 "reference": "e10a2450fa957af6c448b9b93c9010a4e4c0725e",
-<<<<<<< HEAD
-=======
-                "url": "https://api.github.com/repos/symfony/routing/zipball/e10a2450fa957af6c448b9b93c9010a4e4c0725e",
-                "reference": "e10a2450fa957af6c448b9b93c9010a4e4c0725e",
->>>>>>> origin/fe-fakih
                 "shasum": ""
             },
             "require": {
@@ -6332,10 +5589,6 @@
             ],
             "support": {
                 "source": "https://github.com/symfony/routing/tree/v7.2.0"
-<<<<<<< HEAD
-=======
-                "source": "https://github.com/symfony/routing/tree/v7.2.0"
->>>>>>> origin/fe-fakih
             },
             "funding": [
                 {
@@ -6352,36 +5605,19 @@
                 }
             ],
             "time": "2024-11-25T11:08:51+00:00"
-<<<<<<< HEAD
-=======
-            "time": "2024-11-25T11:08:51+00:00"
->>>>>>> origin/fe-fakih
         },
         {
             "name": "symfony/service-contracts",
             "version": "v3.5.1",
-<<<<<<< HEAD
-=======
-            "version": "v3.5.1",
->>>>>>> origin/fe-fakih
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/service-contracts.git",
                 "reference": "e53260aabf78fb3d63f8d79d69ece59f80d5eda0"
-<<<<<<< HEAD
-=======
-                "reference": "e53260aabf78fb3d63f8d79d69ece59f80d5eda0"
->>>>>>> origin/fe-fakih
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/service-contracts/zipball/e53260aabf78fb3d63f8d79d69ece59f80d5eda0",
                 "reference": "e53260aabf78fb3d63f8d79d69ece59f80d5eda0",
-<<<<<<< HEAD
-=======
-                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/e53260aabf78fb3d63f8d79d69ece59f80d5eda0",
-                "reference": "e53260aabf78fb3d63f8d79d69ece59f80d5eda0",
->>>>>>> origin/fe-fakih
                 "shasum": ""
             },
             "require": {
@@ -6398,13 +5634,6 @@
                     "url": "https://github.com/symfony/contracts",
                     "name": "symfony/contracts"
                 },
-<<<<<<< HEAD
-=======
-                "thanks": {
-                    "url": "https://github.com/symfony/contracts",
-                    "name": "symfony/contracts"
-                },
->>>>>>> origin/fe-fakih
                 "branch-alias": {
                     "dev-main": "3.5-dev"
                 }
@@ -6443,10 +5672,6 @@
             ],
             "support": {
                 "source": "https://github.com/symfony/service-contracts/tree/v3.5.1"
-<<<<<<< HEAD
-=======
-                "source": "https://github.com/symfony/service-contracts/tree/v3.5.1"
->>>>>>> origin/fe-fakih
             },
             "funding": [
                 {
@@ -6463,36 +5688,19 @@
                 }
             ],
             "time": "2024-09-25T14:20:29+00:00"
-<<<<<<< HEAD
-=======
-            "time": "2024-09-25T14:20:29+00:00"
->>>>>>> origin/fe-fakih
         },
         {
             "name": "symfony/string",
             "version": "v7.2.0",
-<<<<<<< HEAD
-=======
-            "version": "v7.2.0",
->>>>>>> origin/fe-fakih
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/string.git",
                 "reference": "446e0d146f991dde3e73f45f2c97a9faad773c82"
-<<<<<<< HEAD
-=======
-                "reference": "446e0d146f991dde3e73f45f2c97a9faad773c82"
->>>>>>> origin/fe-fakih
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/string/zipball/446e0d146f991dde3e73f45f2c97a9faad773c82",
                 "reference": "446e0d146f991dde3e73f45f2c97a9faad773c82",
-<<<<<<< HEAD
-=======
-                "url": "https://api.github.com/repos/symfony/string/zipball/446e0d146f991dde3e73f45f2c97a9faad773c82",
-                "reference": "446e0d146f991dde3e73f45f2c97a9faad773c82",
->>>>>>> origin/fe-fakih
                 "shasum": ""
             },
             "require": {
@@ -6551,10 +5759,6 @@
             ],
             "support": {
                 "source": "https://github.com/symfony/string/tree/v7.2.0"
-<<<<<<< HEAD
-=======
-                "source": "https://github.com/symfony/string/tree/v7.2.0"
->>>>>>> origin/fe-fakih
             },
             "funding": [
                 {
@@ -6571,45 +5775,24 @@
                 }
             ],
             "time": "2024-11-13T13:31:26+00:00"
-<<<<<<< HEAD
-=======
-            "time": "2024-11-13T13:31:26+00:00"
->>>>>>> origin/fe-fakih
         },
         {
             "name": "symfony/translation",
             "version": "v7.2.0",
-<<<<<<< HEAD
-=======
-            "version": "v7.2.0",
->>>>>>> origin/fe-fakih
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
                 "reference": "dc89e16b44048ceecc879054e5b7f38326ab6cc5"
-<<<<<<< HEAD
-=======
-                "reference": "dc89e16b44048ceecc879054e5b7f38326ab6cc5"
->>>>>>> origin/fe-fakih
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/translation/zipball/dc89e16b44048ceecc879054e5b7f38326ab6cc5",
                 "reference": "dc89e16b44048ceecc879054e5b7f38326ab6cc5",
-<<<<<<< HEAD
-=======
-                "url": "https://api.github.com/repos/symfony/translation/zipball/dc89e16b44048ceecc879054e5b7f38326ab6cc5",
-                "reference": "dc89e16b44048ceecc879054e5b7f38326ab6cc5",
->>>>>>> origin/fe-fakih
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.2",
                 "symfony/deprecation-contracts": "^2.5|^3",
-<<<<<<< HEAD
-=======
-                "symfony/deprecation-contracts": "^2.5|^3",
->>>>>>> origin/fe-fakih
                 "symfony/polyfill-mbstring": "~1.0",
                 "symfony/translation-contracts": "^2.5|^3.0"
             },
@@ -6671,10 +5854,6 @@
             "homepage": "https://symfony.com",
             "support": {
                 "source": "https://github.com/symfony/translation/tree/v7.2.0"
-<<<<<<< HEAD
-=======
-                "source": "https://github.com/symfony/translation/tree/v7.2.0"
->>>>>>> origin/fe-fakih
             },
             "funding": [
                 {
@@ -6691,36 +5870,19 @@
                 }
             ],
             "time": "2024-11-12T20:47:56+00:00"
-<<<<<<< HEAD
-=======
-            "time": "2024-11-12T20:47:56+00:00"
->>>>>>> origin/fe-fakih
         },
         {
             "name": "symfony/translation-contracts",
             "version": "v3.5.1",
-<<<<<<< HEAD
-=======
-            "version": "v3.5.1",
->>>>>>> origin/fe-fakih
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation-contracts.git",
                 "reference": "4667ff3bd513750603a09c8dedbea942487fb07c"
-<<<<<<< HEAD
-=======
-                "reference": "4667ff3bd513750603a09c8dedbea942487fb07c"
->>>>>>> origin/fe-fakih
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/translation-contracts/zipball/4667ff3bd513750603a09c8dedbea942487fb07c",
                 "reference": "4667ff3bd513750603a09c8dedbea942487fb07c",
-<<<<<<< HEAD
-=======
-                "url": "https://api.github.com/repos/symfony/translation-contracts/zipball/4667ff3bd513750603a09c8dedbea942487fb07c",
-                "reference": "4667ff3bd513750603a09c8dedbea942487fb07c",
->>>>>>> origin/fe-fakih
                 "shasum": ""
             },
             "require": {
@@ -6732,13 +5894,6 @@
                     "url": "https://github.com/symfony/contracts",
                     "name": "symfony/contracts"
                 },
-<<<<<<< HEAD
-=======
-                "thanks": {
-                    "url": "https://github.com/symfony/contracts",
-                    "name": "symfony/contracts"
-                },
->>>>>>> origin/fe-fakih
                 "branch-alias": {
                     "dev-main": "3.5-dev"
                 }
@@ -6777,10 +5932,6 @@
             ],
             "support": {
                 "source": "https://github.com/symfony/translation-contracts/tree/v3.5.1"
-<<<<<<< HEAD
-=======
-                "source": "https://github.com/symfony/translation-contracts/tree/v3.5.1"
->>>>>>> origin/fe-fakih
             },
             "funding": [
                 {
@@ -6797,36 +5948,19 @@
                 }
             ],
             "time": "2024-09-25T14:20:29+00:00"
-<<<<<<< HEAD
-=======
-            "time": "2024-09-25T14:20:29+00:00"
->>>>>>> origin/fe-fakih
         },
         {
             "name": "symfony/uid",
             "version": "v7.2.0",
-<<<<<<< HEAD
-=======
-            "version": "v7.2.0",
->>>>>>> origin/fe-fakih
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/uid.git",
                 "reference": "2d294d0c48df244c71c105a169d0190bfb080426"
-<<<<<<< HEAD
-=======
-                "reference": "2d294d0c48df244c71c105a169d0190bfb080426"
->>>>>>> origin/fe-fakih
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/uid/zipball/2d294d0c48df244c71c105a169d0190bfb080426",
                 "reference": "2d294d0c48df244c71c105a169d0190bfb080426",
-<<<<<<< HEAD
-=======
-                "url": "https://api.github.com/repos/symfony/uid/zipball/2d294d0c48df244c71c105a169d0190bfb080426",
-                "reference": "2d294d0c48df244c71c105a169d0190bfb080426",
->>>>>>> origin/fe-fakih
                 "shasum": ""
             },
             "require": {
@@ -6872,10 +6006,6 @@
             ],
             "support": {
                 "source": "https://github.com/symfony/uid/tree/v7.2.0"
-<<<<<<< HEAD
-=======
-                "source": "https://github.com/symfony/uid/tree/v7.2.0"
->>>>>>> origin/fe-fakih
             },
             "funding": [
                 {
@@ -6892,36 +6022,19 @@
                 }
             ],
             "time": "2024-09-25T14:21:43+00:00"
-<<<<<<< HEAD
-=======
-            "time": "2024-09-25T14:21:43+00:00"
->>>>>>> origin/fe-fakih
         },
         {
             "name": "symfony/var-dumper",
             "version": "v7.2.0",
-<<<<<<< HEAD
-=======
-            "version": "v7.2.0",
->>>>>>> origin/fe-fakih
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
                 "reference": "c6a22929407dec8765d6e2b6ff85b800b245879c"
-<<<<<<< HEAD
-=======
-                "reference": "c6a22929407dec8765d6e2b6ff85b800b245879c"
->>>>>>> origin/fe-fakih
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/var-dumper/zipball/c6a22929407dec8765d6e2b6ff85b800b245879c",
                 "reference": "c6a22929407dec8765d6e2b6ff85b800b245879c",
-<<<<<<< HEAD
-=======
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/c6a22929407dec8765d6e2b6ff85b800b245879c",
-                "reference": "c6a22929407dec8765d6e2b6ff85b800b245879c",
->>>>>>> origin/fe-fakih
                 "shasum": ""
             },
             "require": {
@@ -6938,10 +6051,6 @@
                 "symfony/process": "^6.4|^7.0",
                 "symfony/uid": "^6.4|^7.0",
                 "twig/twig": "^3.12"
-<<<<<<< HEAD
-=======
-                "twig/twig": "^3.12"
->>>>>>> origin/fe-fakih
             },
             "bin": [
                 "Resources/bin/var-dump-server"
@@ -6980,10 +6089,6 @@
             ],
             "support": {
                 "source": "https://github.com/symfony/var-dumper/tree/v7.2.0"
-<<<<<<< HEAD
-=======
-                "source": "https://github.com/symfony/var-dumper/tree/v7.2.0"
->>>>>>> origin/fe-fakih
             },
             "funding": [
                 {
@@ -7000,10 +6105,6 @@
                 }
             ],
             "time": "2024-11-08T15:48:14+00:00"
-<<<<<<< HEAD
-=======
-            "time": "2024-11-08T15:48:14+00:00"
->>>>>>> origin/fe-fakih
         },
         {
             "name": "tightenco/ziggy",
@@ -7078,28 +6179,15 @@
         {
             "name": "tijsverkoyen/css-to-inline-styles",
             "version": "v2.3.0",
-<<<<<<< HEAD
-=======
-            "version": "v2.3.0",
->>>>>>> origin/fe-fakih
             "source": {
                 "type": "git",
                 "url": "https://github.com/tijsverkoyen/CssToInlineStyles.git",
                 "reference": "0d72ac1c00084279c1816675284073c5a337c20d"
-<<<<<<< HEAD
-=======
-                "reference": "0d72ac1c00084279c1816675284073c5a337c20d"
->>>>>>> origin/fe-fakih
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/tijsverkoyen/CssToInlineStyles/zipball/0d72ac1c00084279c1816675284073c5a337c20d",
                 "reference": "0d72ac1c00084279c1816675284073c5a337c20d",
-<<<<<<< HEAD
-=======
-                "url": "https://api.github.com/repos/tijsverkoyen/CssToInlineStyles/zipball/0d72ac1c00084279c1816675284073c5a337c20d",
-                "reference": "0d72ac1c00084279c1816675284073c5a337c20d",
->>>>>>> origin/fe-fakih
                 "shasum": ""
             },
             "require": {
@@ -7107,31 +6195,16 @@
                 "ext-libxml": "*",
                 "php": "^7.4 || ^8.0",
                 "symfony/css-selector": "^5.4 || ^6.0 || ^7.0"
-<<<<<<< HEAD
-=======
-                "php": "^7.4 || ^8.0",
-                "symfony/css-selector": "^5.4 || ^6.0 || ^7.0"
->>>>>>> origin/fe-fakih
             },
             "require-dev": {
                 "phpstan/phpstan": "^2.0",
                 "phpstan/phpstan-phpunit": "^2.0",
                 "phpunit/phpunit": "^8.5.21 || ^9.5.10"
-<<<<<<< HEAD
-=======
-                "phpstan/phpstan": "^2.0",
-                "phpstan/phpstan-phpunit": "^2.0",
-                "phpunit/phpunit": "^8.5.21 || ^9.5.10"
->>>>>>> origin/fe-fakih
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
                     "dev-master": "2.x-dev"
-<<<<<<< HEAD
-=======
-                    "dev-master": "2.x-dev"
->>>>>>> origin/fe-fakih
                 }
             },
             "autoload": {
@@ -7155,15 +6228,8 @@
             "support": {
                 "issues": "https://github.com/tijsverkoyen/CssToInlineStyles/issues",
                 "source": "https://github.com/tijsverkoyen/CssToInlineStyles/tree/v2.3.0"
-<<<<<<< HEAD
             },
             "time": "2024-12-21T16:25:41+00:00"
-=======
-                "source": "https://github.com/tijsverkoyen/CssToInlineStyles/tree/v2.3.0"
-            },
-            "time": "2024-12-21T16:25:41+00:00"
-            "time": "2024-12-21T16:25:41+00:00"
->>>>>>> origin/fe-fakih
         },
         {
             "name": "vlucas/phpdotenv",
@@ -7386,28 +6452,15 @@
         {
             "name": "brianium/paratest",
             "version": "v7.7.0",
-<<<<<<< HEAD
-=======
-            "version": "v7.7.0",
->>>>>>> origin/fe-fakih
             "source": {
                 "type": "git",
                 "url": "https://github.com/paratestphp/paratest.git",
                 "reference": "4fb3f73bc5a4c3146bac2850af7dc72435a32daf"
-<<<<<<< HEAD
-=======
-                "reference": "4fb3f73bc5a4c3146bac2850af7dc72435a32daf"
->>>>>>> origin/fe-fakih
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/paratestphp/paratest/zipball/4fb3f73bc5a4c3146bac2850af7dc72435a32daf",
                 "reference": "4fb3f73bc5a4c3146bac2850af7dc72435a32daf",
-<<<<<<< HEAD
-=======
-                "url": "https://api.github.com/repos/paratestphp/paratest/zipball/4fb3f73bc5a4c3146bac2850af7dc72435a32daf",
-                "reference": "4fb3f73bc5a4c3146bac2850af7dc72435a32daf",
->>>>>>> origin/fe-fakih
                 "shasum": ""
             },
             "require": {
@@ -7417,7 +6470,6 @@
                 "ext-simplexml": "*",
                 "fidry/cpu-core-counter": "^1.2.0",
                 "jean85/pretty-package-versions": "^2.1.0",
-<<<<<<< HEAD
                 "php": "~8.2.0 || ~8.3.0 || ~8.4.0",
                 "phpunit/php-code-coverage": "^11.0.8",
                 "phpunit/php-file-iterator": "^5.1.0",
@@ -7426,21 +6478,6 @@
                 "sebastian/environment": "^7.2.0",
                 "symfony/console": "^6.4.14 || ^7.2.1",
                 "symfony/process": "^6.4.14 || ^7.2.0"
-=======
-                "jean85/pretty-package-versions": "^2.1.0",
-                "php": "~8.2.0 || ~8.3.0 || ~8.4.0",
-                "phpunit/php-code-coverage": "^11.0.8",
-                "phpunit/php-code-coverage": "^11.0.8",
-                "phpunit/php-file-iterator": "^5.1.0",
-                "phpunit/php-timer": "^7.0.1",
-                "phpunit/phpunit": "^11.5.1",
-                "phpunit/phpunit": "^11.5.1",
-                "sebastian/environment": "^7.2.0",
-                "symfony/console": "^6.4.14 || ^7.2.1",
-                "symfony/process": "^6.4.14 || ^7.2.0"
-                "symfony/console": "^6.4.14 || ^7.2.1",
-                "symfony/process": "^6.4.14 || ^7.2.0"
->>>>>>> origin/fe-fakih
             },
             "require-dev": {
                 "doctrine/coding-standard": "^12.0.0",
@@ -7452,15 +6489,6 @@
                 "phpstan/phpstan-strict-rules": "^2",
                 "squizlabs/php_codesniffer": "^3.11.1",
                 "symfony/filesystem": "^6.4.13 || ^7.2.0"
-<<<<<<< HEAD
-=======
-                "phpstan/phpstan": "^2.0.3",
-                "phpstan/phpstan-deprecation-rules": "^2.0.1",
-                "phpstan/phpstan-phpunit": "^2.0.1",
-                "phpstan/phpstan-strict-rules": "^2",
-                "squizlabs/php_codesniffer": "^3.11.1",
-                "symfony/filesystem": "^6.4.13 || ^7.2.0"
->>>>>>> origin/fe-fakih
             },
             "bin": [
                 "bin/paratest",
@@ -7501,10 +6529,6 @@
             "support": {
                 "issues": "https://github.com/paratestphp/paratest/issues",
                 "source": "https://github.com/paratestphp/paratest/tree/v7.7.0"
-<<<<<<< HEAD
-=======
-                "source": "https://github.com/paratestphp/paratest/tree/v7.7.0"
->>>>>>> origin/fe-fakih
             },
             "funding": [
                 {
@@ -7517,36 +6541,19 @@
                 }
             ],
             "time": "2024-12-11T14:50:44+00:00"
-<<<<<<< HEAD
-=======
-            "time": "2024-12-11T14:50:44+00:00"
->>>>>>> origin/fe-fakih
         },
         {
             "name": "doctrine/deprecations",
             "version": "1.1.4",
-<<<<<<< HEAD
-=======
-            "version": "1.1.4",
->>>>>>> origin/fe-fakih
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/deprecations.git",
                 "reference": "31610dbb31faa98e6b5447b62340826f54fbc4e9"
-<<<<<<< HEAD
-=======
-                "reference": "31610dbb31faa98e6b5447b62340826f54fbc4e9"
->>>>>>> origin/fe-fakih
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/doctrine/deprecations/zipball/31610dbb31faa98e6b5447b62340826f54fbc4e9",
                 "reference": "31610dbb31faa98e6b5447b62340826f54fbc4e9",
-<<<<<<< HEAD
-=======
-                "url": "https://api.github.com/repos/doctrine/deprecations/zipball/31610dbb31faa98e6b5447b62340826f54fbc4e9",
-                "reference": "31610dbb31faa98e6b5447b62340826f54fbc4e9",
->>>>>>> origin/fe-fakih
                 "shasum": ""
             },
             "require": {
@@ -7556,17 +6563,8 @@
                 "doctrine/coding-standard": "^9 || ^12",
                 "phpstan/phpstan": "1.4.10 || 2.0.3",
                 "phpstan/phpstan-phpunit": "^1.0 || ^2",
-<<<<<<< HEAD
                 "phpunit/phpunit": "^7.5 || ^8.5 || ^9.5",
                 "psr/log": "^1 || ^2 || ^3"
-=======
-                "doctrine/coding-standard": "^9 || ^12",
-                "phpstan/phpstan": "1.4.10 || 2.0.3",
-                "phpstan/phpstan-phpunit": "^1.0 || ^2",
-                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.5",
-                "psr/log": "^1 || ^2 || ^3"
-                "psr/log": "^1 || ^2 || ^3"
->>>>>>> origin/fe-fakih
             },
             "suggest": {
                 "psr/log": "Allows logging deprecations via PSR-3 logger implementation"
@@ -7575,10 +6573,6 @@
             "autoload": {
                 "psr-4": {
                     "Doctrine\\Deprecations\\": "src"
-<<<<<<< HEAD
-=======
-                    "Doctrine\\Deprecations\\": "src"
->>>>>>> origin/fe-fakih
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -7590,15 +6584,8 @@
             "support": {
                 "issues": "https://github.com/doctrine/deprecations/issues",
                 "source": "https://github.com/doctrine/deprecations/tree/1.1.4"
-<<<<<<< HEAD
             },
             "time": "2024-12-07T21:18:45+00:00"
-=======
-                "source": "https://github.com/doctrine/deprecations/tree/1.1.4"
-            },
-            "time": "2024-12-07T21:18:45+00:00"
-            "time": "2024-12-07T21:18:45+00:00"
->>>>>>> origin/fe-fakih
         },
         {
             "name": "fakerphp/faker",
@@ -7908,28 +6895,15 @@
         {
             "name": "laravel/breeze",
             "version": "v2.3.0",
-<<<<<<< HEAD
-=======
-            "version": "v2.3.0",
->>>>>>> origin/fe-fakih
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/breeze.git",
                 "reference": "d59702967b9ae21879df905d691a50132966c4ff"
-<<<<<<< HEAD
-=======
-                "reference": "d59702967b9ae21879df905d691a50132966c4ff"
->>>>>>> origin/fe-fakih
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/breeze/zipball/d59702967b9ae21879df905d691a50132966c4ff",
                 "reference": "d59702967b9ae21879df905d691a50132966c4ff",
-<<<<<<< HEAD
-=======
-                "url": "https://api.github.com/repos/laravel/breeze/zipball/d59702967b9ae21879df905d691a50132966c4ff",
-                "reference": "d59702967b9ae21879df905d691a50132966c4ff",
->>>>>>> origin/fe-fakih
                 "shasum": ""
             },
             "require": {
@@ -7978,10 +6952,6 @@
                 "source": "https://github.com/laravel/breeze"
             },
             "time": "2024-12-14T21:21:42+00:00"
-<<<<<<< HEAD
-=======
-            "time": "2024-12-14T21:21:42+00:00"
->>>>>>> origin/fe-fakih
         },
         {
             "name": "laravel/pail",
@@ -8026,12 +6996,6 @@
                 },
                 "branch-alias": {
                     "dev-main": "1.x-dev"
-<<<<<<< HEAD
-=======
-                },
-                "branch-alias": {
-                    "dev-main": "1.x-dev"
->>>>>>> origin/fe-fakih
                 }
             },
             "autoload": {
@@ -8136,28 +7100,15 @@
         {
             "name": "laravel/sail",
             "version": "v1.39.1",
-<<<<<<< HEAD
-=======
-            "version": "v1.39.1",
->>>>>>> origin/fe-fakih
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sail.git",
                 "reference": "1a3c7291bc88de983b66688919a4d298d68ddec7"
-<<<<<<< HEAD
-=======
-                "reference": "1a3c7291bc88de983b66688919a4d298d68ddec7"
->>>>>>> origin/fe-fakih
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/sail/zipball/1a3c7291bc88de983b66688919a4d298d68ddec7",
                 "reference": "1a3c7291bc88de983b66688919a4d298d68ddec7",
-<<<<<<< HEAD
-=======
-                "url": "https://api.github.com/repos/laravel/sail/zipball/1a3c7291bc88de983b66688919a4d298d68ddec7",
-                "reference": "1a3c7291bc88de983b66688919a4d298d68ddec7",
->>>>>>> origin/fe-fakih
                 "shasum": ""
             },
             "require": {
@@ -8208,10 +7159,6 @@
                 "source": "https://github.com/laravel/sail"
             },
             "time": "2024-11-27T15:42:28+00:00"
-<<<<<<< HEAD
-=======
-            "time": "2024-11-27T15:42:28+00:00"
->>>>>>> origin/fe-fakih
         },
         {
             "name": "mockery/mockery",
@@ -8456,58 +7403,30 @@
         {
             "name": "pestphp/pest",
             "version": "v3.7.1",
-<<<<<<< HEAD
-=======
-            "version": "v3.7.1",
->>>>>>> origin/fe-fakih
             "source": {
                 "type": "git",
                 "url": "https://github.com/pestphp/pest.git",
                 "reference": "bf3178473dcaa53b0458f21dfdb271306ea62512"
-<<<<<<< HEAD
-=======
-                "reference": "bf3178473dcaa53b0458f21dfdb271306ea62512"
->>>>>>> origin/fe-fakih
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/pestphp/pest/zipball/bf3178473dcaa53b0458f21dfdb271306ea62512",
                 "reference": "bf3178473dcaa53b0458f21dfdb271306ea62512",
-<<<<<<< HEAD
-=======
-                "url": "https://api.github.com/repos/pestphp/pest/zipball/bf3178473dcaa53b0458f21dfdb271306ea62512",
-                "reference": "bf3178473dcaa53b0458f21dfdb271306ea62512",
->>>>>>> origin/fe-fakih
                 "shasum": ""
             },
             "require": {
                 "brianium/paratest": "^7.7.0",
-<<<<<<< HEAD
                 "nunomaduro/collision": "^8.5.0",
                 "nunomaduro/termwind": "^2.3.0",
-=======
-                "brianium/paratest": "^7.7.0",
-                "nunomaduro/collision": "^8.5.0",
-                "nunomaduro/termwind": "^2.3.0",
-                "nunomaduro/termwind": "^2.3.0",
->>>>>>> origin/fe-fakih
                 "pestphp/pest-plugin": "^3.0.0",
                 "pestphp/pest-plugin-arch": "^3.0.0",
                 "pestphp/pest-plugin-mutate": "^3.0.5",
                 "php": "^8.2.0",
                 "phpunit/phpunit": "^11.5.1"
-<<<<<<< HEAD
-=======
-                "phpunit/phpunit": "^11.5.1"
->>>>>>> origin/fe-fakih
             },
             "conflict": {
                 "filp/whoops": "<2.16.0",
                 "phpunit/phpunit": ">11.5.1",
-<<<<<<< HEAD
-=======
-                "phpunit/phpunit": ">11.5.1",
->>>>>>> origin/fe-fakih
                 "sebastian/exporter": "<6.0.0",
                 "webmozart/assert": "<1.11.0"
             },
@@ -8515,11 +7434,6 @@
                 "pestphp/pest-dev-tools": "^3.3.0",
                 "pestphp/pest-plugin-type-coverage": "^3.2.0",
                 "symfony/process": "^7.2.0"
-<<<<<<< HEAD
-=======
-                "pestphp/pest-plugin-type-coverage": "^3.2.0",
-                "symfony/process": "^7.2.0"
->>>>>>> origin/fe-fakih
             },
             "bin": [
                 "bin/pest"
@@ -8585,10 +7499,6 @@
             "support": {
                 "issues": "https://github.com/pestphp/pest/issues",
                 "source": "https://github.com/pestphp/pest/tree/v3.7.1"
-<<<<<<< HEAD
-=======
-                "source": "https://github.com/pestphp/pest/tree/v3.7.1"
->>>>>>> origin/fe-fakih
             },
             "funding": [
                 {
@@ -8601,10 +7511,6 @@
                 }
             ],
             "time": "2024-12-12T11:52:01+00:00"
-<<<<<<< HEAD
-=======
-            "time": "2024-12-12T11:52:01+00:00"
->>>>>>> origin/fe-fakih
         },
         {
             "name": "pestphp/pest-plugin",
@@ -8775,24 +7681,6 @@
                 "pest": {
                     "plugins": [
                         "Pest\\Laravel\\Plugin"
-<<<<<<< HEAD
-=======
-                    ]
-                },
-                "laravel": {
-                    "providers": [
-                        "Pest\\Laravel\\PestServiceProvider"
-                    ]
-                },
-                "laravel": {
-                    "providers": [
-                        "Pest\\Laravel\\PestServiceProvider"
-                    ]
-                },
-                "laravel": {
-                    "providers": [
-                        "Pest\\Laravel\\PestServiceProvider"
->>>>>>> origin/fe-fakih
                     ]
                 },
                 "laravel": {
@@ -9084,28 +7972,15 @@
         {
             "name": "phpdocumentor/reflection-docblock",
             "version": "5.6.1",
-<<<<<<< HEAD
-=======
-            "version": "5.6.1",
->>>>>>> origin/fe-fakih
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
                 "reference": "e5e784149a09bd69d9a5e3b01c5cbd2e2bd653d8"
-<<<<<<< HEAD
-=======
-                "reference": "e5e784149a09bd69d9a5e3b01c5cbd2e2bd653d8"
->>>>>>> origin/fe-fakih
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/e5e784149a09bd69d9a5e3b01c5cbd2e2bd653d8",
                 "reference": "e5e784149a09bd69d9a5e3b01c5cbd2e2bd653d8",
-<<<<<<< HEAD
-=======
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/e5e784149a09bd69d9a5e3b01c5cbd2e2bd653d8",
-                "reference": "e5e784149a09bd69d9a5e3b01c5cbd2e2bd653d8",
->>>>>>> origin/fe-fakih
                 "shasum": ""
             },
             "require": {
@@ -9155,15 +8030,8 @@
             "support": {
                 "issues": "https://github.com/phpDocumentor/ReflectionDocBlock/issues",
                 "source": "https://github.com/phpDocumentor/ReflectionDocBlock/tree/5.6.1"
-<<<<<<< HEAD
             },
             "time": "2024-12-07T09:39:29+00:00"
-=======
-                "source": "https://github.com/phpDocumentor/ReflectionDocBlock/tree/5.6.1"
-            },
-            "time": "2024-12-07T09:39:29+00:00"
-            "time": "2024-12-07T09:39:29+00:00"
->>>>>>> origin/fe-fakih
         },
         {
             "name": "phpdocumentor/type-resolver",
@@ -9273,28 +8141,15 @@
         {
             "name": "phpunit/php-code-coverage",
             "version": "11.0.8",
-<<<<<<< HEAD
-=======
-            "version": "11.0.8",
->>>>>>> origin/fe-fakih
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
                 "reference": "418c59fd080954f8c4aa5631d9502ecda2387118"
-<<<<<<< HEAD
-=======
-                "reference": "418c59fd080954f8c4aa5631d9502ecda2387118"
->>>>>>> origin/fe-fakih
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/418c59fd080954f8c4aa5631d9502ecda2387118",
                 "reference": "418c59fd080954f8c4aa5631d9502ecda2387118",
-<<<<<<< HEAD
-=======
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/418c59fd080954f8c4aa5631d9502ecda2387118",
-                "reference": "418c59fd080954f8c4aa5631d9502ecda2387118",
->>>>>>> origin/fe-fakih
                 "shasum": ""
             },
             "require": {
@@ -9314,10 +8169,6 @@
             },
             "require-dev": {
                 "phpunit/phpunit": "^11.5.0"
-<<<<<<< HEAD
-=======
-                "phpunit/phpunit": "^11.5.0"
->>>>>>> origin/fe-fakih
             },
             "suggest": {
                 "ext-pcov": "PHP extension that provides line coverage",
@@ -9356,10 +8207,6 @@
                 "issues": "https://github.com/sebastianbergmann/php-code-coverage/issues",
                 "security": "https://github.com/sebastianbergmann/php-code-coverage/security/policy",
                 "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/11.0.8"
-<<<<<<< HEAD
-=======
-                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/11.0.8"
->>>>>>> origin/fe-fakih
             },
             "funding": [
                 {
@@ -9368,10 +8215,6 @@
                 }
             ],
             "time": "2024-12-11T12:34:27+00:00"
-<<<<<<< HEAD
-=======
-            "time": "2024-12-11T12:34:27+00:00"
->>>>>>> origin/fe-fakih
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -9621,28 +8464,15 @@
         {
             "name": "phpunit/phpunit",
             "version": "11.5.1",
-<<<<<<< HEAD
-=======
-            "version": "11.5.1",
->>>>>>> origin/fe-fakih
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
                 "reference": "2b94d4f2450b9869fa64a46fd8a6a41997aef56a"
-<<<<<<< HEAD
-=======
-                "reference": "2b94d4f2450b9869fa64a46fd8a6a41997aef56a"
->>>>>>> origin/fe-fakih
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/2b94d4f2450b9869fa64a46fd8a6a41997aef56a",
                 "reference": "2b94d4f2450b9869fa64a46fd8a6a41997aef56a",
-<<<<<<< HEAD
-=======
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/2b94d4f2450b9869fa64a46fd8a6a41997aef56a",
-                "reference": "2b94d4f2450b9869fa64a46fd8a6a41997aef56a",
->>>>>>> origin/fe-fakih
                 "shasum": ""
             },
             "require": {
@@ -9653,10 +8483,6 @@
                 "ext-xml": "*",
                 "ext-xmlwriter": "*",
                 "myclabs/deep-copy": "^1.12.1",
-<<<<<<< HEAD
-=======
-                "myclabs/deep-copy": "^1.12.1",
->>>>>>> origin/fe-fakih
                 "phar-io/manifest": "^2.0.4",
                 "phar-io/version": "^3.2.1",
                 "php": ">=8.2",
@@ -9668,27 +8494,14 @@
                 "sebastian/cli-parser": "^3.0.2",
                 "sebastian/code-unit": "^3.0.1",
                 "sebastian/comparator": "^6.2.1",
-<<<<<<< HEAD
                 "sebastian/diff": "^6.0.2",
                 "sebastian/environment": "^7.2.0",
                 "sebastian/exporter": "^6.3.0",
-=======
-                "sebastian/comparator": "^6.2.1",
-                "sebastian/diff": "^6.0.2",
-                "sebastian/environment": "^7.2.0",
-                "sebastian/exporter": "^6.3.0",
-                "sebastian/exporter": "^6.3.0",
->>>>>>> origin/fe-fakih
                 "sebastian/global-state": "^7.0.2",
                 "sebastian/object-enumerator": "^6.0.1",
                 "sebastian/type": "^5.1.0",
                 "sebastian/version": "^5.0.2",
                 "staabm/side-effects-detector": "^1.0.5"
-<<<<<<< HEAD
-=======
-                "sebastian/version": "^5.0.2",
-                "staabm/side-effects-detector": "^1.0.5"
->>>>>>> origin/fe-fakih
             },
             "suggest": {
                 "ext-soap": "To be able to generate mocks based on WSDL files"
@@ -9700,10 +8513,6 @@
             "extra": {
                 "branch-alias": {
                     "dev-main": "11.5-dev"
-<<<<<<< HEAD
-=======
-                    "dev-main": "11.5-dev"
->>>>>>> origin/fe-fakih
                 }
             },
             "autoload": {
@@ -9736,10 +8545,6 @@
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
                 "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.1"
-<<<<<<< HEAD
-=======
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.1"
->>>>>>> origin/fe-fakih
             },
             "funding": [
                 {
@@ -9756,10 +8561,6 @@
                 }
             ],
             "time": "2024-12-11T10:52:48+00:00"
-<<<<<<< HEAD
-=======
-            "time": "2024-12-11T10:52:48+00:00"
->>>>>>> origin/fe-fakih
         },
         {
             "name": "sebastian/cli-parser",
@@ -9821,28 +8622,15 @@
         {
             "name": "sebastian/code-unit",
             "version": "3.0.2",
-<<<<<<< HEAD
-=======
-            "version": "3.0.2",
->>>>>>> origin/fe-fakih
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/code-unit.git",
                 "reference": "ee88b0cdbe74cf8dd3b54940ff17643c0d6543ca"
-<<<<<<< HEAD
-=======
-                "reference": "ee88b0cdbe74cf8dd3b54940ff17643c0d6543ca"
->>>>>>> origin/fe-fakih
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/sebastianbergmann/code-unit/zipball/ee88b0cdbe74cf8dd3b54940ff17643c0d6543ca",
                 "reference": "ee88b0cdbe74cf8dd3b54940ff17643c0d6543ca",
-<<<<<<< HEAD
-=======
-                "url": "https://api.github.com/repos/sebastianbergmann/code-unit/zipball/ee88b0cdbe74cf8dd3b54940ff17643c0d6543ca",
-                "reference": "ee88b0cdbe74cf8dd3b54940ff17643c0d6543ca",
->>>>>>> origin/fe-fakih
                 "shasum": ""
             },
             "require": {
@@ -9850,10 +8638,6 @@
             },
             "require-dev": {
                 "phpunit/phpunit": "^11.5"
-<<<<<<< HEAD
-=======
-                "phpunit/phpunit": "^11.5"
->>>>>>> origin/fe-fakih
             },
             "type": "library",
             "extra": {
@@ -9883,10 +8667,6 @@
                 "issues": "https://github.com/sebastianbergmann/code-unit/issues",
                 "security": "https://github.com/sebastianbergmann/code-unit/security/policy",
                 "source": "https://github.com/sebastianbergmann/code-unit/tree/3.0.2"
-<<<<<<< HEAD
-=======
-                "source": "https://github.com/sebastianbergmann/code-unit/tree/3.0.2"
->>>>>>> origin/fe-fakih
             },
             "funding": [
                 {
@@ -9895,10 +8675,6 @@
                 }
             ],
             "time": "2024-12-12T09:59:06+00:00"
-<<<<<<< HEAD
-=======
-            "time": "2024-12-12T09:59:06+00:00"
->>>>>>> origin/fe-fakih
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -10225,28 +9001,15 @@
         {
             "name": "sebastian/exporter",
             "version": "6.3.0",
-<<<<<<< HEAD
-=======
-            "version": "6.3.0",
->>>>>>> origin/fe-fakih
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/exporter.git",
                 "reference": "3473f61172093b2da7de1fb5782e1f24cc036dc3"
-<<<<<<< HEAD
-=======
-                "reference": "3473f61172093b2da7de1fb5782e1f24cc036dc3"
->>>>>>> origin/fe-fakih
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/sebastianbergmann/exporter/zipball/3473f61172093b2da7de1fb5782e1f24cc036dc3",
                 "reference": "3473f61172093b2da7de1fb5782e1f24cc036dc3",
-<<<<<<< HEAD
-=======
-                "url": "https://api.github.com/repos/sebastianbergmann/exporter/zipball/3473f61172093b2da7de1fb5782e1f24cc036dc3",
-                "reference": "3473f61172093b2da7de1fb5782e1f24cc036dc3",
->>>>>>> origin/fe-fakih
                 "shasum": ""
             },
             "require": {
@@ -10256,10 +9019,6 @@
             },
             "require-dev": {
                 "phpunit/phpunit": "^11.3"
-<<<<<<< HEAD
-=======
-                "phpunit/phpunit": "^11.3"
->>>>>>> origin/fe-fakih
             },
             "type": "library",
             "extra": {
@@ -10308,10 +9067,6 @@
                 "issues": "https://github.com/sebastianbergmann/exporter/issues",
                 "security": "https://github.com/sebastianbergmann/exporter/security/policy",
                 "source": "https://github.com/sebastianbergmann/exporter/tree/6.3.0"
-<<<<<<< HEAD
-=======
-                "source": "https://github.com/sebastianbergmann/exporter/tree/6.3.0"
->>>>>>> origin/fe-fakih
             },
             "funding": [
                 {
@@ -10320,10 +9075,6 @@
                 }
             ],
             "time": "2024-12-05T09:17:50+00:00"
-<<<<<<< HEAD
-=======
-            "time": "2024-12-05T09:17:50+00:00"
->>>>>>> origin/fe-fakih
         },
         {
             "name": "sebastian/global-state",
@@ -10787,93 +9538,22 @@
             "time": "2024-10-20T05:08:20+00:00"
         },
         {
-<<<<<<< HEAD
             "name": "symfony/yaml",
             "version": "v7.2.0",
-=======
-            "name": "staabm/side-effects-detector",
-            "version": "1.0.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/staabm/side-effects-detector.git",
-                "reference": "d8334211a140ce329c13726d4a715adbddd0a163"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/staabm/side-effects-detector/zipball/d8334211a140ce329c13726d4a715adbddd0a163",
-                "reference": "d8334211a140ce329c13726d4a715adbddd0a163",
-                "shasum": ""
-            },
-            "require": {
-                "ext-tokenizer": "*",
-                "php": "^7.4 || ^8.0"
-            },
-            "require-dev": {
-                "phpstan/extension-installer": "^1.4.3",
-                "phpstan/phpstan": "^1.12.6",
-                "phpunit/phpunit": "^9.6.21",
-                "symfony/var-dumper": "^5.4.43",
-                "tomasvotruba/type-coverage": "1.0.0",
-                "tomasvotruba/unused-public": "1.0.0"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "lib/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "A static analysis tool to detect side effects in PHP code",
-            "keywords": [
-                "static analysis"
-            ],
-            "support": {
-                "issues": "https://github.com/staabm/side-effects-detector/issues",
-                "source": "https://github.com/staabm/side-effects-detector/tree/1.0.5"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/staabm",
-                    "type": "github"
-                }
-            ],
-            "time": "2024-10-20T05:08:20+00:00"
-        },
-        {
-            "name": "symfony/yaml",
-            "version": "v7.2.0",
-            "version": "v7.2.0",
->>>>>>> origin/fe-fakih
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
                 "reference": "099581e99f557e9f16b43c5916c26380b54abb22"
-<<<<<<< HEAD
-=======
-                "reference": "099581e99f557e9f16b43c5916c26380b54abb22"
->>>>>>> origin/fe-fakih
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/yaml/zipball/099581e99f557e9f16b43c5916c26380b54abb22",
                 "reference": "099581e99f557e9f16b43c5916c26380b54abb22",
-<<<<<<< HEAD
-=======
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/099581e99f557e9f16b43c5916c26380b54abb22",
-                "reference": "099581e99f557e9f16b43c5916c26380b54abb22",
->>>>>>> origin/fe-fakih
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.2",
                 "symfony/deprecation-contracts": "^2.5|^3.0",
-<<<<<<< HEAD
-=======
-                "symfony/deprecation-contracts": "^2.5|^3.0",
->>>>>>> origin/fe-fakih
                 "symfony/polyfill-ctype": "^1.8"
             },
             "conflict": {
@@ -10912,10 +9592,6 @@
             "homepage": "https://symfony.com",
             "support": {
                 "source": "https://github.com/symfony/yaml/tree/v7.2.0"
-<<<<<<< HEAD
-=======
-                "source": "https://github.com/symfony/yaml/tree/v7.2.0"
->>>>>>> origin/fe-fakih
             },
             "funding": [
                 {
@@ -10932,10 +9608,6 @@
                 }
             ],
             "time": "2024-10-23T06:56:12+00:00"
-<<<<<<< HEAD
-=======
-            "time": "2024-10-23T06:56:12+00:00"
->>>>>>> origin/fe-fakih
         },
         {
             "name": "ta-tikoma/phpunit-architecture-test",
@@ -11049,13 +9721,12 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^8.2"
+        "php": "^8.3"
     },
-    "platform-dev": [],
-    "plugin-api-version": "2.3.0"
-    "plugin-api-version": "2.3.0"
+    "platform-dev": {},
+    "plugin-api-version": "2.6.0"
 }
