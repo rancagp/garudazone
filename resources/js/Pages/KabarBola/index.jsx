@@ -85,8 +85,7 @@ export default function Match() {
 
             <div className="w-full">
                 <div className="flex flex-wrap justify-center p-6 gap-6">
-                    {/* Add your card elements here */}
-                    {/* Card 1 */}
+                
                     <div className="bg-white shadow-md rounded-md w-56 flex-shrink-0 group transition-transform duration-300 transform group-hover:scale-105">
                         <div className="overflow-hidden rounded-t-md">
                             <img
@@ -108,7 +107,7 @@ export default function Match() {
                         </div>
                     </div>
 
-              {/* Card 2 */}
+              
         <div className="bg-white shadow-md rounded-md w-56 flex-shrink-0 group transition-transform duration-300 transform group-hover:scale-105">
             <div className="overflow-hidden rounded-t-md">
                 <img
@@ -130,7 +129,7 @@ export default function Match() {
             </div>
         </div>
 
-        {/* Card 3 */}
+       
         <div className="bg-white shadow-md rounded-md w-56 flex-shrink-0 group transition-transform duration-300 transform group-hover:scale-105">
             <div className="overflow-hidden rounded-t-md">
                 <img
@@ -152,7 +151,7 @@ export default function Match() {
             </div>
         </div>
 
-        {/* Card 4 */}
+
         <div className="bg-white shadow-md rounded-md w-56 flex-shrink-0 group transition-transform duration-300 transform group-hover:scale-105">
             <div className="overflow-hidden rounded-t-md">
                 <img
@@ -174,7 +173,7 @@ export default function Match() {
             </div>
         </div>
 
-        {/* Card 5 */}
+        
         <div className="bg-white shadow-md rounded-md w-56 flex-shrink-0 group transition-transform duration-300 transform group-hover:scale-105">
             <div className="overflow-hidden rounded-t-md">
                 <img
@@ -196,7 +195,6 @@ export default function Match() {
             </div>
         </div>
 
-        {/* Card 6 */}
         <div className="bg-white shadow-md rounded-md w-56 flex-shrink-0 group transition-transform duration-300 transform group-hover:scale-105">
             <div className="overflow-hidden rounded-t-md">
                 <img
@@ -218,7 +216,6 @@ export default function Match() {
             </div>
         </div>
 
-        {/* Card 7 */}
         <div className="bg-white shadow-md rounded-md w-56 flex-shrink-0 group transition-transform duration-300 transform group-hover:scale-105">
             <div className="overflow-hidden rounded-t-md">
                 <img
@@ -240,7 +237,7 @@ export default function Match() {
             </div>
         </div>
 
-        {/* Card 8 */}
+        
         <div className="bg-white shadow-md rounded-md w-56 flex-shrink-0 group transition-transform duration-300 transform group-hover:scale-105">
             <div className="overflow-hidden rounded-t-md">
                 <img
@@ -266,7 +263,7 @@ export default function Match() {
                 </div>
             
 
-            {/* Pagination under cards */}
+            
             <div className="flex items-center justify-center border-t border-gray-200 bg-white px-4 py-3 sm:px-6">
                 <div className="hidden sm:flex sm:flex-1 sm:items-center sm:justify-center">
                     <div>
