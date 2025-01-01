@@ -1,6 +1,6 @@
-import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuItem, MenuItems } from '@headlessui/react';
+import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
-import { usePage } from '@inertiajs/react';
+import { Link, usePage } from '@inertiajs/react';
 import React from 'react'
 
 const Navbar = () => {
@@ -208,7 +208,8 @@ const Navbar = () => {
                     <div className="px-2 mt-3 space-y-1">
                         {
                             props.auth.user ? (
-                                userNavigation.map((item) => (
+                                <>
+                                {userNavigation.map((item) => (
                                     <DisclosureButton
                                         as='a'
                                         key={item.name}
@@ -217,7 +218,17 @@ const Navbar = () => {
                                     >
                                         {item.name}
                                     </DisclosureButton>
-                                ))
+                                    ))}
+                                    <Link
+                                        href={
+                                            route("logout")
+                                        }
+                                        method='post'
+                                        className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:outline-none w-full text-start"
+                                    >
+                                        Logout
+                                    </Link>
+                                </>
                             ) : (
                                 guestNavigation.map((item) => (
                                     <DisclosureButton
