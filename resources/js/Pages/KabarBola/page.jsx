@@ -1,3 +1,4 @@
+import Footer from "@/Components/Button";
 import {
     Disclosure,
     DisclosureButton,
@@ -7,7 +8,7 @@ import {
     MenuItems,
 } from "@headlessui/react";
 import { useState } from "react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Menu } from "react-feather";
 import { usePage } from "@inertiajs/react";
 
@@ -86,7 +87,7 @@ export default function Match() {
                                             {auth?.user ? (
                                                 <MenuButton className="relative flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                                                     <img
-                                                        alt=""
+                                                        alt="Profile"
                                                         src={user.imageUrl}
                                                         className="h-8 w-8 rounded-full"
                                                     />
@@ -177,50 +178,68 @@ export default function Match() {
             <div className="bg-white shadow-lg rounded-lg p-6 mx-auto w-full sm:w-10/12 lg:w-9/12 xl:w-8/12">
                 {/* Isi Berita */}
                 <div className="mb-8">
-                    <h1 className="text-3xl font-bold text-gray-900 mb-2">
-                        Shin Tae-yong: Timnas Indonesia Siap Berjuang Maksimal
-                    </h1>
                     <img
                         src="https://www.pssi.org/files/uploads/news/image/2024/Dec/14/675d826f6b838/pssi-vietnam-_x600.jpg?token=2f634388119272750865ec65219a10d9"
                         alt="Image Berita"
                         className="w-full object-contain mb-4"
                     />
-                    <div className="flex justify-between text-sm text-gray-500 mb-6">
-                        <span>15 Desember 2024</span>
-                        <span>Penulis: John Doe</span>
-                    </div>
-                </div>
+                    <h1 className="text-4xl font-extrabold text-gray-900 mb-2">
+                        Shin Tae-yong: Timnas Indonesia Siap Berjuang Maksimal
+                    </h1>
 
-                {/* Isi Berita */}
-                <div className="mb-8">
-                    <p className="text-lg text-gray-700 mb-4">
+                    <div className="flex justify-between text-sm text-gray-500 mb-6">
+                        <span>15 Desember 2024 | Penulis: John Doe</span>
+                    </div>
+
+                    {/* Isi Berita */}
+                    <p className="text-lg text-gray-800 mb-4">
                         Pelatih Timnas Indonesia, Shin Tae-yong, memastikan
                         timnya akan memberikan yang terbaik saat menghadapi
                         Vietnam di pertandingan ketiga Grup B ASEAN Mitsubishi
-                        Electric Cup (AMEC) 2024. Pertandingan ini akan
-                        berlangsung pada Minggu, 15 Desember 2024, di Stadion
-                        Viet Tri, Vietnam. Saat konferensi pers sebelum
-                        pertandingan, Shin Tae-yong mengakui bahwa padatnya
-                        jadwal menjadi tantangan besar bagi skuad Garuda.
-                        Setelah menang tipis 1-0 atas Myanmar di laga perdana,
-                        Timnas harus kembali ke Indonesia sebelum bermain imbang
-                        melawan Laos di laga kedua. Kini, tim kembali menjalani
-                        pertandingan tandang ke Vietnam dalam waktu singkat.
+                        Electric Cup (AMEC) 2024.
+                    </p>
+
+                    <p className="text-lg text-gray-800 mb-4">
+                        Pertandingan ini akan berlangsung pada Minggu, 15
+                        Desember 2024, di Stadion Viet Tri, Vietnam.
+                    </p>
+
+                    <p className="text-lg text-gray-800 mb-4">
+                        Saat konferensi pers sebelum pertandingan, Shin Tae-yong
+                        mengakui bahwa padatnya jadwal menjadi tantangan besar
+                        bagi skuad Garuda. Setelah menang tipis 1-0 atas Myanmar
+                        di laga perdana, Timnas harus kembali ke Indonesia
+                        sebelum bermain imbang melawan Laos di laga kedua. Kini,
+                        tim kembali menjalani pertandingan tandang ke Vietnam
+                        dalam waktu singkat.
+                    </p>
+
+                    <p className="text-lg text-gray-800 mb-4">
                         "Pertandingan besok akan sangat sulit. Jadwal yang padat
                         membuat tim kami kelelahan. Tim kami rata-rata berusia
                         di bawah 20 tahun, sehingga dari segi pengalaman dan
                         kompetisi internasional, kami sedikit kurang
-                        dibandingkan dengan Vietnam," ujar Shin Tae-yong. Meski
-                        begitu, pelatih berusia 54 tahun tersebut tetap
+                        dibandingkan dengan Vietnam," ujar Shin Tae-yong.
+                    </p>
+
+                    <p className="text-lg text-gray-800 mb-4">
+                        Meski begitu, pelatih berusia 54 tahun tersebut tetap
                         optimistis. Ia menegaskan bahwa pertandingan ini akan
                         menjadi pembelajaran berharga bagi para pemain muda dan
-                        menyatakan bahwa Timnas akan berjuang maksimal. “Kami
-                        berharap pertandingan ini memberikan pengalaman penting
-                        bagi para pemain. Meski berat, kami akan tetap berusaha
-                        semaksimal mungkin,” tambahnya. Saat ini, Indonesia
-                        telah mengoleksi empat poin dari dua pertandingan. Hasil
-                        pertandingan melawan Vietnam akan menjadi penentu
-                        peluang Garuda untuk melaju ke babak semifinal.
+                        menyatakan bahwa Timnas akan berjuang maksimal.
+                    </p>
+
+                    <p className="text-lg text-gray-800 mb-4">
+                        “Kami berharap pertandingan ini memberikan pengalaman
+                        penting bagi para pemain. Meski berat, kami akan tetap
+                        berusaha semaksimal mungkin,” tambahnya.
+                    </p>
+
+                    <p className="text-lg text-gray-800 mb-4">
+                        Saat ini, Indonesia telah mengoleksi empat poin dari dua
+                        pertandingan. Hasil pertandingan melawan Vietnam akan
+                        menjadi penentu peluang Garuda untuk melaju ke babak
+                        semifinal.
                     </p>
                 </div>
 
@@ -240,18 +259,17 @@ export default function Match() {
                             />
                             <div className="p-4">
                                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                                    STY Matangkan Persiapan Indonesia Jelang
-                                    Lawan Jepang
+                                    <a
+                                        href="/kabar-bola/lawan-jepang"
+                                        className="hover:text-red-700 transition-colors duration-200"
+                                    >
+                                        STY Matangkan Persiapan Indonesia Jelang
+                                        Lawan Jepang
+                                    </a>
                                 </h3>
                                 <p className="text-sm text-gray-600">
                                     15 Desember 2024
                                 </p>
-                                <a
-                                    href="/kabar-bola/slug"
-                                    className="text-red-700 hover:text-red-900 mt-2 inline-block"
-                                >
-                                    Baca Selengkapnya
-                                </a>
                             </div>
                         </div>
 
@@ -264,18 +282,17 @@ export default function Match() {
                             />
                             <div className="p-4">
                                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                                    Hadapi Jepang dan Arab Saudi, Timnas
-                                    Indonesia Panggil 27 Pemain
+                                    <a
+                                        href="/kabar-bola/panggil-27-pemain"
+                                        className="hover:text-red-700 transition-colors duration-200"
+                                    >
+                                        Hadapi Jepang dan Arab Saudi, Timnas
+                                        Indonesia Panggil 27 Pemain
+                                    </a>
                                 </h3>
                                 <p className="text-sm text-gray-600">
                                     14 Desember 2024
                                 </p>
-                                <a
-                                    href="/kabar-bola/slug"
-                                    className="text-red-700 hover:text-red-900 mt-2 inline-block"
-                                >
-                                    Baca Selengkapnya
-                                </a>
                             </div>
                         </div>
 
@@ -288,32 +305,52 @@ export default function Match() {
                             />
                             <div className="p-4">
                                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                                    Motivasi Keras Erick Thohir di Ruang Ganti,
-                                    Minta Seluruhnya Lakukan Introspeksi
+                                    <a
+                                        href="/kabar-bola/erick-thohir"
+                                        className="hover:text-red-700 transition-colors duration-200"
+                                    >
+                                        Motivasi Keras Erick Thohir di Ruang
+                                        Ganti
+                                    </a>
                                 </h3>
                                 <p className="text-sm text-gray-600">
                                     13 Desember 2024
                                 </p>
-                                <a
-                                    href="/kabar-bola/slug"
-                                    className="text-red-700 hover:text-red-900 mt-2 inline-block"
-                                >
-                                    Baca Selengkapnya
-                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 {/* Tombol Kembali */}
                 <div className="text-center">
                     <a
                         href="/kabar-bola"
                         className="inline-block bg-red-700 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-red-800"
                     >
-                        Kembali ke Daftar Berita
+                        Kembali ke Berita Kabar Bola
                     </a>
                 </div>
             </div>
+                {/* Footer */}
+                <footer className="bg-gray-800 text-white py-4">
+                <div className="container mx-auto text-center">
+                    <p>&copy; 2024 GarudaZone. All rights reserved.</p>
+                    <div className="mt-2">
+                        <a
+                            href="https://www.example.com"
+                            className="text-gray-400 hover:text-white mx-2"
+                        >
+                            Privacy Policy
+                        </a>
+                        <a
+                            href="https://www.example.com"
+                            className="text-gray-400 hover:text-white mx-2"
+                        >
+                            Terms of Service
+                        </a>
+                    </div>
+                </div>
+            </footer>
         </>
     );
 }
