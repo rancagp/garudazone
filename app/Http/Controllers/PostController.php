@@ -16,4 +16,25 @@ class PostController extends Controller
             'posts' => $posts
         ]);
     }
+
+    public function update(Request $request)
+    {
+        dd($request);
+        $validatedData = $request->validate([
+            'author' => 'required|integer',
+            'title' => 'required|string',
+            'content' => 'required|string'
+        ]);
+
+        Post::updated([
+            'author' => $validatedData['author'],
+            'title' => $validatedData['title'],
+            'content' => $validatedData['content'],
+        ]);
+    }
+
+    public function destroy(Post $post)
+    {
+        //
+    }
 }

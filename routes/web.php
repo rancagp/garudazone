@@ -16,6 +16,7 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/dashboard', [PostController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::post('/dashboard/post/{post}/edit', [PostController::class, 'update'])->middleware(['auth', 'verified'])->name('post.update');
 
 Route::get('/dashboard/user', function () {
     return Inertia::render('dashboard/user');
