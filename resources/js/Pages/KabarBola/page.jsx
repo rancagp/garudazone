@@ -23,8 +23,7 @@ function classNames(...classes) {
 }
 
 const userNavigation = [
-    { name: "Your Profile", href: "#" },
-    { name: "Settings", href: "#" },
+    { name: "Logout", href: "#" },
 ];
 
 const user = {

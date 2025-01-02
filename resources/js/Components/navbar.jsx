@@ -25,7 +25,7 @@ const Navbar = () => {
 
     const userNavigation = [
         { name: "Your Profile", href: "#" },
-        { name: "Settings", href: "#" },
+        { name: "LogOut", href: "#" },
     ];
 
     return (
@@ -70,7 +70,7 @@ const Navbar = () => {
                             <Menu as="div" className="relative ml-3">
                                 <div>
                                     {props.auth.user ? (
-                                        <MenuButton className="relative flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                                        <MenuButton className="relative flex max-w-xs items-center rounded-full bg-indigo-400 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                                             <span className="absolute -inset-1.5" />
                                             <img
                                                 alt=""
@@ -127,7 +127,7 @@ const Navbar = () => {
 
                     {/* Navbar Mobile Button */}
                     <div className="-mr-2 flex md:hidden">
-                        <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                        <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md bg-gray-600 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                             <span className="absolute -inset-0.5" />
                             <span className="sr-only">
                                 Open main menu
@@ -156,7 +156,7 @@ const Navbar = () => {
                             href={item.href}
                             className={classNames(
                                 url === item.href
-                                    ? "bg-gray-900 text-white"
+                                    ? "bg-gray-600 text-white"
                                     : "text-gray-300 hover:bg-gray-700 hover:text-white",
                                 "block rounded-md px-3 py-2 text-base font-medium"
                             )}
@@ -182,19 +182,7 @@ const Navbar = () => {
                                 {user.email}
                             </div>
                         </div>
-                        <DisclosureButton
-                            type="button"
-                            className="relative ml-auto shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                        >
-                            <span className="absolute -inset-1.5" />
-                            <span className="sr-only">
-                                View notifications
-                            </span>
-                            <BellIcon
-                                aria-hidden="true"
-                                className="size-6"
-                            />
-                        </DisclosureButton>
+
                     </div>
                     <div className="mt-3 space-y-1 px-2">
                         {userNavigation.map((item) => (
