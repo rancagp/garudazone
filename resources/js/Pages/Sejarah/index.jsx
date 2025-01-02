@@ -1,4 +1,7 @@
-import React, { useState } from "react";
+import Footer from "../../components/Footer";
+
+import React, { useState } from 'react';
+
 import {
     Disclosure,
     DisclosureButton,
@@ -39,11 +42,9 @@ const userNavigation = [
     { name: "Settings", href: "#" },
 ];
 
-export default function Sejarah() {
-
-    const {
-        auth
-    } = usePage().props
+export default function Match() {
+    const { auth } = usePage().props;
+    const [showDetails, setShowDetails] = useState(false);
 
     return (
         <div className="min-h-screen flex flex-col">
@@ -88,7 +89,7 @@ export default function Sejarah() {
                                                 <span className="absolute -inset-1.5" />
                                                 <img
                                                     alt=""
-                                                    src={user.imageUrl || auth.user.avatar}
+                                                    src={user.imageUrl}
                                                     className="w-8 h-8 rounded-full"
                                                 />
                                             </MenuButton>
@@ -164,7 +165,7 @@ export default function Sejarah() {
                     spaceBetween={30}
                     centeredSlides={true}
                     autoplay={{
-                        delay: 2500,
+                        delay: 10000,
                         disableOnInteraction: false,
                     }}
                     pagination={{
@@ -223,6 +224,25 @@ export default function Sejarah() {
                     </SwiperSlide>
                 </Swiper>
             </div>
+            <footer className="bg-gray-800 text-white py-4">
+            <div className="container mx-auto text-center">
+                <p>&copy; 2024 GarudaZone. All rights reserved.</p>
+                <div className="mt-2">
+                    <a
+                        href="https://www.example.com"
+                        className="text-gray-400 hover:text-white mx-2"
+                    >
+                        Privacy Policy
+                    </a>
+                    <a
+                        href="https://www.example.com"
+                        className="text-gray-400 hover:text-white mx-2"
+                    >
+                        Terms of Service
+                    </a>
+                </div>
+            </div>
+        </footer>
         </div>
     );
 }
