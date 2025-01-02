@@ -162,7 +162,7 @@ export default function Match() {
             <div className="flex-1">
                 <Swiper
                     direction={"vertical"}
-                    spaceBetween={100}
+                    spaceBetween={30}
                     centeredSlides={true}
                     autoplay={{
                         delay: 10000,
