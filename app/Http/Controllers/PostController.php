@@ -10,7 +10,7 @@ class PostController extends Controller
 {
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::with('author')->get();
 
         return Inertia::render('dashboard/post', [
             'posts' => $posts

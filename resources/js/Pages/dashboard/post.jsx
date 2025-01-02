@@ -2,64 +2,7 @@ import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import { Head } from '@inertiajs/react';
 import { useState } from 'react';
 
-export default function Post() {
-    const [posts, setPosts] = useState([
-        { id: 1, title: 'Berita A', author: 'Penulis A', image: 'https://via.placeholder.com/50', content: 'Konten A', created_at: '2024-12-01' },
-        { id: 2, title: 'Berita B', author: 'Penulis B', image: 'https://via.placeholder.com/50', content: 'Konten B', created_at: '2024-12-02' },
-    ]);
-    const [matches, setMatches] = useState([
-        { id: 1, team1: 'Tim A', team2: 'Tim B', score: '2-1', date: '2024-12-05' },
-        { id: 2, team1: 'Tim C', team2: 'Tim D', score: '1-1', date: '2024-12-06' },
-    ]);
-    const [postSearch, setPostSearch] = useState('');
-    const [matchSearch, setMatchSearch] = useState('');
-
-    const handleAddPost = () => {
-        const newPost = {
-            id: Date.now(),
-            title: 'Postingan Baru',
-            author: 'Penulis Baru',
-            image: 'https://via.placeholder.com/50',
-            content: 'Konten baru',
-            created_at: new Date().toISOString().split('T')[0],
-        };
-        setPosts([...posts, newPost]);
-    };
-
-    const handleAddMatch = () => {
-        const newMatch = {
-            id: Date.now(),
-            team1: 'Tim Baru 1',
-            team2: 'Tim Baru 2',
-            score: '0-0',
-            date: new Date().toISOString().split('T')[0],
-        };
-        setMatches([...matches, newMatch]);
-    };
-
-    const handleEditMatch = (id) => {
-        const updatedMatches = matches.map(match =>
-            match.id === id ? { ...match, score: '3-2' } : match
-        );
-        setMatches(updatedMatches);
-    };
-
-    const handleDeleteMatch = (id) => {
-        const updatedMatches = matches.filter(match => match.id !== id);
-        setMatches(updatedMatches);
-    };
-
-    const filteredPosts = posts.filter(post =>
-        post.title.toLowerCase().includes(postSearch.toLowerCase()) ||
-        post.content.toLowerCase().includes(postSearch.toLowerCase())
-    );
-
-    const filteredMatches = matches.filter(match =>
-        match.team1.toLowerCase().includes(matchSearch.toLowerCase()) ||
-        match.team2.toLowerCase().includes(matchSearch.toLowerCase()) ||
-        match.score.includes(matchSearch)
-    );
-
+export default function Post({ posts }) {
     return (
         <AuthenticatedLayout
             header={
@@ -74,18 +17,17 @@ export default function Post() {
                 <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
                     <div className="overflow-hidden bg-white shadow-sm sm:rounded-lg">
                         <div className="p-6 text-gray-900">
-                            {/* Bagian Post */}
                             <div className="mb-4 flex items-center">
                                 <input
                                     type="text"
                                     placeholder="Search Posts..."
-                                    value={postSearch}
-                                    onChange={(e) => setPostSearch(e.target.value)}
+                                    // value={postSearch}
+                                    // onChange={(e) => setPostSearch(e.target.value)}
                                     className="px-4 py-2 border border-gray-300 rounded mr-4"
                                 />
                                 <button
                                     className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-                                    onClick={handleAddPost}
+                                // onClick={handleAddPost}
                                 >
                                     Add Post
                                 </button>
@@ -104,11 +46,11 @@ export default function Post() {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {filteredPosts.map((post, index) => (
+                                    {posts.map((post) => (
                                         <tr key={post.id}>
-                                            <td className="border border-gray-300 px-4 py-2">{index + 1}</td>
+                                            <td className="border border-gray-300 px-4 py-2">{post.id}</td>
                                             <td className="border border-gray-300 px-4 py-2">{post.title}</td>
-                                            <td className="border border-gray-300 px-4 py-2">{post.author}</td>
+                                            <td className="border border-gray-300 px-4 py-2">{post.author.name}</td>
                                             <td className="border border-gray-300 px-4 py-2 text-center">
                                                 <img src={post.image} alt="Post" className="w-12 h-12 mx-auto" />
                                             </td>
@@ -134,7 +76,7 @@ export default function Post() {
                             </table>
 
                             {/* Bagian Hasil Pertandingan */}
-                            <div className="mb-4 flex items-center">
+                            {/* <div className="mb-4 flex items-center">
                                 <input
                                     type="text"
                                     placeholder="Search Matches..."
@@ -186,7 +128,7 @@ export default function Post() {
                                         </tr>
                                     ))}
                                 </tbody>
-                            </table>
+                            </table> */}
                         </div>
                     </div>
                 </div>
