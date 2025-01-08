@@ -29,6 +29,7 @@
         "lucide-react": "^0.469.0",
         "react-feather": "^2.0.10",
         "react-paginate": "^8.2.0",
+        "react-toastify": "^11.0.2",
         "swiper": "^11.1.15"
     }
 }

@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
+use App\Providers\RouteServiceProvider; // tambahkan import RouteServiceProvider
+use Illuminate\Http\Request;
 
 class LoginRequest extends FormRequest
 {
@@ -28,7 +30,7 @@ class LoginRequest extends FormRequest
     {
         return [
             'email' => ['required', 'string', 'email'],
-            'password' => ['string'],
+            'password' => ['required', 'string'],
         ];
     }
 
@@ -50,6 +52,20 @@ class LoginRequest extends FormRequest
         }
 
         RateLimiter::clear($this->throttleKey());
+
+         // Get the authenticated user
+         $user = Auth::user();
+    
+         // Determine the redirect path based on the user's role
+         if ($user->role === 'admin') {
+            session()->regenerate();
+            $this->session()->put('role', 'admin');
+             
+            } else {
+              session()->regenerate();
+              $this->session()->put('role', 'user');
+             
+            }
     }
 
     /**

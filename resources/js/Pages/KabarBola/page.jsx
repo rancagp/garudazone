@@ -10,7 +10,8 @@ import {
 import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Menu } from "react-feather";
-import { usePage } from "@inertiajs/react";
+import { usePage, Link } from "@inertiajs/react";
+ import { Head } from "@inertiajs/react";
 
 const navigation = [
     { name: "HOME", href: "/", current: false },
@@ -33,12 +34,27 @@ const user = {
     imageUrl: "/images/ranca.jpg",
 };
 
-export default function Match() {
+const formatDate = (dateString) => {
+ const date = new Date(dateString);
+ const options = {
+   day: '2-digit',
+   month: 'long',
+   year: 'numeric',
+   hour: 'numeric',
+   minute: '2-digit',
+   hour12: true,
+ };
+return date.toLocaleDateString('en-US', options).replace(' at ', ', ');
+};
+
+
+export default function Match({ post }) {
     const { auth } = usePage().props || {};
     const [showDetails, setShowDetails] = useState(false);
 
     return (
         <>
+             <Head title={post.title} />
             <div className="w-full">
                 <Disclosure
                     as="nav"
@@ -178,162 +194,40 @@ export default function Match() {
                 {/* Isi Berita */}
                 <div className="mb-8">
                     <img
-                        src="https://www.pssi.org/files/uploads/news/image/2024/Dec/14/675d826f6b838/pssi-vietnam-_x600.jpg?token=2f634388119272750865ec65219a10d9"
+                        src={post.image}
                         alt="Image Berita"
                         className="w-full object-contain mb-4"
                     />
                     <h1 className="text-4xl font-extrabold text-gray-900 mb-2">
-                        Shin Tae-yong: Timnas Indonesia Siap Berjuang Maksimal
+                        {post.title}
                     </h1>
 
                     <div className="flex justify-between text-sm text-gray-500 mb-6">
-                        <span>15 Desember 2024 | Penulis: John Doe</span>
+                        <span>{formatDate(post.created_at)} | Author : {post.author.name}</span>
                     </div>
 
                     {/* Isi Berita */}
                     <p className="text-lg text-gray-800 mb-4">
-                        Pelatih Timnas Indonesia, Shin Tae-yong, memastikan
-                        timnya akan memberikan yang terbaik saat menghadapi
-                        Vietnam di pertandingan ketiga Grup B ASEAN Mitsubishi
-                        Electric Cup (AMEC) 2024.
+                        {post.content}
                     </p>
 
-                    <p className="text-lg text-gray-800 mb-4">
-                        Pertandingan ini akan berlangsung pada Minggu, 15
-                        Desember 2024, di Stadion Viet Tri, Vietnam.
-                    </p>
 
-                    <p className="text-lg text-gray-800 mb-4">
-                        Saat konferensi pers sebelum pertandingan, Shin Tae-yong
-                        mengakui bahwa padatnya jadwal menjadi tantangan besar
-                        bagi skuad Garuda. Setelah menang tipis 1-0 atas Myanmar
-                        di laga perdana, Timnas harus kembali ke Indonesia
-                        sebelum bermain imbang melawan Laos di laga kedua. Kini,
-                        tim kembali menjalani pertandingan tandang ke Vietnam
-                        dalam waktu singkat.
-                    </p>
-
-                    <p className="text-lg text-gray-800 mb-4">
-                        "Pertandingan besok akan sangat sulit. Jadwal yang padat
-                        membuat tim kami kelelahan. Tim kami rata-rata berusia
-                        di bawah 20 tahun, sehingga dari segi pengalaman dan
-                        kompetisi internasional, kami sedikit kurang
-                        dibandingkan dengan Vietnam," ujar Shin Tae-yong.
-                    </p>
-
-                    <p className="text-lg text-gray-800 mb-4">
-                        Meski begitu, pelatih berusia 54 tahun tersebut tetap
-                        optimistis. Ia menegaskan bahwa pertandingan ini akan
-                        menjadi pembelajaran berharga bagi para pemain muda dan
-                        menyatakan bahwa Timnas akan berjuang maksimal.
-                    </p>
-
-                    <p className="text-lg text-gray-800 mb-4">
-                        “Kami berharap pertandingan ini memberikan pengalaman
-                        penting bagi para pemain. Meski berat, kami akan tetap
-                        berusaha semaksimal mungkin,” tambahnya.
-                    </p>
-
-                    <p className="text-lg text-gray-800 mb-4">
-                        Saat ini, Indonesia telah mengoleksi empat poin dari dua
-                        pertandingan. Hasil pertandingan melawan Vietnam akan
-                        menjadi penentu peluang Garuda untuk melaju ke babak
-                        semifinal.
-                    </p>
-                </div>
-
-                {/* Rekomendasi Berita Lainnya */}
-                <div className="bg-white shadow-lg rounded-lg p-6 mb-8">
-                    <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                        Rekomendasi Berita
-                    </h2>
-                    {/* Grid untuk Rekomendasi Berita */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                        {/* Berita 1 */}
-                        <div className="bg-gray-100 rounded-lg shadow-md overflow-hidden">
-                            <img
-                                src="https://www.pssi.org/files/uploads/news/image/2024/Nov/12/673376ec422e2/whatsapp-image-2024-11-12-at-22-37-31-_x600.jpeg?token=e93c5c2f49cc7cf41eb6a5df8d8b84b0"
-                                alt="Image Berita 1"
-                                className="w-full h-40 object-cover mb-4"
-                            />
-                            <div className="p-4">
-                                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                                    <a
-                                        href="/kabar-bola/lawan-jepang"
-                                        className="hover:text-red-700 transition-colors duration-200"
-                                    >
-                                        STY Matangkan Persiapan Indonesia Jelang
-                                        Lawan Jepang
-                                    </a>
-                                </h3>
-                                <p className="text-sm text-gray-600">
-                                    15 Desember 2024
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* Berita 2 */}
-                        <div className="bg-gray-100 rounded-lg shadow-md overflow-hidden">
-                            <img
-                                src="https://www.pssi.org/files/uploads/news/image/2024/Nov/02/6725ab47a6c26/fai00093-_x600.jpg?token=fb64d2711cbac8e936cbbfc94081bfe3"
-                                alt="Image Berita 2"
-                                className="w-full h-40 object-cover mb-4"
-                            />
-                            <div className="p-4">
-                                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                                    <a
-                                        href="/kabar-bola/panggil-27-pemain"
-                                        className="hover:text-red-700 transition-colors duration-200"
-                                    >
-                                        Hadapi Jepang dan Arab Saudi, Timnas
-                                        Indonesia Panggil 27 Pemain
-                                    </a>
-                                </h3>
-                                <p className="text-sm text-gray-600">
-                                    14 Desember 2024
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* Berita 3 */}
-                        <div className="bg-gray-100 rounded-lg shadow-md overflow-hidden">
-                            <img
-                                src="https://www.pssi.org/files/uploads/news/image/2024/Nov/16/67382be8ce748/whatsapp-image-2024-11-16-at-12-21-05-_x600.jpeg?token=81a75e0ddcee18bfc40817c70a3b9a6a"
-                                alt="Image Berita 3"
-                                className="w-full h-40 object-cover mb-4"
-                            />
-                            <div className="p-4">
-                                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                                    <a
-                                        href="/kabar-bola/erick-thohir"
-                                        className="hover:text-red-700 transition-colors duration-200"
-                                    >
-                                        Motivasi Keras Erick Thohir di Ruang
-                                        Ganti
-                                    </a>
-                                </h3>
-                                <p className="text-sm text-gray-600">
-                                    13 Desember 2024
-                                </p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
                 {/* Tombol Kembali */}
                 <div className="text-center">
-                    <a
+                    <Link
                         href="/kabar-bola"
                         className="inline-block bg-red-700 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-red-800"
                     >
                         Kembali ke Berita Kabar Bola
-                    </a>
+                    </Link>
                 </div>
             </div>
                 {/* Footer */}
                 <footer className="bg-gray-800 text-white py-4">
                 <div className="container mx-auto text-center">
-                    <p>&copy; 2024 GarudaZone. All rights reserved.</p>
+                    <p>© 2024 GarudaZone. All rights reserved.</p>
                     <div className="mt-2">
                         <a
                             href="https://www.example.com"
