@@ -1,0 +1,73 @@
+#app {
+    height: 100%;
+}
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.mySwiper {
+    width: 100%; /* Membuat lebar Swiper 100% */
+    height: 100vh; /* Membuat tinggi Swiper 100% dari viewport */
+}
+
+@media (max-width: 768px) {
+    .mySwiper {
+        height: 100vh; /* Ukuran tinggi tetap 100vh pada mobile */
+    }
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-slide h1 {
+    font-size: 2.5rem;
+    color: #756d6c; /* Vibrant color */
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Paragraph Style */
+.swiper-slide p {
+    font-size: 1.2rem;
+    color: #444;
+    font-family: "Georgia", serif;
+    line-height: 1.6;
+    margin: 0;
+    max-width: 80%;
+    font-style: italic;
+}

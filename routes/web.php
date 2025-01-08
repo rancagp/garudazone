@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -14,9 +15,11 @@ Route::get('/', function () {
     ]);
 })->name('home');
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', [PostController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('/dashboard/user', function () {
+    return Inertia::render('dashboard/user');
+})->middleware(['auth', 'verified'])->name('user.dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -24,4 +27,21 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+Route::get('/pertandingan', function () {
+    return Inertia::render('Match/index');
+});
+
+Route::get('/sejarah', function () {
+    return Inertia::render('Sejarah/index');
+});
+
+Route::get('/kabar-bola', function () {
+    return Inertia::render('KabarBola/index');
+});
+
+Route::get('/kabar-bola/slug', function () {
+    return Inertia::render('KabarBola/page');
+});
+
+
+require __DIR__ . '/auth.php';
