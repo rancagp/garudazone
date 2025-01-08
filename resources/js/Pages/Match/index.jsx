@@ -1,711 +1,216 @@
 import Button from "@/Components/Button";
 import Navbar from "@/Components/navbar";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { usePage, Link } from "@inertiajs/react";
+import { Head } from "@inertiajs/react";
 
-export default function Match() {
+const MatchStatus = ({status, children}) => {
+    const statusColor = status === 'live' ? 'text-green-500' : 'text-gray-800';
+    return(
+         <p className={`${statusColor} font-extrabold`}>{children}</p>
+       )
+}
+
+const TeamInfo = ({match}) => {
+   return (
+         <div className="flex items-center justify-center">
+            <div className="flex flex-col items-center">
+                 <img
+                      src={match.home_team_flag ? match.home_team_flag.replace('/storage', '/storage') : '/images/no-image.png'}
+                      alt={match.home_team_name}
+                      className="w-20"
+                    />
+                     <span>{match.home_team_name}</span>
+                  </div>
+             {match.status === 'live' ? (
+                <div className="border flex gap-2 px-4 py-2 mx-4">
+                     <span>{match.home_score}</span>
+                      <span>-</span>
+                      <span>{match.away_score}</span>
+               </div>
+                ) : (<span className="mx-4">vs</span>
+              )}
+            <div className="flex flex-col items-center">
+                <img
+                   src={match.away_team_flag ? match.away_team_flag.replace('/storage', '/storage') : '/images/no-image.png'}
+                     alt={match.away_team_name}
+                     className="w-20"
+                  />
+                <span>{match.away_team_name}</span>
+              </div>
+          </div>
+     )
+}
+
+
+export default function Match({ matches, nearestMatches, scheduledMatches }) {
+    const [activePage, setActivePage] = useState(1);
+
+    const formatMatchTime = (date, time) => {
+        const [hours, minutes, seconds] = time.split(':');
+        const matchDate = new Date(date);
+        matchDate.setHours(parseInt(hours, 10));
+        matchDate.setMinutes(parseInt(minutes, 10));
+        matchDate.setSeconds(parseInt(seconds, 10));
+        return matchDate.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
+    }
+
 
     return (
         <>
             <Navbar />
-            <div className="grid w-3/4 shadow-lg mx-auto mt-4">
-                <div className="grid text-center gap-4 p-5 font-extrabold">
-                    <p>ASEAN MITSHUBISHI ELECTRIC CUP 2024</p>
-                    <div className="grid grid-cols-3 items-center">
-                        <div className="flex flex-col justify-between items-center">
-                            <img
-                                src="https://www.pssi.org/files/uploads/club/logo_url/2017/Oct/09/59db3b8bc9256/id-140x92.png?token=0ba48f74da007fa4bfaf996bb0559131"
-                                alt="indo"
-                                className="w-20"
-                            />
-                            <span>Indonesia</span>
-                        </div>
-                        <div className="flex flex-col items-center justify-between gap-5">
-                            <span className="text-xl font-bold">VS</span>
-                            <Button
-                                variant={'danger'}
-                            >
-                                Beli Tiket
-                            </Button>
-                        </div>
-                        <div className="flex flex-col items-center justify-between">
-                            <img
-                                src="https://www.pssi.org/files/uploads/club/logo_url/2017/Oct/29/59f5fbc952d55/laos-140x92.png?token=03cc59fd1d26595996b8aa160d3fdf74"
-                                alt="laos"
-                                className="w-20"
-                            />
-                            <span>Laos</span>
-                        </div>
-                    </div>
+             <Head title="Match" />
+
+            {/* Card Pertandingan Terdekat (Live/Scheduled Terdekat) */}
+            {nearestMatches && nearestMatches.length > 0 && (
+                <div className="grid w-3/4 shadow-lg mx-auto mt-4">
+                    {nearestMatches.map((match) => (
+                        <div key={match.id}>
+                             <div className="grid text-center gap-4 p-5 font-extrabold">
+                                  <MatchStatus status={match.status}>
+                                        {match.competition}
+                                   </MatchStatus>
+                                   <TeamInfo match={match}/>
+                              </div>
+                              <div className="grid border p-4 bg-slate-100/50">
+                                  <div className="flex items-center justify-center gap-1">
+                                       <span className="text-4xl font-extrabold">{new Date(match.match_date).getDate()}</span>
+                                         <div className="grid">
+                                              <span>{new Date(match.match_date).toLocaleString('default', { month: 'short' })}</span>
+                                              <span className="-mt-2">{new Date(match.match_date).getFullYear()}</span>
+                                         </div>
+                                     </div>
+                                      <p className="text-center font-extrabold">
+                                          {match.stadium}, {match.location}
+                                      </p>
+                                  </div>
+                                   <div className="grid text-center p-4">
+                                      {match.status === 'live' ? (
+                                          <p className="text-green-500 font-extrabold">LIVE</p>
+                                       ) : (
+                                         <p>{new Date(match.match_date).toLocaleString('en-US', { weekday: 'long' })}, {new Date(match.match_date).toLocaleString('default', { month: 'long' })} {new Date(match.match_date).getDate()} {new Date(match.match_date).getFullYear()} | {formatMatchTime(match.match_date, match.match_time)}</p>
+                                       )}
+                                   </div>
+                           </div>
+                      ))}
                 </div>
-                <div className="grid border p-4 bg-slate-100/50">
-                    <div className="flex items-center justify-center gap-1">
-                        <span className="text-4xl font-extrabold">12</span>
-                        <div className="grid">
-                            <span>DEC</span>
-                            <span className="-mt-2">2024</span>
-                        </div>
-                    </div>
-                    <p className="text-center font-extrabold">
-                        MANAHAN STADIUM, SURAKARTA
-                    </p>
-                </div>
-                <div className="grid text-center p-4">
-                    <p>Thursday, 20 March 2025 | 07.00 PM</p>
-                </div>
-                <div className="grid text-center bg-slate-100/50 p-4 border gap-4">
-                    <p className="text-red-500 text-center font-extrabold">
-                        FIFA World Cup Qualifiers
-                    </p>
-                    <div className="flex items-center justify-center gap-2">
-                        <div className="flex items-center gap-2">
-                            <span>Australia</span>
-                            <img
-                                src="https://www.pssi.org/files/uploads/club/logo_url/2019/Oct/21/5dad7e3b61d3f/australia-_x70.png?token=0fab09662d1165ec7ee4ca6cb3013133"
-                                alt="australia"
-                                className="w-10"
-                            />
-                        </div>
-                        <div className="border flex gap-2 px-4 py-2">
-                            <span>{/* score home */}</span>
-                            <span>-</span>
-                            <span>{/* score away */}</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <img
-                                src="https://www.pssi.org/files/uploads/club/logo_url/2017/Oct/09/59db3b8bc9256/id-_x70.png?token=186559410932fb7c8b06c08c67bde4e2"
-                                alt="indonesia"
-                                className="w-10"
-                            />
-                            <span>Indonesia</span>
-                        </div>
-                    </div>
-                    <div className="flex items-center justify-center gap-2">
-                        <img
-                            src="https://www.pssi.org/assets/img/stadion.png"
-                            alt="stadion"
-                            className="w-5"
-                        />
-                        <span className="text-xs">TBA</span>
-                    </div>
-                </div>
-                <div className="grid text-center p-4">
-                    <p>Thursday, 25 March 2025 | 07.00 PM</p>
-                </div>
-                <div className="grid text-center bg-slate-100/50 p-4 border gap-4">
-                    <p className="text-red-500 text-center font-extrabold">
-                        FIFA World Cup Qualifiers
-                    </p>
-                    <div className="flex items-center justify-center gap-2">
-                        <div className="flex items-center gap-2">
-                            <span>Indonesia</span>
-                            <img
-                                src="https://www.pssi.org/files/uploads/club/logo_url/2017/Oct/09/59db3b8bc9256/id-_x70.png?token=186559410932fb7c8b06c08c67bde4e2"
-                                alt="indonesia"
-                                className="w-10"
-                            />
-                        </div>
-                        <div className="border flex gap-2 px-4 py-2">
-                            <span>{/* score home */}</span>
-                            <span>-</span>
-                            <span>{/* score away */}</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <img
-                                src="https://www.pssi.org/files/uploads/club/logo_url/2018/Apr/02/5ac217744d919/bahrain-_x70.png?token=a78a26e15fcadca21e2a95398c74059e"
-                                className="w-10"
-                            />
-                            <span>Bahrain</span>
-                        </div>
-                    </div>
-                    <div className="flex items-center justify-center gap-2">
-                        <img
-                            src="https://www.pssi.org/assets/img/stadion.png"
-                            alt="stadion"
-                            className="w-5"
-                        />
-                        <span className="text-xs">TBA</span>
-                    </div>
-                </div>
-                <div className="grid text-center p-4">
-                    <p>Thursday, 5 June 2025 | 07.00 PM</p>
-                </div>
-                <div className="grid text-center bg-slate-100/50 p-4 border gap-4">
-                    <p className="text-red-500 text-center font-extrabold">
-                        FIFA World Cup Qualifiers
-                    </p>
-                    <div className="flex items-center justify-center gap-2">
-                        <div className="flex items-center gap-2">
-                            <span>Indonesia</span>
-                            <img
-                                src="https://www.pssi.org/files/uploads/club/logo_url/2017/Oct/09/59db3b8bc9256/id-_x70.png?token=186559410932fb7c8b06c08c67bde4e2"
-                                alt="indonesia"
-                                className="w-10"
-                            />
-                        </div>
-                        <div className="border flex gap-2 px-4 py-2">
-                            <span>{/* score home */}</span>
-                            <span>-</span>
-                            <span>{/* score away */}</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <img
-                                src="https://www.pssi.org/files/uploads/club/logo_url/2017/Oct/23/59edfc54506b0/china-_x70.png?token=c96a49b24299b33978012669cc9e1095"
-                                alt="china pr"
-                                className="w-10"
-                            />
-                            <span>China PR</span>
-                        </div>
-                    </div>
-                    <div className="flex items-center justify-center gap-2">
-                        <img
-                            src="https://www.pssi.org/assets/img/stadion.png"
-                            alt="stadion"
-                            className="w-5"
-                        />
-                        <span className="text-xs">TBA</span>
-                    </div>
-                </div>
-                <div className="grid text-center p-4">
-                    <p>Thursday,10 June 2025 | 01.00 PM</p>
-                </div>
-                <div className="grid text-center bg-slate-100/50 p-4 border gap-4">
-                    <p className="text-red-500 text-center font-extrabold">
-                        FIFA World Cup Qualifiers
-                    </p>
-                    <div className="flex items-center justify-center gap-2">
-                        <div className="flex items-center gap-2">
-                            <span>Jepan</span>
-                            <img
-                                src="https://www.pssi.org/files/uploads/club/logo_url/2023/Nov/28/6565912548407/japan-_x70.png?token=bd8d111e7db03d8ed98fb50e472660dc"
-                                alt="jepan"
-                                className="w-10"
-                            />
-                        </div>
-                        <div className="border flex gap-2 px-4 py-2">
-                            <span>{/* score home */}</span>
-                            <span>-</span>
-                            <span>{/* score away */}</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <img
-                                src="https://www.pssi.org/files/uploads/club/logo_url/2017/Oct/09/59db3b8bc9256/id-_x70.png?token=186559410932fb7c8b06c08c67bde4e2"
-                                alt="indonesia"
-                                className="w-10"
-                            />
-                            <span>Indonesia</span>
-                        </div>
-                    </div>
-                    <div className="flex items-center justify-center gap-2">
-                        <img
-                            src="https://www.pssi.org/assets/img/stadion.png"
-                            alt="stadion"
-                            className="w-5"
-                        />
-                        <span className="text-xs">TBA</span>
-                    </div>
-                </div>
-            </div>
+           )}
+
+            {/* Card Jadwal Pertandingan (Scheduled Lainnya) */}
+             {scheduledMatches && scheduledMatches.length > 0 && (
+                    <div className="grid w-3/4 shadow-lg mx-auto mt-4">
+                       <div className="grid text-center gap-4 p-5">
+                           <p className="font-extrabold">PERTANDINGAN AKAN DATANG</p>
+                          </div>
+                      {scheduledMatches.map((match) => (
+                             <div key={match.id} className="grid text-center bg-slate-100/50 p-4 border gap-4">
+                                    <p className="text-red-500 text-center font-extrabold">
+                                          {match.competition}
+                                        </p>
+                                        <div className="flex items-center justify-center">
+                                            <div className="flex items-center gap-2">
+                                                 <span>{match.home_team_name}</span>
+                                                  <img
+                                                      src={match.home_team_flag ? match.home_team_flag.replace('/storage', '/storage') : '/images/no-image.png'}
+                                                        alt={match.home_team_name}
+                                                        className="w-10"
+                                                     />
+                                               </div>
+                                                <div className="border flex gap-2 px-4 py-2">
+                                                   <span>VS</span>
+                                                </div>
+                                            <div className="flex items-center gap-2">
+                                                   <img
+                                                    src={match.away_team_flag ? match.away_team_flag.replace('/storage', '/storage') : '/images/no-image.png'}
+                                                       alt={match.away_team_name}
+                                                       className="w-10"
+                                                    />
+                                               <span>{match.away_team_name}</span>
+                                            </div>
+                                        </div>
+                                        <div className="flex items-center justify-center gap-2">
+                                            <img
+                                                src="https://www.pssi.org/assets/img/stadion.png"
+                                                alt="stadion"
+                                                  className="w-5"
+                                            />
+                                          <span className="text-xs">{match.stadium}, {match.location}</span>
+                                      </div>
+                                         <div className="grid text-center p-4">
+                                            <p>{new Date(match.match_date).toLocaleString('en-US', { weekday: 'long' })}, {new Date(match.match_date).toLocaleString('default', { month: 'long' })} {new Date(match.match_date).getDate()} {new Date(match.match_date).getFullYear()} | {formatMatchTime(match.match_date, match.match_time)}</p>
+                                     </div>
+                                </div>
+                         ))}
+                     </div>
+             )}
+
+
+            {/* Card Hasil Pertandingan (tanpa Pagination) */}
             <div className="grid w-3/4 shadow-lg mx-auto my-4">
                 <div className="grid text-center gap-4 p-5">
                     <p className="font-extrabold">HASIL PERTANDINGAN</p>
-                    <div className="grid text-center p-4">
-                        <p>Thursday,10 June 2025 | 01.00 PM</p>
-                    </div>
                 </div>
-                <div className="grid text-center bg-slate-100/50 p-4 border gap-4">
-                    <p className="text-red-500 text-center font-extrabold">
-                        FIFA World Cup Qualifiers
-                    </p>
-                    <div className="flex items-center justify-center gap-2">
-                        <div className="flex items-center gap-2">
-                            <span>Australia</span>
-                            <img
-                                src="https://www.pssi.org/files/uploads/club/logo_url/2019/Oct/21/5dad7e3b61d3f/australia-_x70.png?token=0fab09662d1165ec7ee4ca6cb3013133"
-                                alt="australia"
-                                className="w-10"
-                            />
-                        </div>
-                        <div className="border flex gap-2 px-4 py-2">
-                            <span>1</span>
-                            <span>-</span>
-                            <span>10</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <img
-                                src="https://www.pssi.org/files/uploads/club/logo_url/2017/Oct/09/59db3b8bc9256/id-_x70.png?token=186559410932fb7c8b06c08c67bde4e2"
-                                alt="indonesia"
-                                className="w-10"
-                            />
-                            <span>Indonesia</span>
-                        </div>
-                    </div>
-                    <div className="flex items-center justify-center gap-2">
-                        <img
-                            src="https://www.pssi.org/assets/img/stadion.png"
-                            alt="stadion"
-                            className="w-5"
-                        />
-                        <span className="text-xs">TBA</span>
-                    </div>
-                </div>
-                <div className="grid text-center p-4">
-                    <p>Thursday,10 June 2025 | 01.00 PM</p>
-                </div>
-                <div className="grid text-center bg-slate-100/50 p-4 border gap-4">
-                    <p className="text-red-500 text-center font-extrabold">
-                        FIFA World Cup Qualifiers
-                    </p>
-                    <div className="flex items-center justify-center gap-2">
-                        <div className="flex items-center gap-2">
-                            <span>Australia</span>
-                            <img
-                                src="https://www.pssi.org/files/uploads/club/logo_url/2019/Oct/21/5dad7e3b61d3f/australia-_x70.png?token=0fab09662d1165ec7ee4ca6cb3013133"
-                                alt="australia"
-                                className="w-10"
-                            />
-                        </div>
-                        <div className="border flex gap-2 px-4 py-2">
-                            <span>1</span>
-                            <span>-</span>
-                            <span>10</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <img
-                                src="https://www.pssi.org/files/uploads/club/logo_url/2017/Oct/09/59db3b8bc9256/id-_x70.png?token=186559410932fb7c8b06c08c67bde4e2"
-                                alt="indonesia"
-                                className="w-10"
-                            />
-                            <span>Indonesia</span>
-                        </div>
-                    </div>
-                    <div className="flex items-center justify-center gap-2">
-                        <img
-                            src="https://www.pssi.org/assets/img/stadion.png"
-                            alt="stadion"
-                            className="w-5"
-                        />
-                        <span className="text-xs">TBA</span>
-                    </div>
-                </div>
-                <div className="grid text-center p-4">
-                    <p>Thursday,10 June 2025 | 01.00 PM</p>
-                </div>
-                <div className="grid text-center bg-slate-100/50 p-4 border gap-4">
-                    <p className="text-red-500 text-center font-extrabold">
-                        FIFA World Cup Qualifiers
-                    </p>
-                    <div className="flex items-center justify-center gap-2">
-                        <div className="flex items-center gap-2">
-                            <span>Australia</span>
-                            <img
-                                src="https://www.pssi.org/files/uploads/club/logo_url/2019/Oct/21/5dad7e3b61d3f/australia-_x70.png?token=0fab09662d1165ec7ee4ca6cb3013133"
-                                alt="australia"
-                                className="w-10"
-                            />
-                        </div>
-                        <div className="border flex gap-2 px-4 py-2">
-                            <span>1</span>
-                            <span>-</span>
-                            <span>10</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <img
-                                src="https://www.pssi.org/files/uploads/club/logo_url/2017/Oct/09/59db3b8bc9256/id-_x70.png?token=186559410932fb7c8b06c08c67bde4e2"
-                                alt="indonesia"
-                                className="w-10"
-                            />
-                            <span>Indonesia</span>
-                        </div>
-                    </div>
-                    <div className="flex items-center justify-center gap-2">
-                        <img
-                            src="https://www.pssi.org/assets/img/stadion.png"
-                            alt="stadion"
-                            className="w-5"
-                        />
-                        <span className="text-xs">TBA</span>
-                    </div>
-                </div>
-                <div className="grid text-center p-4">
-                    <p>Thursday,10 June 2025 | 01.00 PM</p>
-                </div>
-                <div className="grid text-center bg-slate-100/50 p-4 border gap-4">
-                    <p className="text-red-500 text-center font-extrabold">
-                        FIFA World Cup Qualifiers
-                    </p>
-                    <div className="flex items-center justify-center gap-2">
-                        <div className="flex items-center gap-2">
-                            <span>Australia</span>
-                            <img
-                                src="https://www.pssi.org/files/uploads/club/logo_url/2019/Oct/21/5dad7e3b61d3f/australia-_x70.png?token=0fab09662d1165ec7ee4ca6cb3013133"
-                                alt="australia"
-                                className="w-10"
-                            />
-                        </div>
-                        <div className="border flex gap-2 px-4 py-2">
-                            <span>1</span>
-                            <span>-</span>
-                            <span>10</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <img
-                                src="https://www.pssi.org/files/uploads/club/logo_url/2017/Oct/09/59db3b8bc9256/id-_x70.png?token=186559410932fb7c8b06c08c67bde4e2"
-                                alt="indonesia"
-                                className="w-10"
-                            />
-                            <span>Indonesia</span>
-                        </div>
-                    </div>
-                    <div className="flex items-center justify-center gap-2">
-                        <img
-                            src="https://www.pssi.org/assets/img/stadion.png"
-                            alt="stadion"
-                            className="w-5"
-                        />
-                        <span className="text-xs">TBA</span>
-                    </div>
-                </div>
-                <div className="grid text-center p-4">
-                    <p>Thursday,10 June 2025 | 01.00 PM</p>
-                </div>
-                <div className="grid text-center bg-slate-100/50 p-4 border gap-4">
-                    <p className="text-red-500 text-center font-extrabold">
-                        FIFA World Cup Qualifiers
-                    </p>
-                    <div className="flex items-center justify-center gap-2">
-                        <div className="flex items-center gap-2">
-                            <span>Australia</span>
-                            <img
-                                src="https://www.pssi.org/files/uploads/club/logo_url/2019/Oct/21/5dad7e3b61d3f/australia-_x70.png?token=0fab09662d1165ec7ee4ca6cb3013133"
-                                alt="australia"
-                                className="w-10"
-                            />
-                        </div>
-                        <div className="border flex gap-2 px-4 py-2">
-                            <span>1</span>
-                            <span>-</span>
-                            <span>10</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <img
-                                src="https://www.pssi.org/files/uploads/club/logo_url/2017/Oct/09/59db3b8bc9256/id-_x70.png?token=186559410932fb7c8b06c08c67bde4e2"
-                                alt="indonesia"
-                                className="w-10"
-                            />
-                            <span>Indonesia</span>
-                        </div>
-                    </div>
-                    <div className="flex items-center justify-center gap-2">
-                        <img
-                            src="https://www.pssi.org/assets/img/stadion.png"
-                            alt="stadion"
-                            className="w-5"
-                        />
-                        <span className="text-xs">TBA</span>
-                    </div>
-                </div>
-                <div className="grid text-center p-4">
-                    <p>Thursday,10 June 2025 | 01.00 PM</p>
-                </div>
-                <div className="grid text-center bg-slate-100/50 p-4 border gap-4">
-                    <p className="text-red-500 text-center font-extrabold">
-                        FIFA World Cup Qualifiers
-                    </p>
-                    <div className="flex items-center justify-center gap-2">
-                        <div className="flex items-center gap-2">
-                            <span>Australia</span>
-                            <img
-                                src="https://www.pssi.org/files/uploads/club/logo_url/2019/Oct/21/5dad7e3b61d3f/australia-_x70.png?token=0fab09662d1165ec7ee4ca6cb3013133"
-                                alt="australia"
-                                className="w-10"
-                            />
-                        </div>
-                        <div className="border flex gap-2 px-4 py-2">
-                            <span>1</span>
-                            <span>-</span>
-                            <span>10</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <img
-                                src="https://www.pssi.org/files/uploads/club/logo_url/2017/Oct/09/59db3b8bc9256/id-_x70.png?token=186559410932fb7c8b06c08c67bde4e2"
-                                alt="indonesia"
-                                className="w-10"
-                            />
-                            <span>Indonesia</span>
-                        </div>
-                    </div>
-                    <div className="flex items-center justify-center gap-2">
-                        <img
-                            src="https://www.pssi.org/assets/img/stadion.png"
-                            alt="stadion"
-                            className="w-5"
-                        />
-                        <span className="text-xs">TBA</span>
-                    </div>
-                </div>
-                <div className="grid text-center p-4">
-                    <p>Thursday,10 June 2025 | 01.00 PM</p>
-                </div>
-                <div className="grid text-center bg-slate-100/50 p-4 border gap-4">
-                    <p className="text-red-500 text-center font-extrabold">
-                        FIFA World Cup Qualifiers
-                    </p>
-                    <div className="flex items-center justify-center gap-2">
-                        <div className="flex items-center gap-2">
-                            <span>Australia</span>
-                            <img
-                                src="https://www.pssi.org/files/uploads/club/logo_url/2019/Oct/21/5dad7e3b61d3f/australia-_x70.png?token=0fab09662d1165ec7ee4ca6cb3013133"
-                                alt="australia"
-                                className="w-10"
-                            />
-                        </div>
-                        <div className="border flex gap-2 px-4 py-2">
-                            <span>1</span>
-                            <span>-</span>
-                            <span>10</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <img
-                                src="https://www.pssi.org/files/uploads/club/logo_url/2017/Oct/09/59db3b8bc9256/id-_x70.png?token=186559410932fb7c8b06c08c67bde4e2"
-                                alt="indonesia"
-                                className="w-10"
-                            />
-                            <span>Indonesia</span>
-                        </div>
-                    </div>
-                    <div className="flex items-center justify-center gap-2">
-                        <img
-                            src="https://www.pssi.org/assets/img/stadion.png"
-                            alt="stadion"
-                            className="w-5"
-                        />
-                        <span className="text-xs">TBA</span>
-                    </div>
-                </div>
-                <div className="grid text-center p-4">
-                    <p>Thursday,10 June 2025 | 01.00 PM</p>
-                </div>
-                <div className="grid text-center bg-slate-100/50 p-4 border gap-4">
-                    <p className="text-red-500 text-center font-extrabold">
-                        FIFA World Cup Qualifiers
-                    </p>
-                    <div className="flex items-center justify-center gap-2">
-                        <div className="flex items-center gap-2">
-                            <span>Australia</span>
-                            <img
-                                src="https://www.pssi.org/files/uploads/club/logo_url/2019/Oct/21/5dad7e3b61d3f/australia-_x70.png?token=0fab09662d1165ec7ee4ca6cb3013133"
-                                alt="australia"
-                                className="w-10"
-                            />
-                        </div>
-                        <div className="border flex gap-2 px-4 py-2">
-                            <span>1</span>
-                            <span>-</span>
-                            <span>10</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <img
-                                src="https://www.pssi.org/files/uploads/club/logo_url/2017/Oct/09/59db3b8bc9256/id-_x70.png?token=186559410932fb7c8b06c08c67bde4e2"
-                                alt="indonesia"
-                                className="w-10"
-                            />
-                            <span>Indonesia</span>
-                        </div>
-                    </div>
-                    <div className="flex items-center justify-center gap-2">
-                        <img
-                            src="https://www.pssi.org/assets/img/stadion.png"
-                            alt="stadion"
-                            className="w-5"
-                        />
-                        <span className="text-xs">TBA</span>
-                    </div>
-                </div>
-                <div className="grid text-center p-4">
-                    <p>Thursday,10 June 2025 | 01.00 PM</p>
-                </div>
-                <div className="grid text-center bg-slate-100/50 p-4 border gap-4">
-                    <p className="text-red-500 text-center font-extrabold">
-                        FIFA World Cup Qualifiers
-                    </p>
-                    <div className="flex items-center justify-center gap-2">
-                        <div className="flex items-center gap-2">
-                            <span>Australia</span>
-                            <img
-                                src="https://www.pssi.org/files/uploads/club/logo_url/2019/Oct/21/5dad7e3b61d3f/australia-_x70.png?token=0fab09662d1165ec7ee4ca6cb3013133"
-                                alt="australia"
-                                className="w-10"
-                            />
-                        </div>
-                        <div className="border flex gap-2 px-4 py-2">
-                            <span>1</span>
-                            <span>-</span>
-                            <span>10</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <img
-                                src="https://www.pssi.org/files/uploads/club/logo_url/2017/Oct/09/59db3b8bc9256/id-_x70.png?token=186559410932fb7c8b06c08c67bde4e2"
-                                alt="indonesia"
-                                className="w-10"
-                            />
-                            <span>Indonesia</span>
-                        </div>
-                    </div>
-                    <div className="flex items-center justify-center gap-2">
-                        <img
-                            src="https://www.pssi.org/assets/img/stadion.png"
-                            alt="stadion"
-                            className="w-5"
-                        />
-                        <span className="text-xs">TBA</span>
-                    </div>
-                </div>
-                <div className="grid text-center p-4">
-                    <p>Thursday,10 June 2025 | 01.00 PM</p>
-                </div>
-                <div className="grid text-center bg-slate-100/50 p-4 border gap-4">
-                    <p className="text-red-500 text-center font-extrabold">
-                        FIFA World Cup Qualifiers
-                    </p>
-                    <div className="flex items-center justify-center gap-2">
-                        <div className="flex items-center gap-2">
-                            <span>Australia</span>
-                            <img
-                                src="https://www.pssi.org/files/uploads/club/logo_url/2019/Oct/21/5dad7e3b61d3f/australia-_x70.png?token=0fab09662d1165ec7ee4ca6cb3013133"
-                                alt="australia"
-                                className="w-10"
-                            />
-                        </div>
-                        <div className="border flex gap-2 px-4 py-2">
-                            <span>1</span>
-                            <span>-</span>
-                            <span>10</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <img
-                                src="https://www.pssi.org/files/uploads/club/logo_url/2017/Oct/09/59db3b8bc9256/id-_x70.png?token=186559410932fb7c8b06c08c67bde4e2"
-                                alt="indonesia"
-                                className="w-10"
-                            />
-                            <span>Indonesia</span>
-                        </div>
-                    </div>
-                    <div className="flex items-center justify-center gap-2">
-                        <img
-                            src="https://www.pssi.org/assets/img/stadion.png"
-                            alt="stadion"
-                            className="w-5"
-                        />
-                        <span className="text-xs">TBA</span>
-                    </div>
-                </div>
-                <div className="grid text-center p-4">
-                    <p>Thursday,10 June 2025 | 01.00 PM</p>
-                </div>
-                <div className="grid text-center bg-slate-100/50 p-4 border gap-4">
-                    <p className="text-red-500 text-center font-extrabold">
-                        FIFA World Cup Qualifiers
-                    </p>
-                    <div className="flex items-center justify-center gap-2">
-                        <div className="flex items-center gap-2">
-                            <span>Australia</span>
-                            <img
-                                src="https://www.pssi.org/files/uploads/club/logo_url/2019/Oct/21/5dad7e3b61d3f/australia-_x70.png?token=0fab09662d1165ec7ee4ca6cb3013133"
-                                alt="australia"
-                                className="w-10"
-                            />
-                        </div>
-                        <div className="border flex gap-2 px-4 py-2">
-                            <span>1</span>
-                            <span>-</span>
-                            <span>10</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <img
-                                src="https://www.pssi.org/files/uploads/club/logo_url/2017/Oct/09/59db3b8bc9256/id-_x70.png?token=186559410932fb7c8b06c08c67bde4e2"
-                                alt="indonesia"
-                                className="w-10"
-                            />
-                            <span>Indonesia</span>
-                        </div>
-                    </div>
-                    <div className="flex items-center justify-center gap-2">
-                        <img
-                            src="https://www.pssi.org/assets/img/stadion.png"
-                            alt="stadion"
-                            className="w-5"
-                        />
-                        <span className="text-xs">TBA</span>
-                    </div>
-                </div>
-                <div className="grid text-center p-4">
-                    <p>Thursday,10 June 2025 | 01.00 PM</p>
-                </div>
-                <div className="grid text-center bg-slate-100/50 p-4 border gap-4">
-                    <p className="text-red-500 text-center font-extrabold">
-                        FIFA World Cup Qualifiers
-                    </p>
-                    <div className="flex items-center justify-center gap-2">
-                        <div className="flex items-center gap-2">
-                            <span>Australia</span>
-                            <img
-                                src="https://www.pssi.org/files/uploads/club/logo_url/2019/Oct/21/5dad7e3b61d3f/australia-_x70.png?token=0fab09662d1165ec7ee4ca6cb3013133"
-                                alt="australia"
-                                className="w-10"
-                            />
-                        </div>
-                        <div className="border flex gap-2 px-4 py-2">
-                            <span>1</span>
-                            <span>-</span>
-                            <span>10</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <img
-                                src="https://www.pssi.org/files/uploads/club/logo_url/2017/Oct/09/59db3b8bc9256/id-_x70.png?token=186559410932fb7c8b06c08c67bde4e2"
-                                alt="indonesia"
-                                className="w-10"
-                            />
-                            <span>Indonesia</span>
-                        </div>
-                    </div>
-                    <div className="flex items-center justify-center gap-2">
-                        <img
-                            src="https://www.pssi.org/assets/img/stadion.png"
-                            alt="stadion"
-                            className="w-5"
-                        />
-                        <span className="text-xs">TBA</span>
-                    </div>
-                </div>
-                <div className="grid text-center p-4">
-                    <Button
-                        className={
-                            "bg-red-500 w-max text-white rounded-sm px-4 py-2 mx-auto"
-                        }
-                    >
-                        Selengkapnya
-                    </Button>
-                </div>
-                <footer className="bg-gray-800 text-white py-4">
-            <div className="container mx-auto text-center">
-                <p>&copy; 2024 GarudaZone. All rights reserved.</p>
-                <div className="mt-2">
-                    <a
-                        href="https://www.example.com"
-                        className="text-gray-400 hover:text-white mx-2"
-                    >
-                        Privacy Policy
-                    </a>
-                    <a
-                        href="https://www.example.com"
-                        className="text-gray-400 hover:text-white mx-2"
-                    >
-                        Terms of Service
-                    </a>
-                </div>
+                {matches && matches.map((match) => (
+                    <div key={match.id} className="grid text-center bg-slate-100/50 p-4 border gap-4">
+                        <p className="text-red-500 text-center font-extrabold">
+                            {match.competition}
+                        </p>
+                         <div className="flex items-center justify-center gap-2">
+                            <div className="flex items-center gap-2">
+                                <span>{match.home_team_name}</span>
+                                 <img
+                                     src={match.home_team_flag ? match.home_team_flag.replace('/storage', '/storage') : '/images/no-image.png'}
+                                      alt={match.home_team_name}
+                                       className="w-10"
+                                    />
+                                </div>
+                                <div className="border flex gap-2 px-4 py-2">
+                                    <span>{match.home_score}</span>
+                                    <span>-</span>
+                                    <span>{match.away_score}</span>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                     <img
+                                          src={match.away_team_flag ? match.away_team_flag.replace('/storage', '/storage') : '/images/no-image.png'}
+                                        alt={match.away_team_name}
+                                           className="w-10"
+                                    />
+                                    <span>{match.away_team_name}</span>
+                                </div>
+                             </div>
+                            <div className="flex items-center justify-center gap-2">
+                                <img
+                                    src="https://www.pssi.org/assets/img/stadion.png"
+                                    alt="stadion"
+                                     className="w-5"
+                                />
+                                <span className="text-xs">{match.stadium}, {match.location}</span>
+                            </div>
+                            <div className="grid text-center p-4">
+                                <p>{new Date(match.match_date).toLocaleString('en-US', { weekday: 'long' })}, {new Date(match.match_date).toLocaleString('default', { month: 'long' })} {new Date(match.match_date).getDate()} {new Date(match.match_date).getFullYear()} | {formatMatchTime(match.match_date, match.match_time)}</p>
+                             </div>
+                      </div>
+                    ))}
             </div>
-        </footer>
-            </div>
+             <footer className="bg-gray-800 text-white py-4">
+                <div className="container mx-auto text-center">
+                    <p>© 2024 GarudaZone. All rights reserved.</p>
+                    <div className="mt-2">
+                        <a
+                            href="https://www.example.com"
+                            className="text-gray-400 hover:text-white mx-2"
+                        >
+                            Privacy Policy
+                        </a>
+                        <a
+                            href="https://www.example.com"
+                            className="text-gray-400 hover:text-white mx-2"
+                        >
+                            Terms of Service
+                        </a>
+                    </div>
+                </div>
+            </footer>
         </>
     );
 }

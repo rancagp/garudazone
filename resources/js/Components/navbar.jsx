@@ -1,16 +1,11 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
-import { Link, usePage } from '@inertiajs/react';
+import { Link, usePage, router } from '@inertiajs/react';
 import React from 'react'
 
 const Navbar = () => {
-    const user = {
-        name: "RancaGp",
-        email: "tom@example.com",
-        imageUrl: "/images/ranca.jpg",
-    };
-
-    const navigation = [
+     const { props, url } = usePage();
+     const navigation = [
         { name: "HOME", href: "/" },
         { name: "KABAR BOLA", href: "/kabar-bola" },
         { name: "SEJARAH", href: "/sejarah" },
@@ -21,7 +16,7 @@ const Navbar = () => {
         return classes.filter(Boolean).join(" ");
     }
 
-    const { props, url } = usePage();
+
 
     const userNavigation = [
         { name: "Your Profile", href: "#" },
@@ -46,7 +41,7 @@ const Navbar = () => {
                         <div className="hidden md:block">
                             <div className="flex items-baseline ml-10 space-x-4">
                                 {navigation.map((item) => (
-                                    <a
+                                    <Link
                                         key={item.name}
                                         href={item.href}
                                         className={classNames(
@@ -57,7 +52,7 @@ const Navbar = () => {
                                         )}
                                     >
                                         {item.name}
-                                    </a>
+                                    </Link>
                                 ))}
                             </div>
                         </div>
@@ -69,16 +64,16 @@ const Navbar = () => {
                             {/* Profile dropdown */}
                             <Menu as="div" className="relative ml-3">
                                 <div>
-                                    {props.auth.user ? (
+                                    {props.auth?.user ? (
                                         <MenuButton className="relative flex max-w-xs items-center rounded-full bg-indigo-400 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                                             <span className="absolute -inset-1.5" />
-                                            <img
+                                             <img
                                                 alt=""
-                                                src={user.imageUrl}
+                                               src={props.auth.user.imageUrl}
                                                 className="rounded-full size-8"
-                                            />
+                                              />
                                         </MenuButton>
-                                    ) : (
+                                   ) : (
                                         <>
                                             <a
                                                 href="/register"
@@ -86,12 +81,12 @@ const Navbar = () => {
                                             >
                                                 Register
                                             </a>
-                                            <a
-                                                href="/login"
+                                           <a
+                                               href="/login"
                                                 className="px-3 py-2 text-sm font-medium text-gray-300 uppercase rounded-md hover:bg-red-900 hover:text-white"
-                                            >
-                                                Login
-                                            </a>
+                                           >
+                                               Login
+                                           </a>
                                         </>
                                     )}
                                 </div>
@@ -109,8 +104,8 @@ const Navbar = () => {
                                             </a>
                                         </MenuItem>
                                     ))}
-                                    <MenuItem>
-                                        <button
+                                   <MenuItem>
+                                       <button
                                             onClick={() =>
                                                 router.post("/logout")
                                             }
@@ -120,7 +115,7 @@ const Navbar = () => {
                                         </button>
                                     </MenuItem>
                                 </MenuItems>
-                            </Menu>
+                           </Menu>
                         </div>
                     </div>
                     {/* End Navbar Desktop */}
@@ -151,52 +146,54 @@ const Navbar = () => {
                 <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                     {navigation.map((item) => (
                         <DisclosureButton
-                            as='a'
-                            key={item.name}
+                             as='a'
+                             key={item.name}
                             href={item.href}
-                            className={classNames(
+                             className={classNames(
                                 url === item.href
-                                    ? "bg-gray-600 text-white"
-                                    : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                                "block rounded-md px-3 py-2 text-base font-medium"
-                            )}
-                        >
-                            {item.name}
-                        </DisclosureButton>
-                    ))}
+                                  ? "bg-gray-600 text-white"
+                                  : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                               "block rounded-md px-3 py-2 text-base font-medium"
+                           )}
+                      >
+                           {item.name}
+                      </DisclosureButton>
+                   ))}
                 </div>
-                <div className="border-t border-gray-700 pb-3 pt-4">
-                    <div className="flex items-center px-5">
-                        <div className="shrink-0">
-                            <img
-                                alt=""
-                                src={user.imageUrl}
-                                className="size-10 rounded-full"
-                            />
-                        </div>
-                        <div className="ml-3">
-                            <div className="text-base/5 font-medium text-white">
-                                {user.name}
+                {props.auth?.user && (
+                  <div className="border-t border-gray-700 pb-3 pt-4">
+                      <div className="flex items-center px-5">
+                          <div className="shrink-0">
+                              <img
+                                 alt=""
+                                  src={props.auth?.user?.imageUrl}
+                                   className="size-10 rounded-full"
+                                />
+                           </div>
+                            <div className="ml-3">
+                                 <div className="text-base/5 font-medium text-white">
+                                   {props.auth?.user?.name}
+                                  </div>
+                                <div className="text-sm font-medium text-gray-400">
+                                      {props.auth?.user?.email}
+                                 </div>
                             </div>
-                            <div className="text-sm font-medium text-gray-400">
-                                {user.email}
-                            </div>
-                        </div>
 
-                    </div>
-                    <div className="mt-3 space-y-1 px-2">
-                        {userNavigation.map((item) => (
-                            <DisclosureButton
-                                key={item.name}
-                                href={item.href}
-                                className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
-                            >
-                                {item.name}
-                            </DisclosureButton>
-                        ))}
-                    </div>
-                </div>
-            </DisclosurePanel>
+                        </div>
+                         <div className="mt-3 space-y-1 px-2">
+                             {userNavigation.map((item) => (
+                                 <DisclosureButton
+                                      key={item.name}
+                                     href={item.href}
+                                    className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
+                                   >
+                                      {item.name}
+                                 </DisclosureButton>
+                             ))}
+                        </div>
+                     </div>
+                   )}
+             </DisclosurePanel>
             {/* End Navbar Mobile Menu */}
         </Disclosure>
     )

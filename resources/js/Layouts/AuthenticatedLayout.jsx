@@ -28,13 +28,19 @@ export default function AuthenticatedLayout({ header, children }) {
                                     href={route('dashboard')}
                                     active={route().current('dashboard')}
                                 >
-                                    post
+                                    News
                                 </NavLink>
                                 <NavLink
                                     href={route('user.dashboard')}
                                     active={route().current('user.dashboard')}
                                 >
-                                    user
+                                    Users
+                                </NavLink>
+                                <NavLink
+                                    href={route('match.index')}
+                                    active={route().current('match.index')}
+                                >
+                                    Match
                                 </NavLink>
                             </div>
                         </div>
