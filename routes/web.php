@@ -8,19 +8,12 @@ use Inertia\Inertia;
 use Illuminate\Support\Facades\Auth;
 use App\Providers\RouteServiceProvider;
 use App\Http\Controllers\KabarBolaController;
-use App\Http\Controllers\UserController; 
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\MatchController;
 use App\Http\Controllers\PertandinganController;
+use App\Http\Controllers\HomeController;
 
-
-Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
-})->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/dashboard', [PostController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 

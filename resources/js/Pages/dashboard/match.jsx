@@ -8,7 +8,7 @@ export default function Match({ matches }) {
     const [openModalAdd, setOpenModalAdd] = useState(false);
     const [openModalEdit, setOpenModalEdit] = useState(false);
     const { auth } = usePage().props;
-    const [dataMatch, setDataMatch] = useState([]);
+    const [dataMatch, setDataMatch] = useState(null);
     const [author, setAuthor] = useState('');
 
     const { data: dataAdd, setData: setDataAdd, post: postAdd, reset: resetAdd } = useForm({
@@ -317,8 +317,7 @@ export default function Match({ matches }) {
                                             </td>
                                         </tr>
                                     ))}
-
-                                    <ModalEdit open={openModalEdit} setOpen={() => setOpenModalEdit(false)} match={dataMatch} />
+                                       {dataMatch && <ModalEdit open={openModalEdit} setOpen={() => setOpenModalEdit(false)} match={dataMatch} />}
                                 </tbody>
                             </table>
                         </div>
@@ -331,43 +330,45 @@ export default function Match({ matches }) {
 
 function ModalEdit({ open, setOpen, match }) {
     const { data: dataEdit, setData: setDataEdit, match: matchEdit, reset } = useForm({
-        competition: match?.competition,
-        home_team_name: match?.home_team_name,
+          competition: match?.competition || "",
+        home_team_name: match?.home_team_name || "",
         home_team_flag: null,
-        away_team_name: match?.away_team_name,
+        away_team_name: match?.away_team_name || "",
         away_team_flag: null,
-        match_date: match?.match_date,
-        match_time: match?.match_time,
-        stadium: match?.stadium,
-        location: match?.location,
-        status: match?.status,
+        match_date: match?.match_date || "",
+        match_time: match?.match_time || "",
+        stadium: match?.stadium || "",
+        location: match?.location || "",
+        status: match?.status || "scheduled",
     });
 
     const handleSubmitEdit = async (e) => {
-        e.preventDefault();
+      e.preventDefault();
 
-        const formData = new FormData();
-        formData.append('competition', dataEdit.competition);
-        formData.append('home_team_name', dataEdit.home_team_name);
-        if (dataEdit.home_team_flag) {
-            formData.append('home_team_flag', dataEdit.home_team_flag);
-        }
-        formData.append('away_team_name', dataEdit.away_team_name);
-        if (dataEdit.away_team_flag) {
-            formData.append('away_team_flag', dataEdit.away_team_flag);
-        }
-        formData.append('match_date', dataEdit.match_date);
-        formData.append('match_time', dataEdit.match_time);
-        formData.append('stadium', dataEdit.stadium);
-        formData.append('location', dataEdit.location);
-        formData.append('status', dataEdit.status);
+     const formData = new FormData();
+      formData.append('competition', dataEdit.competition);
+      formData.append('home_team_name', dataEdit.home_team_name);
+      if (dataEdit.home_team_flag) {
+          formData.append('home_team_flag', dataEdit.home_team_flag);
+      }
+      formData.append('away_team_name', dataEdit.away_team_name);
+      if (dataEdit.away_team_flag) {
+          formData.append('away_team_flag', dataEdit.away_team_flag);
+      }
+      formData.append('match_date', dataEdit.match_date);
+      formData.append('match_time', dataEdit.match_time);
+      formData.append('stadium', dataEdit.stadium);
+      formData.append('location', dataEdit.location);
+      formData.append('status', dataEdit.status);
 
-        try {
-            const response = await axios.post(route('match.update', match.id), formData, {
-                headers: {
-                    'Content-Type': 'multipart/form-data',
-                },
-            });
+
+      console.log(formData); // <-- Tambahkan ini
+    try {
+      const response = await axios.put(route('match.update', match.id), formData, {
+          headers: {
+              'Content-Type': 'multipart/form-data',
+          },
+      });
 
             if (response.status === 200) {
                 setOpen(false);
