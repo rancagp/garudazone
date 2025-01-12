@@ -16,36 +16,16 @@ import {
     ServerIcon,
 } from "@heroicons/react/20/solid";
 
-const features = [
-    {
-        name: "Push to deploy.",
-        description:
-            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
-        icon: CloudArrowUpIcon,
-    },
-    {
-        name: "SSL certificates.",
-        description:
-            "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.",
-        icon: LockClosedIcon,
-    },
-    {
-        name: "Database backups.",
-        description:
-            "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
-        icon: ServerIcon,
-    },
-];
-
 const user = {
     name: "RancaGp",
-    email: "tom@example.com",
+    email: "tom@example.com", // Corrected the email
     imageUrl: "/images/ranca.jpg",
 };
+
 const navigation = [
     { name: "HOME", href: "/", current: true },
     { name: "KABAR BOLA", href: "/kabar-bola", current: false },
-    { name: "SEJARAH", href: "sejarah", current: false },
+    { name: "SEJARAH", href: "/sejarah", current: false },
     { name: "PERTANDINGAN", href: "/pertandingan", current: false },
 ];
 
@@ -60,6 +40,25 @@ const slides = [
     "/images/timnas5.jpg",
     "/images/timnas0.png",
     "/images/timnas14.jpeg",
+];
+
+const videoHighlights = [
+    {
+        title: "Highlight 1",
+        link: "https://www.youtube.com/embed/4F2oOGDyWeY?si=XJ8eVmyP4vwdUgMb&rel=0&autoplay=0&mute=1",
+    },
+    {
+        title: "Highlight 2",
+        link: "https://www.youtube.com/embed/eEy6cR3zIgg?si=5U4WoS8KQt1qBow7&rel=0&autoplay=0&mute=1",
+    },
+    {
+        title: "Highlight 3",
+        link: "https://www.youtube.com/embed/To8cGxmSTiE?si=gxvWFVNHoXfcvvhu&rel=0&autoplay=0&mute=1",
+    },
+    {
+        title: "Highlight 4",
+        link: "https://www.youtube.com/embed/h2Rs6u41nIg?si=glKyv22E2aqBxWIW&rel=0&autoplay=0&mute=1",
+    },
 ];
 
 function classNames(...classes) {
@@ -127,7 +126,7 @@ export default function Example(props) {
                                                     <span className="absolute -inset-1.5" />
                                                     <img
                                                         alt=""
-                                                        src={user.imageUrl}
+                                                        src={props.auth.user.avatar}
                                                         className="size-8 rounded-full"
                                                     />
                                                 </MenuButton>
@@ -383,76 +382,65 @@ export default function Example(props) {
                         </div>
                     </div>
 
-                    <div className="overflow-hidden bg-white py-24 sm:py-32">
-                        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                            <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-                                <div className="lg:pr-8 lg:pt-4">
-                                    <div className="lg:max-w-lg">
-                                        <h2 className="text-base/7 font-semibold text-red-700">
-                                            SEMUA MOMEN PENTING
-                                        </h2>
-                                        <p className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
-                                            MOMEN PENTING TERBARU
-                                        </p>
-                                        <p className="mt-6 text-lg/8 text-gray-600">
-                                            Lorem ipsum, dolor sit amet
-                                            consectetur adipisicing elit.
-                                            Maiores impedit perferendis suscipit
-                                            eaque, iste dolor cupiditate
-                                            blanditiis ratione.
-                                        </p>
-                                        <dl className="mt-10 max-w-xl space-y-8 text-base/7 text-gray-600 lg:max-w-none">
-                                            {features.map((feature) => (
-                                                <div
-                                                    key={feature.name}
-                                                    className="relative pl-9"
-                                                >
-                                                    <dt className="inline font-semibold text-gray-900">
-                                                        <feature.icon
-                                                            aria-hidden="true"
-                                                            className="absolute left-1 top-1 size-5 text-indigo-600"
-                                                        />
-                                                        {feature.name}
-                                                    </dt>{" "}
-                                                    <dd className="inline">
-                                                        {feature.description}
-                                                    </dd>
-                                                </div>
-                                            ))}
-                                        </dl>
-                                    </div>
+
+                    <div className="py-24 bg-gray-300">
+                <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                    <h2 className="text-2xl font-bold text-gray-800 mb-6">Highlight Videos</h2>
+                    <div className="flex justify-between gap-2 snap-x snap-mandatory">
+                        {videoHighlights.map((video, index) => (
+                            <div
+                                key={index}
+                                className="max-w-[280px] bg-white shadow-md rounded-lg snap-start overflow-hidden flex-shrink-0 transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+                            >
+                                <div className="w-full h-48">
+                                    <iframe
+                                        width="100%"
+                                        height="100%"
+                                        className="embed-responsive-item"
+                                        src={video.link}
+                                        allowFullScreen
+                                    ></iframe>
                                 </div>
-                                <img
-                                    alt="Product screenshot"
-                                    src="/images/timnaswp4.jpg"
-                                    width={2432}
-                                    height={1442}
-                                    className="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
-                                />
+                                <div className="p-4">
+                                    <h3 className="text-lg font-semibold text-gray-700">
+                                        {video.title}
+                                    </h3>
+                                </div>
                             </div>
-                        </div>
+                        ))}
                     </div>
+                </div>
+            </div>
+
+
 
                     {/* footer */}
-                    <footer className="bg-gray-800 text-white py-4">
-                        <div className="container mx-auto text-center">
-                            <p>© 2024 GarudaZone. All rights reserved.</p>
-                            <div className="mt-2">
-                                <a
-                                    href="https://www.example.com"
-                                    className="text-gray-400 hover:text-white mx-2"
-                                >
-                                    Privacy Policy
-                                </a>
-                                <a
-                                    href="https://www.example.com"
-                                    className="text-gray-400 hover:text-white mx-2"
-                                >
-                                    Terms of Service
-                                </a>
-                            </div>
-                        </div>
-                    </footer>
+                    <footer class="bg-red-700 rounded-lg shadow dark:bg-gray-900 w-full">
+            <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+                <div class="sm:flex sm:items-center sm:justify-between">
+                    <a href="/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                        <img src="/images/garudazone.png" class="h-8" alt="garudazone Logo" />
+                        <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">Garudazone</span>
+                    </a>
+                    <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-white sm:mb-0">
+                        <li>
+                            <a href="/kabarbola" class="hover:underline me-4 md:me-6">Kabarbola</a>
+                        </li>
+                        <li>
+                            <a href="/sejarah" class="hover:underline me-4 md:me-6">Sejarah</a>
+                        </li>
+                        <li>
+                            <a href="/pertandingan" class="hover:underline me-4 md:me-6">Pertandingan</a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/6285864172264" class="hover:underline">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <hr class="my-6 border-white sm:mx-auto dark:border-white lg:my-8" />
+                <span class="block text-sm text-white sm:text-center dark:text-white">© 2025 <a href="/" class="hover:underline">GarudaZone™</a>. All Rights Reserved.</span>
+            </div>
+        </footer>
                 </main>
             </div>
         </>
