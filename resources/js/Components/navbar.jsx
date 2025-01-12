@@ -25,7 +25,6 @@ const Navbar = () => {
 
     const userNavigation = [
         { name: "Your Profile", href: "#" },
-        { name: "LogOut", href: "#" },
     ];
 
     return (
@@ -110,14 +109,13 @@ const Navbar = () => {
                                         </MenuItem>
                                     ))}
                                     <MenuItem>
-                                        <button
-                                            onClick={() =>
-                                                router.post("/logout")
-                                            }
+                                        <Link
+                                            href={route('logout')}
+                                            method='post'
                                             className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:outline-none w-full text-start"
                                         >
                                             Logout
-                                        </button>
+                                        </Link>
                                     </MenuItem>
                                 </MenuItems>
                             </Menu>

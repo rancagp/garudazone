@@ -22,7 +22,7 @@ export default function Login({ status, canResetPassword }) {
     };
 
     return (
-        <GuestLayout>
+        <GuestLayout processing={processing}>
             <Head title="Log in" />
 
             {status && (
@@ -81,12 +81,12 @@ export default function Login({ status, canResetPassword }) {
                 </div>
 
                 <div className="flex items-center justify-end mt-4">
-                        <Link
-                            href='/register'
-                            className="mr-4 text-sm text-gray-600 underline rounded-md hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                        >
-                            Register
-                        </Link>
+                    <Link
+                        href='/register'
+                        className="mr-4 text-sm text-gray-600 underline rounded-md hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                    >
+                        Register
+                    </Link>
                     {canResetPassword && (
                         <Link
                             href={route('password.request')}
@@ -99,9 +99,6 @@ export default function Login({ status, canResetPassword }) {
                     <Button variant={'primary'} className='ms-4' >
                         Log in
                     </Button>
-                    <a href='/google/redirect' className="ms-4" disabled={processing}>
-                        Google
-                    </a>
                 </div>
             </form>
         </GuestLayout>
