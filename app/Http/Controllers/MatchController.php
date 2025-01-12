@@ -57,37 +57,53 @@ class MatchController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Matched $match)
-    {
-         $request->validate([
+   public function update(Request $request, Matched $match)
+{
+    try {
+        \Log::info('Update request data:', $request->all());
+        
+        $request->validate([
             'competition' => 'required',
             'home_team_name' => 'required',
             'home_team_flag' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'away_team_name' => 'required',
             'away_team_flag' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'match_date' => 'required|date',
-            'match_time' => 'required|date_format:H:i',
+            'match_time' => 'required',
             'stadium' => 'required',
             'location' => 'required',
             'status' => 'required|in:scheduled,live,completed'
         ]);
 
-        $data = $request->except(['home_team_flag', 'away_team_flag']);
+        $data = $request->except(['home_team_flag', 'away_team_flag', '_method']);
 
         if ($request->hasFile('home_team_flag')) {
-            $path = $request->file('home_team_flag')->store('flags', 'public');  
-            $data['home_team_flag'] =  '/storage/' . $path;
+            // Hapus file lama jika ada
+            if ($match->home_team_flag) {
+                Storage::disk('public')->delete(str_replace('/storage/', '', $match->home_team_flag));
+            }
+            $path = $request->file('home_team_flag')->store('flags', 'public');
+            $data['home_team_flag'] = '/storage/' . $path;
         }
 
         if ($request->hasFile('away_team_flag')) {
-            $path = $request->file('away_team_flag')->store('flags', 'public'); 
-            $data['away_team_flag'] =  '/storage/' . $path;
+            // Hapus file lama jika ada
+            if ($match->away_team_flag) {
+                Storage::disk('public')->delete(str_replace('/storage/', '', $match->away_team_flag));
+            }
+            $path = $request->file('away_team_flag')->store('flags', 'public');
+            $data['away_team_flag'] = '/storage/' . $path;
         }
 
+        \Log::info('Data to update:', $data);
         $match->update($data);
 
-        return redirect()->back();
+        return response()->json(['message' => 'Match updated successfully']);
+    } catch (\Exception $e) {
+        \Log::error('Error updating match: ' . $e->getMessage());
+        return response()->json(['error' => $e->getMessage()], 500);
     }
+}
 
 
     /**

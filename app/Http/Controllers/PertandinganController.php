@@ -9,51 +9,55 @@ use Carbon\Carbon;
 
 class PertandinganController extends Controller
 {
-     /**
-      * Display a listing of the resource.
-      */
     public function index(Request $request)
     {
          $now = Carbon::now();
 
-          $liveMatch = Matched::where('status', 'live')->first();
+        $liveMatch = Matched::where('status', 'live')->first();
+        $nearestMatch = null;
+         $scheduledMatches = [];
 
-          $nearestMatch = null;
-           $scheduledMatches = [];
+        if ($liveMatch) {
+            $upcomingMatches = collect([$liveMatch]);
+            $scheduledMatches = Matched::where('status', 'scheduled')
+                ->orderBy('match_date')
+                ->orderBy('match_time')
+                ->get();
+        } else {
+            $nearestMatch = Matched::where('match_date', '>=', $now)
+                 ->where('status', 'scheduled')
+                ->orderBy('match_date')
+                ->orderBy('match_time')
+                 ->first();
 
-            if(!$liveMatch){
-                $nearestMatch = Matched::where('match_date', '>=', $now)
-                     ->where('status', 'scheduled')
-                     ->orderBy('match_date')
-                    ->orderBy('match_time')
-                     ->first();
-              if($nearestMatch){
-                   $scheduledMatches = Matched::where('match_date', '>=', $now)
-                      ->where('status', 'scheduled')
+           if($nearestMatch){
+                 $upcomingMatches = collect([$nearestMatch]);
+                  $scheduledMatches = Matched::where('status', 'scheduled')
                        ->where('id', '!=', $nearestMatch->id)
                      ->orderBy('match_date')
                       ->orderBy('match_time')
                      ->get();
-                  }
-              }else{
-                  $scheduledMatches = Matched::where('match_date', '>=', $now)
-                       ->where('status', 'scheduled')
-                       ->orderBy('match_date')
-                      ->orderBy('match_time')
-                      ->get();
-              }
+             } else{
+                $upcomingMatches = collect();
+                $scheduledMatches = Matched::where('status', 'scheduled')
+                   ->orderBy('match_date')
+                  ->orderBy('match_time')
+                 ->get();
+            }
+
+        }
 
 
-             $upcomingMatches =  $liveMatch ? collect([$liveMatch]) : ( $nearestMatch ? collect([$nearestMatch]) : collect() );
-            $matches = Matched::where('match_date', '<=', $now)
-                ->where('status','completed') // change this line
-               ->latest()
-                 ->get(); // remove paginate
 
-              return Inertia::render('Match/index', [
-                'matches' => $matches,
-                   'nearestMatches' => $upcomingMatches,
-                    'scheduledMatches' => $scheduledMatches,
-                ]);
+         $matches = Matched::where('match_date', '<=', $now)
+             ->where('status','completed')
+            ->latest()
+              ->get();
+
+        return Inertia::render('Match/index', [
+            'matches' => $matches,
+            'nearestMatches' => $upcomingMatches,
+            'scheduledMatches' => $scheduledMatches,
+         ]);
     }
 }
