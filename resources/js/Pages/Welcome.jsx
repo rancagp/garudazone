@@ -16,16 +16,36 @@ import {
     ServerIcon,
 } from "@heroicons/react/20/solid";
 
+const features = [
+    {
+        name: "Push to deploy.",
+        description:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+        icon: CloudArrowUpIcon,
+    },
+    {
+        name: "SSL certificates.",
+        description:
+            "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.",
+        icon: LockClosedIcon,
+    },
+    {
+        name: "Database backups.",
+        description:
+            "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
+        icon: ServerIcon,
+    },
+];
+
 const user = {
     name: "RancaGp",
-    email: "tom@example.com", // Corrected the email
+    email: "tom@example.com",
     imageUrl: "/images/ranca.jpg",
 };
-
 const navigation = [
     { name: "HOME", href: "/", current: true },
     { name: "KABAR BOLA", href: "/kabar-bola", current: false },
-    { name: "SEJARAH", href: "/sejarah", current: false },
+    { name: "SEJARAH", href: "sejarah", current: false },
     { name: "PERTANDINGAN", href: "/pertandingan", current: false },
 ];
 
@@ -42,25 +62,6 @@ const slides = [
     "/images/timnas14.jpeg",
 ];
 
-const videoHighlights = [
-    {
-        title: "Highlight 1",
-        link: "https://www.youtube.com/embed/4F2oOGDyWeY?si=XJ8eVmyP4vwdUgMb&rel=0&autoplay=0&mute=1",
-    },
-    {
-        title: "Highlight 2",
-        link: "https://www.youtube.com/embed/eEy6cR3zIgg?si=5U4WoS8KQt1qBow7&rel=0&autoplay=0&mute=1",
-    },
-    {
-        title: "Highlight 3",
-        link: "https://www.youtube.com/embed/To8cGxmSTiE?si=gxvWFVNHoXfcvvhu&rel=0&autoplay=0&mute=1",
-    },
-    {
-        title: "Highlight 4",
-        link: "https://www.youtube.com/embed/h2Rs6u41nIg?si=glKyv22E2aqBxWIW&rel=0&autoplay=0&mute=1",
-    },
-];
-
 function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
 }
@@ -68,10 +69,10 @@ function classNames(...classes) {
 export default function Example(props) {
     const { auth, liveMatch, completedMatches, latestPosts } = usePage().props;
 
-    const userNavigation = [
-        { name: "Your Profile", href: "#" },
-        { name: "Settings", href: "#" },
-    ];
+    // const userNavigation = [
+    //     { name: "Your Profile", href: "#" },
+    //     { name: "Settings", href: "#" },
+    // ];
 
     return (
         <>
@@ -151,7 +152,7 @@ export default function Example(props) {
                                             transition
                                             className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
                                         >
-                                            {userNavigation.map((item) => (
+                                            {/* {userNavigation.map((item) => (
                                                 <MenuItem key={item.name}>
                                                     <a
                                                         href={item.href}
@@ -160,24 +161,26 @@ export default function Example(props) {
                                                         {item.name}
                                                     </a>
                                                 </MenuItem>
-                                            ))}
-                                            <MenuItem>
-                                                <button
-                                                    onClick={() =>
-                                                        router.post("/logout")
-                                                    }
-                                                    className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:outline-none w-full text-start"
-                                                >
-                                                    Logout
-                                                </button>
-                                            </MenuItem>
+                                            ))} */}
+                                            {auth.user && (
+                                             <MenuItem>
+                                                 <button
+                                                     onClick={() =>
+                                                         router.post("/logout")
+                                                     }
+                                                     className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:outline-none w-full text-start"
+                                                 >
+                                                     Logout
+                                                 </button>
+                                             </MenuItem>
+                                            )}
                                         </MenuItems>
                                     </Menu>
                                 </div>
                             </div>
                             <div className="-mr-2 flex md:hidden">
                                 {/* Mobile menu button */}
-                                <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                                <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md bg-red-700 p-2 text-gray-400 hover:bg-red-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                                     <span className="absolute -inset-0.5" />
                                     <span className="sr-only">
                                         Open main menu
@@ -207,8 +210,8 @@ export default function Example(props) {
                                     }
                                     className={classNames(
                                         item.current
-                                            ? "bg-gray-900 text-white"
-                                            : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                                            ? "bg-red-900 text-white"
+                                            : "text-gray-300 hover:bg-red-900 hover:text-white",
                                         "block rounded-md px-3 py-2 text-base font-medium"
                                     )}
                                 >
@@ -216,50 +219,47 @@ export default function Example(props) {
                                 </DisclosureButton>
                             ))}
                         </div>
-                        <div className="border-t border-gray-700 pb-3 pt-4">
-                            <div className="flex items-center px-5">
-                                <div className="shrink-0">
-                                    <img
-                                        alt=""
-                                        src={user.imageUrl}
-                                        className="size-10 rounded-full"
-                                    />
-                                </div>
-                                <div className="ml-3">
-                                    <div className="text-base/5 font-medium text-white">
-                                        {user.name}
+                        {auth.user && (
+                            <div className="border-t border-gray-700 pb-3 pt-4">
+                                <div className="flex items-center px-5">
+                                    <div className="shrink-0">
+                                        <img
+                                            alt=""
+                                            src={user.imageUrl}
+                                            className="size-10 rounded-full"
+                                        />
                                     </div>
-                                    <div className="text-sm font-medium text-gray-400">
-                                        {user.email}
+                                    <div className="ml-3">
+                                        <div className="text-base/5 font-medium text-white">
+                                            {user.name}
+                                        </div>
+                                        <div className="text-sm font-medium text-gray-400">
+                                            {user.email}
+                                        </div>
                                     </div>
                                 </div>
-                                <button
-                                    type="button"
-                                    className="relative ml-auto shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                                >
-                                    <span className="absolute -inset-1.5" />
-                                    <span className="sr-only">
-                                        View notifications
-                                    </span>
-                                    <BellIcon
-                                        aria-hidden="true"
-                                        className="size-6"
-                                    />
-                                </button>
-                            </div>
-                            <div className="mt-3 space-y-1 px-2">
-                                {userNavigation.map((item) => (
+                                {/* <div className="mt-3 space-y-1 px-2">
+                                    {userNavigation.map((item) => (
+                                        <DisclosureButton
+                                            key={item.name}
+                                            as="a"
+                                            href={item.href}
+                                            className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-red-900 hover:text-white"
+                                        >
+                                            {item.name}
+                                        </DisclosureButton>
+                                    ))}
+                                </div> */}
+                                 <div className="mt-3 space-y-1 px-2">
                                     <DisclosureButton
-                                        key={item.name}
-                                        as="a"
-                                        href={item.href}
-                                        className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
+                                        onClick={() => router.post("/logout")}
+                                        className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-red-900 hover:text-white w-full text-start"
                                     >
-                                        {item.name}
+                                        Logout
                                     </DisclosureButton>
-                                ))}
+                                </div>
                             </div>
-                        </div>
+                        )}
                     </DisclosurePanel>
                 </Disclosure>
 
@@ -382,65 +382,76 @@ export default function Example(props) {
                         </div>
                     </div>
 
-
-                    <div className="py-24 bg-gray-300">
-                <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                    <h2 className="text-2xl font-bold text-gray-800 mb-6">Highlight Videos</h2>
-                    <div className="flex justify-between gap-2 snap-x snap-mandatory">
-                        {videoHighlights.map((video, index) => (
-                            <div
-                                key={index}
-                                className="max-w-[280px] bg-white shadow-md rounded-lg snap-start overflow-hidden flex-shrink-0 transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
-                            >
-                                <div className="w-full h-48">
-                                    <iframe
-                                        width="100%"
-                                        height="100%"
-                                        className="embed-responsive-item"
-                                        src={video.link}
-                                        allowFullScreen
-                                    ></iframe>
+                    <div className="overflow-hidden bg-white py-24 sm:py-32">
+                        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                            <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+                                <div className="lg:pr-8 lg:pt-4">
+                                    <div className="lg:max-w-lg">
+                                        <h2 className="text-base/7 font-semibold text-red-700">
+                                            SEMUA MOMEN PENTING
+                                        </h2>
+                                        <p className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                                            MOMEN PENTING TERBARU
+                                        </p>
+                                        <p className="mt-6 text-lg/8 text-gray-600">
+                                            Lorem ipsum, dolor sit amet
+                                            consectetur adipisicing elit.
+                                            Maiores impedit perferendis suscipit
+                                            eaque, iste dolor cupiditate
+                                            blanditiis ratione.
+                                        </p>
+                                        <dl className="mt-10 max-w-xl space-y-8 text-base/7 text-gray-600 lg:max-w-none">
+                                            {features.map((feature) => (
+                                                <div
+                                                    key={feature.name}
+                                                    className="relative pl-9"
+                                                >
+                                                    <dt className="inline font-semibold text-gray-900">
+                                                        <feature.icon
+                                                            aria-hidden="true"
+                                                            className="absolute left-1 top-1 size-5 text-indigo-600"
+                                                        />
+                                                        {feature.name}
+                                                    </dt>{" "}
+                                                    <dd className="inline">
+                                                        {feature.description}
+                                                    </dd>
+                                                </div>
+                                            ))}
+                                        </dl>
+                                    </div>
                                 </div>
-                                <div className="p-4">
-                                    <h3 className="text-lg font-semibold text-gray-700">
-                                        {video.title}
-                                    </h3>
-                                </div>
+                                <img
+                                    alt="Product screenshot"
+                                    src="/images/timnaswp4.jpg"
+                                    width={2432}
+                                    height={1442}
+                                    className="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
+                                />
                             </div>
-                        ))}
+                        </div>
                     </div>
-                </div>
-            </div>
-
-
 
                     {/* footer */}
-                    <footer class="bg-red-700 rounded-lg shadow dark:bg-gray-900 w-full">
-            <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-                <div class="sm:flex sm:items-center sm:justify-between">
-                    <a href="/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
-                        <img src="/images/garudazone.png" class="h-8" alt="garudazone Logo" />
-                        <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">Garudazone</span>
-                    </a>
-                    <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-white sm:mb-0">
-                        <li>
-                            <a href="/kabarbola" class="hover:underline me-4 md:me-6">Kabarbola</a>
-                        </li>
-                        <li>
-                            <a href="/sejarah" class="hover:underline me-4 md:me-6">Sejarah</a>
-                        </li>
-                        <li>
-                            <a href="/pertandingan" class="hover:underline me-4 md:me-6">Pertandingan</a>
-                        </li>
-                        <li>
-                            <a href="https://wa.me/6285864172264" class="hover:underline">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-                <hr class="my-6 border-white sm:mx-auto dark:border-white lg:my-8" />
-                <span class="block text-sm text-white sm:text-center dark:text-white">© 2025 <a href="/" class="hover:underline">GarudaZone™</a>. All Rights Reserved.</span>
-            </div>
-        </footer>
+                    <footer className="bg-gray-800 text-white py-4">
+                        <div className="container mx-auto text-center">
+                            <p>© 2024 GarudaZone. All rights reserved.</p>
+                            <div className="mt-2">
+                                <a
+                                    href="https://www.example.com"
+                                    className="text-gray-400 hover:text-white mx-2"
+                                >
+                                    Privacy Policy
+                                </a>
+                                <a
+                                    href="https://www.example.com"
+                                    className="text-gray-400 hover:text-white mx-2"
+                                >
+                                    Terms of Service
+                                </a>
+                            </div>
+                        </div>
+                    </footer>
                 </main>
             </div>
         </>
