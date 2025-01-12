@@ -438,7 +438,7 @@ export default function Example(props) {
                     </ul>
                 </div>
                 <hr class="my-6 border-white sm:mx-auto dark:border-white lg:my-8" />
-                <span class="block text-sm text-white sm:text-center dark:text-white">© 2025 <a href="/" class="hover:underline">GarudaZonee™</a>. All Rights Reserved.</span>
+                <span class="block text-sm text-white sm:text-center dark:text-white">© 2025 <a href="/" class="hover:underline">GarudaZone™</a>. All Rights Reserved.</span>
             </div>
         </footer>
                 </main>
